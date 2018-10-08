@@ -15,7 +15,7 @@
      (although some can be lost).
 **********************************************************************/
 
-#define BIDIRECTIONAL 0    /* change to 1 for bidirectional */
+#define BIDIRECTIONAL 1    /* change to 1 for bidirectional */
                            /* and write a routine called B_output */
 
 /* a "msg" is the data unit passed from layer 5 (teachers code) to layer  */
@@ -51,7 +51,8 @@ struct pkt {
   int A_packetcount = 0;
   int B_packetcount = 0;
   starttimer(int, float);
-  struct pkt prev_pkt;
+  struct pkt prev_pkt_A;
+  struct pkt prev_pkt_B;
 /* the following routine will be called once (only) before any other */
 /* entity A routines are called. You can use it to do any initialization */
 void A_init()
@@ -89,7 +90,6 @@ flip(int seqnum){
 void A_output(struct msg message)
 {
   struct pkt packet;
- // printf("Hello, How are you doing today");
   packet.seqnum = AtoBseqnum_A;
   packet.acknum = AtoBacknum_A;
   strncpy (packet.payload, message.data, datachunks);
@@ -98,7 +98,7 @@ void A_output(struct msg message)
   printf("**********A_output********** \n");
   printf("--------Packet being sent from A to B------- \n");
   printpacketdata(packet.payload);
-  prev_pkt = packet;
+  prev_pkt_A = packet;
   printf("Packet Sequence Number is: %d \n", packet.seqnum);
   printf("Packet Ack Number is: %d \n", packet.acknum);
   printf("Packet CheckSum is: %d \n", packet.checksum);
@@ -127,14 +127,40 @@ void A_input(struct pkt packet)
       A_timerinterrupt();
     }
   }
+  else if((packet.seqnum == 2) || (packet.seqnum == 3)){
+    printf("**********A_input**********\n");
+    printf("--------A received packet with Seqnum: %d from B------- \n",packet.seqnum);
+    printpacketdata(packet.payload);
+    printf("Packet Sequence Number is: %d \n", packet.seqnum);
+    printf("Packet Ack Number is: %d \n", packet.acknum);
+    int checksum_B = checksum(packet.seqnum,packet.acknum,packet.payload);
+    printf("Packet CheckSum is: %d \n", checksum_B);
+
+    if((packet.seqnum == BtoAseqnum_A) && 
+        (packet.acknum == BtoAacknum_A) &&
+        (packet.checksum == checksum_B)&&
+        (strlen(packet.payload) == 21)){
+      printf("----------A Sending Acknowledgement %d to B for packet with Seqnum: %d---------- \n", packet.acknum, packet.seqnum);
+      BtoAseqnum_A = flip(BtoAseqnum_A);
+      BtoAacknum_A = flip(BtoAacknum_A);
+      B_input(packet);
+      B_packetcount++;
+      printf("-------Total number of packets sent from B to A so far: %d------- \n", B_packetcount);
+    }
+    else{
+      printf("-------A sending NAck to B for packet with seqnum: %d------- \n", packet.seqnum);
+      packet.seqnum = flip(packet.seqnum);
+      B_input(packet);
+    }
+  }
 }
 
 /* called when A's timer goes off */
 void A_timerinterrupt()
 {
   printf("************A_timerinterrupt*********** \n");
-  printf("-------Resending packet wth Seqnum:%d from A-------\n", prev_pkt.seqnum);
-  tolayer3(SENDER_A, prev_pkt);
+  printf("-------Resending packet wth Seqnum:%d from A-------\n", prev_pkt_A.seqnum);
+  tolayer3(SENDER_A, prev_pkt_A);
   starttimer(SENDER_A, TIME);
 }  
 
@@ -146,6 +172,21 @@ void B_init()
 /* called from layer 5, passed the data to be sent to other side */
 void B_output(struct msg message)
 {
+  struct pkt packet1;
+  packet1.seqnum = BtoAseqnum_B;
+  packet1.acknum = BtoAacknum_B;
+  strncpy (packet1.payload, message.data, datachunks);
+  int checksum_B = checksum(packet1.seqnum , packet1.acknum , packet1.payload);
+  packet1.checksum = checksum_B;
+  printf("**********B_output********** \n");
+  printf("--------Packet being sent from B to A------- \n");
+  printpacketdata(packet1.payload);
+  prev_pkt_B = packet1;
+  printf("Packet Sequence Number is: %d \n", packet1.seqnum);
+  printf("Packet Ack Number is: %d \n", packet1.acknum);
+  printf("Packet CheckSum is: %d \n", packet1.checksum);
+  tolayer3(SENDER_B, packet1);
+  starttimer(SENDER_B, TIME);
 
 }
 /* called from layer 3, when a packet arrives for layer 4 at B*/
@@ -169,7 +210,7 @@ void B_input(struct pkt packet)
       AtoBacknum_B = flip(AtoBacknum_B);
       A_input(packet);
       A_packetcount++;
-      printf("#######Total number of packets sent to B from A so far: %d######## \n", A_packetcount);
+      printf("-------Total number of packets sent to B from A so far: %d------- \n", A_packetcount);
     }
     else{
       printf("-------B sending NAck to A for packet with seqnum: %d------- \n", packet.seqnum);
@@ -177,11 +218,34 @@ void B_input(struct pkt packet)
       A_input(packet);
     } 
   }
+  else if ((packet.seqnum == 2) || (packet.seqnum == 3)){
+    printf("**********B_input********* \n");
+    int checksum_returnpkt_B = checksum(packet.seqnum, packet.acknum, packet.payload);
+    if((packet.seqnum == BtoAseqnum_B) &&
+        (packet.acknum == BtoAacknum_B) &&
+        (packet.checksum == checksum_returnpkt_B)){
+      printf("-------B Received acknowledgement %d from A for Seqnum: %d-------\n", packet.acknum , packet.seqnum);
+      stoptimer(SENDER_B);
+      tolayer5(SENDER_B,packet.payload);
+      BtoAseqnum_B = flip(BtoAseqnum_B);
+      BtoAacknum_B = flip(BtoAacknum_B);
+    }
+    else{
+      printf("------Packet with Seqnum:%d is corrupted------ \n", flip(packet.seqnum));
+      stoptimer(SENDER_B);
+      B_timerinterrupt();
+
+    }
+  }
 }
 
 /* called when B's timer goes off */
 void B_timerinterrupt()
 {
+  printf("************B_timerinterrupt*********** \n");
+  printf("-------Resending packet wth Seqnum:%d from B-------\n", prev_pkt_B.seqnum);
+  tolayer3(SENDER_B, prev_pkt_B);
+  starttimer(SENDER_B, TIME);
 }
 
 /*****************************************************************
