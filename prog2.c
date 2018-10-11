@@ -44,16 +44,18 @@ struct pkt {
   int SENDER_A = 0;
   int SENDER_B = 1;
   float TIME = 20.0;
-  windowsize = 50;
+  int windowsize = 50;
   int currpacket = 0;
   int base = 1;
-  char * bufferedmessages[50];
+  struct pkt bufferedmessages[50];
   int A_packetcount = 0;
   starttimer(int, float);
-  int ack_seqnum_A = 0;
-  int ack_acknum_A = 0;
-  //struct pkt prev_pkt_A;
-  //struct pkt prev_pkt_B;
+  int ack_seqnum_A = 1;
+  int ack_acknum_A = 1;
+  struct pkt prev_pkt_A;
+  struct pkt prev_pkt_B;
+  struct pkt packet_resend;
+  int Total_packs_discarded = 0;
 /* the following routine will be called once (only) before any other */
 /* entity A routines are called. You can use it to do any initialization */
 void A_init()
@@ -71,7 +73,7 @@ int checksum(int seqnum,int acknum, char * payload){
 printpacketdata(char * payload){
   int i;
   //for (i=0; packet.payload[i]; i++){
-    printf("Packet payload is :%s \n",payload);
+    printf("Packet payload is :%.20s \n",payload);
 }
 
 /*flip(int seqnum){
@@ -91,11 +93,12 @@ printpacketdata(char * payload){
 void A_output(struct msg message)
 {
   struct pkt packet;
+  strncpy(packet.payload, message.data, 20);
   seqnum_A = seqnum_A + 1;
   acknum_A = acknum_A + 1;
   packet.seqnum = seqnum_A;
   packet.acknum = acknum_A;
-  strncpy (packet.payload, message.data, datachunks);
+  //printf("length of message is %d: \n",strlen(packet.payload)); 
   int checksum_A = checksum(packet.seqnum , packet.acknum , packet.payload);
   packet.checksum = checksum_A;
   printf("**********A_output********** \n");
@@ -104,17 +107,25 @@ void A_output(struct msg message)
   printf("Packet Ack Number is: %d \n", packet.acknum);
   printf("Packet CheckSum is: %d \n", packet.checksum);
   if(seqnum_A == base){
+    starttimer(SENDER_A, TIME);
     tolayer3(SENDER_A, packet);
-    starttimer(SENDER_A);
     printf("--------Packet being sent from A to B------- \n");
-    bufferedmessages[seqnum_A] = packet.payload;
+    strcpy(bufferedmessages[seqnum_A].payload, packet.payload);
+    //bufferedmessages[seqnum_A].payload = packet.payload; 
+    bufferedmessages[seqnum_A].seqnum = packet.seqnum;
+    bufferedmessages[seqnum_A].acknum = packet.acknum;
+    bufferedmessages[seqnum_A].checksum = packet.checksum;
   }
   else if( seqnum_A < base + windowsize){
     printf("--------Packet being sent from A to B------- \n");
     tolayer3(SENDER_A, packet);
-    bufferedmessages[seqnum_A] = packet.payload; 
+    strcpy(bufferedmessages[seqnum_A].payload, packet.payload);
+    bufferedmessages[seqnum_A].seqnum = packet.seqnum;
+    bufferedmessages[seqnum_A].acknum = packet.acknum;
+    bufferedmessages[seqnum_A].checksum = packet.checksum;
+
   }
-  else if(seqnum == base + windowsize){
+  else if(seqnum_A >= base + windowsize){
     printf("No buffer available to send the messages. Packet is being dropped \n");
   }
 }
@@ -129,54 +140,41 @@ void A_input(struct pkt packet)
         (packet.checksum == checksum_returnpkt)){
       printf("-------A Received acknowledgement %d from B for Seqnum: %d-------\n", packet.acknum , packet.seqnum);
       stoptimer(SENDER_A);
-      tolayer5(SENDER_A,packet.payload);
       ack_seqnum_A = ack_seqnum_A + 1;
       ack_acknum_A = ack_acknum_A + 1;
-      if(ack_seqnum_A < base + window){
-        starttimer(SENDER_A);
+      if(ack_seqnum_A < base + windowsize){
+        starttimer(SENDER_A, TIME);
       }
+      tolayer5(SENDER_A,packet.payload);
     }
     else{
       printf("------Receiving duplicates packets with acknum:%d. Ignoring the acks------ \n", packet.acknum);
-      stoptimer(SENDER_A)
-      A_timerinterrupt();
+      //stoptimer(SENDER_A);
+      //A_timerinterrupt();
     }
 }
-  /*else if((packet.seqnum == 2) || (packet.seqnum == 3)){
-    printf("**********A_input**********\n");
-    printf("--------A received packet with Seqnum: %d from B------- \n",packet.seqnum);
-    printpacketdata(packet.payload);
-    printf("Packet Sequence Number is: %d \n", packet.seqnum);
-    printf("Packet Ack Number is: %d \n", packet.acknum);
-    int checksum_B = checksum(packet.seqnum,packet.acknum,packet.payload);
-    printf("Packet CheckSum is: %d \n", checksum_B);
-
-    if((packet.seqnum == BtoAseqnum_A) && 
-        (packet.acknum == BtoAacknum_A) &&
-        (packet.checksum == checksum_B)&&
-        (strlen(packet.payload) == 21)){
-      printf("----------A Sending Acknowledgement %d to B for packet with Seqnum: %d---------- \n", packet.acknum, packet.seqnum);
-      BtoAseqnum_A = flip(BtoAseqnum_A);
-      BtoAacknum_A = flip(BtoAacknum_A);
-      B_input(packet);
-      B_packetcount++;
-      printf("-------Total number of packets sent from B to A so far: %d------- \n", B_packetcount);
-    }
-    else{
-      printf("-------A sending NAck to B for packet with seqnum: %d------- \n", packet.seqnum);
-      packet.seqnum = flip(packet.seqnum);
-      B_input(packet);
-    }
-  }
-}*/
-
 /* called when A's timer goes off */
 void A_timerinterrupt()
 {
   printf("************A_timerinterrupt*********** \n");
-  printf("-------Resending packet wth Seqnum:%d from A-------\n", prev_pkt_A.seqnum);
-  tolayer3(SENDER_A, prev_pkt_A);
-  starttimer(SENDER_A, TIME);
+  printf("-------Resending packet wth Seqnum: from A-------\n");
+ /* printf("Total packets acknowledged so far %d \n",ack_acknum_A);
+  printf("Total packets discared by B so far %d\n",Total_packs_discarded);
+  printf("A seq num has reached by now %d \n",seqnum_A);
+  printf(" For loop woul run from %d to %d \n",ack_acknum_A, ack_acknum_A + Total_packs_discarded);
+  printf("trying to access buffered messages \n");
+  printf("First lost message would be:seq %d, ack %d, msg %s, checksum %d \n",bufferedmessages[ack_acknum_A].seqnum,
+      bufferedmessages[ack_acknum_A].acknum,bufferedmessages[ack_acknum_A].payload, bufferedmessages[ack_acknum_A].checksum);*/
+  int forend = seqnum_A;
+  starttimer(SENDER_A,TIME);
+  for (int i = ack_acknum_A; i<= forend; i++){
+    packet_resend.seqnum = bufferedmessages[i].seqnum;
+    packet_resend.acknum = bufferedmessages[i].acknum;
+    packet_resend.checksum = bufferedmessages[i].checksum;
+  //  printf("Packets being resent with seq %d, ack %d, msg %d \n",packet_resend.seqnum, packet_resend.acknum, packet_resend.checksum );
+    strcpy(packet_resend.payload,bufferedmessages[i].payload);
+    tolayer3(SENDER_A, packet_resend);
+  }
 }  
 
 /* the following rouytine will be called once (only) before any other */
@@ -185,25 +183,9 @@ void B_init()
 {
 }
 /* called from layer 5, passed the data to be sent to other side */
-/*void B_output(struct msg message)
+void B_output(struct msg message)
 {
-  struct pkt packet1;
-  packet1.seqnum = BtoAseqnum_B;
-  packet1.acknum = BtoAacknum_B;
-  strncpy (packet1.payload, message.data, datachunks);
-  int checksum_B = checksum(packet1.seqnum , packet1.acknum , packet1.payload);
-  packet1.checksum = checksum_B;
-  printf("**********B_output********** \n");
-  printf("--------Packet being sent from B to A------- \n");
-  printpacketdata(packet1.payload);
-  prev_pkt_B = packet1;
-  printf("Packet Sequence Number is: %d \n", packet1.seqnum);
-  printf("Packet Ack Number is: %d \n", packet1.acknum);
-  printf("Packet CheckSum is: %d \n", packet1.checksum);
-  tolayer3(SENDER_B, packet1);
-  starttimer(SENDER_B, TIME);
-
-}*/
+}
 /* called from layer 3, when a packet arrives for layer 4 at B*/
 void B_input(struct pkt packet)
 {
@@ -222,44 +204,22 @@ void B_input(struct pkt packet)
       printf("----------B Sending Acknowledgement %d to A for packet with Seqnum: %d---------- \n", packet.acknum, packet.seqnum);
       expected_seqnum_B = expected_seqnum_B + 1;
       expected_acknum_B = expected_acknum_B + 1;
-      A_input(packet);
       A_packetcount++;
-      printf("-------Total number of packets sent to B from A so far: %d------- \n", A_packetcount);
+      printf("-------Total number of packets sent from A to B so far: %d------- \n", A_packetcount);
+      A_input(packet);
     }
     else{
       printf("-------B sending NAck to A for packet with seqnum: %d------- \n", packet.seqnum);
-      packet.acknum = expected_acknum_B + 1;
+      packet.acknum = expected_acknum_B;
+      Total_packs_discarded = Total_packs_discarded + 1;
+      printf("Total packets discarded so far %d \n", Total_packs_discarded);
       A_input(packet);
     } 
-  }
-  /*else if ((packet.seqnum == 2) || (packet.seqnum == 3)){
-    printf("**********B_input********* \n");
-    int checksum_returnpkt_B = checksum(packet.seqnum, packet.acknum, packet.payload);
-    if((packet.seqnum == BtoAseqnum_B) &&
-        (packet.acknum == BtoAacknum_B) &&
-        (packet.checksum == checksum_returnpkt_B)){
-      printf("-------B Received acknowledgement %d from A for Seqnum: %d-------\n", packet.acknum , packet.seqnum);
-      stoptimer(SENDER_B);
-      tolayer5(SENDER_B,packet.payload);
-      BtoAseqnum_B = flip(BtoAseqnum_B);
-      BtoAacknum_B = flip(BtoAacknum_B);
-    }
-    else{
-      printf("------Packet with Seqnum:%d is corrupted------ \n", flip(packet.seqnum));
-      stoptimer(SENDER_B);
-      B_timerinterrupt();
-
-    }
-  }
-}*/
+ }
 
 /* called when B's timer goes off */
 void B_timerinterrupt()
 {
-  printf("************B_timerinterrupt*********** \n");
-  printf("-------Resending packet wth Seqnum:%d from B-------\n", prev_pkt_B.seqnum);
-  tolayer3(SENDER_B, prev_pkt_B);
-  starttimer(SENDER_B, TIME);
 }
 
 /*****************************************************************
