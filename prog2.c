@@ -50,6 +50,7 @@ struct pkt {
   int B_packetcount =0;
   struct pkt *sent_packets;
   struct pkt *received_packets_buffered;
+  struct pkt * acked_packets_B;
   struct msg *buffer_messages;
   int base = 1;
   int receiver_base =1;
@@ -57,7 +58,7 @@ struct pkt {
   //struct pkt bufferedmessages[50];
   int A_packetcount = 0;
   int expected_acknum_A =1;
-  starttimer(int, float);
+  starttimer(int,int, float);
 /* the following routine will be called once (only) before any other */
 /* entity A routines are called. You can use it to do any initialization */
 void A_init()
@@ -102,6 +103,7 @@ void A_output(struct msg message)
     A_packetcount++;
     seqnum_A++;
     sent_packets[seqnum_A-1-base] = packet;
+    starttimer(SENDER_A, seqnum_A-1, TIME);
     tolayer3(SENDER_A, packet);
   }
   else{
@@ -128,20 +130,26 @@ void A_output(struct msg message)
 void A_input(struct pkt packet)
 {
     printf("**********A_input********* \n");
-    if(packet.acknum == expected_acknum_A){
+    //printf("received acknum= %d , expectedacknum %d\n", packet.acknum, expected_acknum_A);
+    //if(packet.acknum == expected_acknum_A){
       if(packet.checksum == checksum(packet.seqnum, 
                                    packet.acknum, 
                                    packet.payload)){
         printf("-------A Received acknowledgement %d from B-------\n", 
                packet.acknum);
+       // base = expected_acknum_A + 1;
         expected_acknum_A++;
+        stoptimer(SENDER_A, packet.acknum);
         }
-      }
+      //}
     }
 /* called when A's timer goes off */
-void A_timerinterrupt()
+void A_timerinterrupt(int seqnum)
 {
   printf("************A_timerinterrupt*********** \n");
+  printf("resending packet to B with seqnum %d \n", seqnum);
+  tolayer3(SENDER_A, sent_packets[seqnum-1]);
+  starttimer(SENDER_A, seqnum, TIME);
 }  
 
 /* the following rouytine will be called once (only) before any other */
@@ -149,6 +157,7 @@ void A_timerinterrupt()
 void B_init()
 {
   received_packets_buffered = (struct pkt*)malloc(receiver_window_size * sizeof(struct pkt));
+  acked_packets_B = (struct pkt*)malloc(receiver_window_size * sizeof(struct pkt));
 }
 /* called from layer 5, passed the data to be sent to other side */
 void B_output(struct msg message)
@@ -170,32 +179,46 @@ void B_input(struct pkt packet)
       if(packet.checksum == checksum(packet.seqnum,packet.acknum,packet.payload)){
         if(packet.seqnum == expected_seqnum_B){
           printf("----------B Sending Acknowledgement %d to A for packet with Seqnum: %d---------- \n", expected_seqnum_B, packet.seqnum);
+          acked_packets_B[expected_seqnum_B] = packet;
           expected_seqnum_B++;
           receiver_base = expected_seqnum_B + 1;
           B_packetcount++;
-          printf("-------Total number of packets sent from A to B so far: %d------- \n", B_packetcount);
+          //printf("-------Total number of packets sent from A to B so far: %d------- \n", B_packetcount);
           tolayer3(SENDER_B, packet);
           tolayer5(SENDER_B, packet);
         }
         else if(packet.seqnum != expected_seqnum_B){
           printf("----------B received unexpected packet from A with seq num:%d---------\n",packet.seqnum);
           if(packet.seqnum < expected_seqnum_B){
-            printf("----------Lost or Corrupted Packet got re-sent \n");
-            printf("----------B Sending Acknowledgement %d to A for packet with Seqnum: %d---------- \n", packet.seqnum, packet.seqnum);
-            tolayer3(SENDER_B, packet);
-            printf("---------B looking for any buffered messages \n");
-            for (i = packet.seqnum + 1; i < buffered_messages_count_B; i++){
-              printf("Sending messages to upper layer for buffered messages \n");
-              tolayer5(SENDER_B, received_packets_buffered[i]);
+              //printf("Seqnum number already exists? %d \n",received_packets_buffered[4].seqnum);
+            if(packet.seqnum == acked_packets_B[packet.seqnum].seqnum){
+              printf("Packet was acknowledged earlier. Resending the ACK to A. Layer 5 already has this message \n");
+              tolayer3(SENDER_B, packet);
+            }else{
+              printf("----------Lost or Corrupted Packet got re-sent \n");
+              printf("----------B Sending Acknowledgement %d to A for packet with Seqnum: %d---------- \n", packet.seqnum, packet.seqnum);
+              acked_packets_B[packet.seqnum] = packet;
+              B_packetcount++;
+              tolayer3(SENDER_B, packet);
+              printf("---------B looking for any buffered messages. No of buffered messages available %d \n", buffered_messages_count_B);
+              for (i = packet.seqnum + 1; i < packet.seqnum + 1+ buffered_messages_count_B; i++){
+                printf("Sending messages to upper layer for buffered messages \n");
+                tolayer5(SENDER_B, received_packets_buffered[i]);
+               // expected_seqnum_B = expected_seqnum_B + 1;
+              }
             }
           }
-          else{
+          else if(packet.seqnum > expected_seqnum_B){
             printf("Packet will be buffered and sending Ack %d to A for packet with Seqnum %d \n", packet.seqnum, packet.seqnum);
             received_packets_buffered[packet.seqnum] = packet;
+           // printf("Buffered packet at B is received_packets_buffered[packet.seqnum].seqnum=%d \n",received_packets_buffered[packet.seqnum].seqnum);
+            B_packetcount++;
             buffered_messages_count_B++;
+            expected_seqnum_B = expected_seqnum_B + 1;
             tolayer3(SENDER_B, packet);
           }
         }
+          printf("-------Total number of packets sent from A to B so far: %d------- \n", B_packetcount);
       }
     }
 }
@@ -240,6 +263,7 @@ struct event *evlist = NULL;   /* the event list */
 #define  ON              1
 #define   A    0
 #define   B    1
+#define TIMER_B 999999
 
 
 
@@ -319,10 +343,10 @@ main()
       free(eventptr->pktptr);          /* free the memory for packet */
             }
           else if (eventptr->evtype ==  TIMER_INTERRUPT) {
-            if (eventptr->eventity == A) 
-         A_timerinterrupt();
-             else
+            if (eventptr->eventity == TIMER_B) 
          B_timerinterrupt();
+             else
+         A_timerinterrupt(eventptr ->eventity);
              }
           else  {
        printf("INTERNAL PANIC: unknown event type \n");
@@ -471,14 +495,14 @@ printevlist()
 
 /* called by students routine to cancel a previously-started timer */
 /* A or B is trying to stop timer */
-stoptimer(int AorB){
+stoptimer(int AorB, int seqnum){
  struct event *q,*qold;
 
  if (TRACE>2)
     printf("          STOP TIMER: stopping timer at %f\n",time);
 /* for (q=evlist; q!=NULL && q->next!=NULL; q = q->next)  */
  for (q=evlist; q!=NULL ; q = q->next) 
-    if ( (q->evtype==TIMER_INTERRUPT  && q->eventity==AorB) ) { 
+    if ( (q->evtype==TIMER_INTERRUPT  && q->eventity==seqnum) ) { 
        /* remove this event */
        if (q->next==NULL && q->prev==NULL)
              evlist=NULL;         /* remove first and only event on list */
@@ -499,7 +523,7 @@ stoptimer(int AorB){
 }
 
 
-starttimer(int AorB, float increment){
+starttimer(int AorB, int seqnum, float increment){
 
  struct event *q;
  struct event *evptr;
@@ -519,7 +543,7 @@ starttimer(int AorB, float increment){
    evptr = (struct event *)malloc(sizeof(struct event));
    evptr->evtime =  time + increment;
    evptr->evtype =  TIMER_INTERRUPT;
-   evptr->eventity = AorB;
+   evptr->eventity = seqnum;
    insertevent(evptr);
 } 
 
