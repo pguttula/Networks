@@ -105,7 +105,7 @@ void A_output(struct msg message)
   else
   {
     if(num_buff_msgs >= buffersize){
-      printf("----------A does not have any buffer left. Dropping the messages-----------\n");
+      printf("----------A doesn't have any buffer left. Dropping the messages-----------\n");
     }
     else if (num_buff_msgs < buffersize){
       //we have a buffer left in A
@@ -155,8 +155,8 @@ void A_input(struct pkt packet)
       }
     }
     else{
-      printf("Packet sent to B either got corrupted or lost\n");
-      printf("------Receiving duplicates packets with acknum:%d. Ignoring the acks------ \n", packet.acknum);
+      printf("------A received a corrupt or duplicate ACK-------\n");
+      printf("------Ignoring packet received with acknum:%d------ \n", packet.acknum);
     }
 }
 /* called when A's timer goes off */
@@ -166,7 +166,7 @@ void A_timerinterrupt()
   int forend = seqnum_A - base;
   starttimer(SENDER_A,TIME);
   for(int i = 0; i< forend; i++){
-    printf("Packet with seqnum %d being resent from A \n",sent_packets[i].seqnum);
+    printf("--------Packet with seqnum %d being resent from A ---------\n",sent_packets[i].seqnum);
     tolayer3(SENDER_A, sent_packets[i]);
   }
 }  
@@ -356,19 +356,24 @@ init()                         /* initialize the simulator */
   int i;
   float sum, avg;
   float jimsrand();
-  
-  
+    
+   printf("***********GO-BACK N PROTOCOL*********** \n");
    printf("-----  Stop and Wait Network Simulator Version 1.1 -------- \n\n");
-   printf("Enter the number of messages to simulate: ");
-   scanf("%d",&nsimmax);
-   printf("Enter  packet loss probability [enter 0.0 for no loss]:");
-   scanf("%f",&lossprob);
-   printf("Enter packet corruption probability [0.0 for no corruption]:");
-   scanf("%f",&corruptprob);
-   printf("Enter average time between messages from sender's layer5 [ > 0.0]:");
-   scanf("%f",&lambda);
-   printf("Enter TRACE:");
-   scanf("%d",&TRACE);
+  // printf("Enter the number of messages to simulate: ");
+  // scanf("%d",&nsimmax);
+   nsimmax = 80;
+  // printf("Enter  packet loss probability [enter 0.0 for no loss]:");
+  // scanf("%f",&lossprob);
+   lossprob = 0.2;
+  // printf("Enter packet corruption probability [0.0 for no corruption]:");
+  // scanf("%f",&corruptprob);
+   corruptprob = 0.2;
+  // printf("Enter average time between messages from sender's layer5 [ > 0.0]:");
+  // scanf("%f",&lambda);
+   lambda = 10;
+  // printf("Enter TRACE:");
+  // scanf("%d",&TRACE);
+   TRACE = 2;
 
    srand(9999);              /* init random number generator */
    sum = 0.0;                /* test random number generator for students */
