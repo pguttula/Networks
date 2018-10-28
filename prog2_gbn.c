@@ -73,8 +73,11 @@ int checksum(int seqnum,int acknum, char * payload){
 }
 printpacketdata(char * payload){
   int i;
-  //for (i=0; packet.payload[i]; i++){
-    printf("Packet payload is :%.20s \n",payload);
+  printf("Packet Payload is:");
+  for (i=0; i<datachunks; i++){
+    printf("%c", payload[i]);
+  }
+  printf("\n");
 }
 
 /* called from layer 5, passed the data to be sent to other side */

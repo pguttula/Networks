@@ -5,7 +5,7 @@
 EVENT time: 18.705740,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa 
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 Packet Sequence Number is: 1 
 Packet Ack Number is: 1 
 Packet CheckSum is: 1941 
@@ -13,7 +13,7 @@ Packet CheckSum is: 1941
 EVENT time: 24.170835,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 1 from A------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa 
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 Packet Sequence Number is: 1 
 Packet Ack Number is: 1 
 Packet CheckSum is: 1941 
@@ -29,7 +29,7 @@ EVENT time: 29.402449,  type: 2, fromlayer3  entity: 0
 EVENT time: 35.124840,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :bbbbbbbbbbbbbbbbbbbb 
+Packet Payload is:bbbbbbbbbbbbbbbbbbbb
 Packet Sequence Number is: 2 
 Packet Ack Number is: 2 
 Packet CheckSum is: 1962 
@@ -38,7 +38,7 @@ Packet CheckSum is: 1962
 EVENT time: 37.680447,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :cccccccccccccccccccc 
+Packet Payload is:cccccccccccccccccccc
 Packet Sequence Number is: 3 
 Packet Ack Number is: 3 
 Packet CheckSum is: 1983 
@@ -54,7 +54,7 @@ EVENT time: 38.705742,  type: 0, timerinterrupt   entity: 0
 EVENT time: 42.147713,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 3 from A------- 
-Packet payload is :Zccccccccccccccccccc 
+Packet Payload is:Zccccccccccccccccccc
 Packet Sequence Number is: 3 
 Packet Ack Number is: 3 
 Packet CheckSum is: 1974 
@@ -63,7 +63,7 @@ Packet CheckSum is: 1974
 EVENT time: 46.394402,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :dddddddddddddddddddd 
+Packet Payload is:dddddddddddddddddddd
 Packet Sequence Number is: 4 
 Packet Ack Number is: 4 
 Packet CheckSum is: 2004 
@@ -71,7 +71,7 @@ Packet CheckSum is: 2004
 EVENT time: 51.576138,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 2 from A------- 
-Packet payload is :bbbbbbbbbbbbbbbbbbbb 
+Packet Payload is:bbbbbbbbbbbbbbbbbbbb
 Packet Sequence Number is: 2 
 Packet Ack Number is: 2 
 Packet CheckSum is: 1962 
@@ -85,7 +85,7 @@ EVENT time: 53.942478,  type: 2, fromlayer3  entity: 0
 EVENT time: 57.571404,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :eeeeeeeeeeeeeeeeeeee 
+Packet Payload is:eeeeeeeeeeeeeeeeeeee
 Packet Sequence Number is: 5 
 Packet Ack Number is: 5 
 Packet CheckSum is: 2025 
@@ -94,7 +94,7 @@ Packet CheckSum is: 2025
 EVENT time: 59.039051,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 3 from A------- 
-Packet payload is :cccccccccccccccccccc 
+Packet Payload is:cccccccccccccccccccc
 Packet Sequence Number is: 3 
 Packet Ack Number is: 3 
 Packet CheckSum is: 1983 
@@ -105,7 +105,7 @@ Packet CheckSum is: 1983
 EVENT time: 61.769291,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 4 from A------- 
-Packet payload is :dddddddddddddddddddd 
+Packet Payload is:dddddddddddddddddddd
 Packet Sequence Number is: 4 
 Packet Ack Number is: 4 
 Packet CheckSum is: 2004 
@@ -115,7 +115,7 @@ Packet CheckSum is: 2004
 EVENT time: 67.742073,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :ffffffffffffffffffff 
+Packet Payload is:ffffffffffffffffffff
 Packet Sequence Number is: 6 
 Packet Ack Number is: 6 
 Packet CheckSum is: 2046 
@@ -128,7 +128,7 @@ EVENT time: 68.018311,  type: 2, fromlayer3  entity: 0
 EVENT time: 81.523926,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :gggggggggggggggggggg 
+Packet Payload is:gggggggggggggggggggg
 Packet Sequence Number is: 7 
 Packet Ack Number is: 7 
 Packet CheckSum is: 2067 
@@ -136,7 +136,7 @@ Packet CheckSum is: 2067
 EVENT time: 84.154579,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 7 from A------- 
-Packet payload is :gggggggggggggggggggg 
+Packet Payload is:gggggggggggggggggggg
 Packet Sequence Number is: 7 
 Packet Ack Number is: 7 
 Packet CheckSum is: 2067 
@@ -156,7 +156,7 @@ EVENT time: 88.018311,  type: 0, timerinterrupt   entity: 0
 EVENT time: 89.324699,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 6 from A------- 
-Packet payload is :ffffffffffffffffffff 
+Packet Payload is:ffffffffffffffffffff
 Packet Sequence Number is: 6 
 Packet Ack Number is: 6 
 Packet CheckSum is: 2046 
@@ -166,7 +166,7 @@ Packet CheckSum is: 2046
 EVENT time: 91.168831,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :hhhhhhhhhhhhhhhhhhhh 
+Packet Payload is:hhhhhhhhhhhhhhhhhhhh
 Packet Sequence Number is: 8 
 Packet Ack Number is: 8 
 Packet CheckSum is: 2088 
@@ -174,7 +174,7 @@ Packet CheckSum is: 2088
 EVENT time: 94.903320,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 7 from A------- 
-Packet payload is :Zggggggggggggggggggg 
+Packet Payload is:Zggggggggggggggggggg
 Packet Sequence Number is: 7 
 Packet Ack Number is: 7 
 Packet CheckSum is: 2054 
@@ -188,7 +188,7 @@ EVENT time: 95.574631,  type: 2, fromlayer3  entity: 0
 EVENT time: 97.623230,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :iiiiiiiiiiiiiiiiiiii 
+Packet Payload is:iiiiiiiiiiiiiiiiiiii
 Packet Sequence Number is: 9 
 Packet Ack Number is: 9 
 Packet CheckSum is: 2109 
@@ -196,7 +196,7 @@ Packet CheckSum is: 2109
 EVENT time: 97.781158,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 8 from A------- 
-Packet payload is :hhhhhhhhhhhhhhhhhhhh 
+Packet Payload is:hhhhhhhhhhhhhhhhhhhh
 Packet Sequence Number is: 8 
 Packet Ack Number is: 8 
 Packet CheckSum is: 2088 
@@ -208,7 +208,7 @@ EVENT time: 99.058617,  type: 2, fromlayer3  entity: 0
 EVENT time: 104.900040,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 9 from A------- 
-Packet payload is :iiiiiiiiiiiiiiiiiiii 
+Packet Payload is:iiiiiiiiiiiiiiiiiiii
 Packet Sequence Number is: 9 
 Packet Ack Number is: 9 
 Packet CheckSum is: 2109 
@@ -230,7 +230,7 @@ EVENT time: 108.018311,  type: 0, timerinterrupt   entity: 0
 EVENT time: 109.824646,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 7 from A------- 
-Packet payload is :Zggggggggggggggggggg 
+Packet Payload is:Zggggggggggggggggggg
 Packet Sequence Number is: 7 
 Packet Ack Number is: 7 
 Packet CheckSum is: 2054 
@@ -244,7 +244,7 @@ EVENT time: 110.517708,  type: 2, fromlayer3  entity: 0
 EVENT time: 112.841690,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 9 from A------- 
-Packet payload is :iiiiiiiiiiiiiiiiiiii 
+Packet Payload is:iiiiiiiiiiiiiiiiiiii
 Packet Sequence Number is: 9 
 Packet Ack Number is: 9 
 Packet CheckSum is: 2109 
@@ -253,7 +253,7 @@ Packet CheckSum is: 2109
 EVENT time: 116.281189,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :jjjjjjjjjjjjjjjjjjjj 
+Packet Payload is:jjjjjjjjjjjjjjjjjjjj
 Packet Sequence Number is: 10 
 Packet Ack Number is: 10 
 Packet CheckSum is: 2130 
@@ -264,7 +264,7 @@ EVENT time: 117.595749,  type: 2, fromlayer3  entity: 0
 EVENT time: 119.575356,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk 
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 Packet Sequence Number is: 11 
 Packet Ack Number is: 11 
 Packet CheckSum is: 2151 
@@ -272,7 +272,7 @@ Packet CheckSum is: 2151
 EVENT time: 122.265289,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 10 from A------- 
-Packet payload is :jjjjjjjjjjjjjjjjjjjj 
+Packet Payload is:jjjjjjjjjjjjjjjjjjjj
 Packet Sequence Number is: 10 
 Packet Ack Number is: 10 
 Packet CheckSum is: 2130 
@@ -282,7 +282,7 @@ Packet CheckSum is: 2130
 EVENT time: 123.969528,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 11 from A------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk 
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 Packet Sequence Number is: 11 
 Packet Ack Number is: 11 
 Packet CheckSum is: 2151 
@@ -306,7 +306,7 @@ EVENT time: 131.927383,  type: 2, fromlayer3  entity: 0
 EVENT time: 132.410767,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 5 from A------- 
-Packet payload is :eeeeeeeeeeeeeeeeeeee 
+Packet Payload is:eeeeeeeeeeeeeeeeeeee
 Packet Sequence Number is: 5 
 Packet Ack Number is: 5 
 Packet CheckSum is: 2025 
@@ -317,7 +317,7 @@ Packet CheckSum is: 2025
 EVENT time: 138.075790,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 6 from A------- 
-Packet payload is :ffffffffffffffffffff 
+Packet Payload is:ffffffffffffffffffff
 Packet Sequence Number is: 6 
 Packet Ack Number is: 6 
 Packet CheckSum is: 2046 
@@ -328,7 +328,7 @@ Packet CheckSum is: 2046
 EVENT time: 138.084274,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :llllllllllllllllllll 
+Packet Payload is:llllllllllllllllllll
 Packet Sequence Number is: 12 
 Packet Ack Number is: 12 
 Packet CheckSum is: 2172 
@@ -341,7 +341,7 @@ EVENT time: 143.976746,  type: 2, fromlayer3  entity: 0
 EVENT time: 144.772644,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 7 from A------- 
-Packet payload is :Zggggggggggggggggggg 
+Packet Payload is:Zggggggggggggggggggg
 Packet Sequence Number is: 7 
 Packet Ack Number is: 7 
 Packet CheckSum is: 2054 
@@ -365,12 +365,12 @@ EVENT time: 148.018311,  type: 0, timerinterrupt   entity: 0
 
 EVENT time: 150.540253,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message mmmmmmmmmmmmmmmmmmmmü to buffer at 0--------
+--------A adds message mmmmmmmmmmmmmmmmmmmmý to buffer at 0--------
 
 EVENT time: 154.260818,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 8 from A------- 
-Packet payload is :hhhhhhhhhhhhhhhhhhhh 
+Packet Payload is:hhhhhhhhhhhhhhhhhhhh
 Packet Sequence Number is: 8 
 Packet Ack Number is: 8 
 Packet CheckSum is: 2088 
@@ -379,7 +379,7 @@ Packet CheckSum is: 2088
 EVENT time: 156.766037,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 9 from A------- 
-Packet payload is :iiiiiiiiiiiiiiiiiiii 
+Packet Payload is:iiiiiiiiiiiiiiiiiiii
 Packet Sequence Number is: 9 
 Packet Ack Number is: 9 
 Packet CheckSum is: 2109 
@@ -387,20 +387,20 @@ Packet CheckSum is: 2109
 
 EVENT time: 158.403442,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message nnnnnnnnnnnnnnnnnnnnü to buffer at 1--------
+--------A adds message nnnnnnnnnnnnnnnnnnnný to buffer at 1--------
 
 EVENT time: 162.206635,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
 -------A Received acknowledgement 6 from B-------
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm 
+Packet Payload is:mmmmmmmmmmmmmmmmmmmm
 Packet Sequence Number is: 13 
 Packet Ack Number is: 13 
 Packet CheckSum is: 2193 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn 
+Packet Payload is:nnnnnnnnnnnnnnnnnnnn
 Packet Sequence Number is: 14 
 Packet Ack Number is: 14 
 Packet CheckSum is: 2214 
@@ -408,7 +408,7 @@ Packet CheckSum is: 2214
 EVENT time: 163.025314,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 10 from A------- 
-Packet payload is :jjjjjjjjjjjjjjjjjjjj 
+Packet Payload is:jjjjjjjjjjjjjjjjjjjj
 Packet Sequence Number is: 10 
 Packet Ack Number is: 10 
 Packet CheckSum is: 2130 
@@ -418,7 +418,7 @@ Packet CheckSum is: 2130
 EVENT time: 165.174698,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 12 from A------- 
-Packet payload is :llllllllllllllllllll 
+Packet Payload is:llllllllllllllllllll
 Packet Sequence Number is: 12 
 Packet Ack Number is: 12 
 Packet CheckSum is: 2172 
@@ -428,7 +428,7 @@ Packet CheckSum is: 2172
 EVENT time: 166.758560,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 5 from A------- 
-Packet payload is :Zeeeeeeeeeeeeeeeeeee 
+Packet Payload is:Zeeeeeeeeeeeeeeeeeee
 Packet Sequence Number is: 5 
 Packet Ack Number is: 5 
 Packet CheckSum is: 2014 
@@ -440,7 +440,7 @@ EVENT time: 166.933426,  type: 2, fromlayer3  entity: 0
 EVENT time: 172.005692,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 6 from A------- 
-Packet payload is :ffffffffffffffffffff 
+Packet Payload is:ffffffffffffffffffff
 Packet Sequence Number is: 6 
 Packet Ack Number is: 6 
 Packet CheckSum is: 2046 
@@ -453,7 +453,7 @@ EVENT time: 173.701874,  type: 2, fromlayer3  entity: 0
 
 EVENT time: 176.472092,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ooooooooooooooooooooü to buffer at 0--------
+--------A adds message ooooooooooooooooooooý to buffer at 0--------
 
 EVENT time: 177.420090,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -461,7 +461,7 @@ EVENT time: 177.420090,  type: 2, fromlayer3  entity: 0
 EVENT time: 180.949432,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 7 from A------- 
-Packet payload is :Zggggggggggggggggggg 
+Packet Payload is:Zggggggggggggggggggg
 Packet Sequence Number is: 7 
 Packet Ack Number is: 7 
 Packet CheckSum is: 2054 
@@ -484,7 +484,7 @@ EVENT time: 182.206635,  type: 0, timerinterrupt   entity: 0
 EVENT time: 190.271881,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 8 from A------- 
-Packet payload is :Zhhhhhhhhhhhhhhhhhhh 
+Packet Payload is:Zhhhhhhhhhhhhhhhhhhh
 Packet Sequence Number is: 8 
 Packet Ack Number is: 8 
 Packet CheckSum is: 2074 
@@ -493,7 +493,7 @@ Packet CheckSum is: 2074
 EVENT time: 193.268265,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 9 from A------- 
-Packet payload is :iiiiiiiiiiiiiiiiiiii 
+Packet Payload is:iiiiiiiiiiiiiiiiiiii
 Packet Sequence Number is: 9 
 Packet Ack Number is: 9 
 Packet CheckSum is: 2109 
@@ -502,7 +502,7 @@ Packet CheckSum is: 2109
 EVENT time: 194.417297,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 11 from A------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk 
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 Packet Sequence Number is: 11 
 Packet Ack Number is: 11 
 Packet CheckSum is: 1002150 
@@ -510,19 +510,19 @@ Packet CheckSum is: 1002150
 
 EVENT time: 194.694839,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ppppppppppppppppppppü to buffer at 1--------
+--------A adds message ppppppppppppppppppppý to buffer at 1--------
 
 EVENT time: 196.283112,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
 
 EVENT time: 199.835785,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message qqqqqqqqqqqqqqqqqqqqü to buffer at 2--------
+--------A adds message qqqqqqqqqqqqqqqqqqqqý to buffer at 2--------
 
 EVENT time: 201.985809,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 12 from A------- 
-Packet payload is :llllllllllllllllllll 
+Packet Payload is:llllllllllllllllllll
 Packet Sequence Number is: 12 
 Packet Ack Number is: 12 
 Packet CheckSum is: 2172 
@@ -549,7 +549,7 @@ EVENT time: 204.499466,  type: 2, fromlayer3  entity: 0
 EVENT time: 207.667267,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 13 from A------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm 
+Packet Payload is:mmmmmmmmmmmmmmmmmmmm
 Packet Sequence Number is: 13 
 Packet Ack Number is: 13 
 Packet CheckSum is: 2193 
@@ -558,12 +558,12 @@ Packet CheckSum is: 2193
 
 EVENT time: 210.353683,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message rrrrrrrrrrrrrrrrrrrrü to buffer at 3--------
+--------A adds message rrrrrrrrrrrrrrrrrrrrý to buffer at 3--------
 
 EVENT time: 212.606476,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 14 from A------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn 
+Packet Payload is:nnnnnnnnnnnnnnnnnnnn
 Packet Sequence Number is: 14 
 Packet Ack Number is: 14 
 Packet CheckSum is: 2214 
@@ -575,7 +575,7 @@ EVENT time: 213.681290,  type: 2, fromlayer3  entity: 0
 EVENT time: 219.291885,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 7 from A------- 
-Packet payload is :gggggggggggggggggggg 
+Packet Payload is:gggggggggggggggggggg
 Packet Sequence Number is: 7 
 Packet Ack Number is: 7 
 Packet CheckSum is: 2067 
@@ -600,12 +600,12 @@ EVENT time: 222.206635,  type: 0, timerinterrupt   entity: 0
 
 EVENT time: 223.731689,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ssssssssssssssssssssü to buffer at 4--------
+--------A adds message ssssssssssssssssssssý to buffer at 4--------
 
 EVENT time: 225.001953,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 8 from A------- 
-Packet payload is :hhhhhhhhhhhhhhhhhhhh 
+Packet Payload is:hhhhhhhhhhhhhhhhhhhh
 Packet Sequence Number is: 8 
 Packet Ack Number is: 8 
 Packet CheckSum is: 2088 
@@ -617,13 +617,13 @@ EVENT time: 228.038910,  type: 2, fromlayer3  entity: 0
 -------A Received acknowledgement 8 from B-------
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :oooooooooooooooooooo 
+Packet Payload is:oooooooooooooooooooo
 Packet Sequence Number is: 15 
 Packet Ack Number is: 15 
 Packet CheckSum is: 2235 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :pppppppppppppppppppp 
+Packet Payload is:pppppppppppppppppppp
 Packet Sequence Number is: 16 
 Packet Ack Number is: 16 
 Packet CheckSum is: 2256 
@@ -631,7 +631,7 @@ Packet CheckSum is: 2256
 EVENT time: 229.834717,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 9 from A------- 
-Packet payload is :iiiiiiiiiiiiiiiiiiii 
+Packet Payload is:iiiiiiiiiiiiiiiiiiii
 Packet Sequence Number is: 9 
 Packet Ack Number is: 9 
 Packet CheckSum is: 2109 
@@ -641,7 +641,7 @@ Packet CheckSum is: 2109
 EVENT time: 232.613297,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 10 from A------- 
-Packet payload is :Zjjjjjjjjjjjjjjjjjjj 
+Packet Payload is:Zjjjjjjjjjjjjjjjjjjj
 Packet Sequence Number is: 10 
 Packet Ack Number is: 10 
 Packet CheckSum is: 2114 
@@ -649,14 +649,14 @@ Packet CheckSum is: 2114
 
 EVENT time: 236.973618,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ttttttttttttttttttttü to buffer at 3--------
+--------A adds message ttttttttttttttttttttý to buffer at 3--------
 
 EVENT time: 237.986435,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
 -------A Received acknowledgement 9 from B-------
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :qqqqqqqqqqqqqqqqqqqq 
+Packet Payload is:qqqqqqqqqqqqqqqqqqqq
 Packet Sequence Number is: 17 
 Packet Ack Number is: 17 
 Packet CheckSum is: 2277 
@@ -665,7 +665,7 @@ Packet CheckSum is: 2277
 EVENT time: 240.373276,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 11 from A------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk 
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 Packet Sequence Number is: 11 
 Packet Ack Number is: 11 
 Packet CheckSum is: 2151 
@@ -677,7 +677,7 @@ EVENT time: 247.036255,  type: 2, fromlayer3  entity: 0
 EVENT time: 247.765656,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 13 from A------- 
-Packet payload is :Zmmmmmmmmmmmmmmmmmmm 
+Packet Payload is:Zmmmmmmmmmmmmmmmmmmm
 Packet Sequence Number is: 13 
 Packet Ack Number is: 13 
 Packet CheckSum is: 2174 
@@ -685,12 +685,12 @@ Packet CheckSum is: 2174
 
 EVENT time: 248.234421,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message uuuuuuuuuuuuuuuuuuuuü to buffer at 3--------
+--------A adds message uuuuuuuuuuuuuuuuuuuuý to buffer at 3--------
 
 EVENT time: 250.184021,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 14 from A------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn 
+Packet Payload is:nnnnnnnnnnnnnnnnnnnn
 Packet Sequence Number is: 14 
 Packet Ack Number is: 14 
 Packet CheckSum is: 2214 
@@ -698,12 +698,12 @@ Packet CheckSum is: 2214
 
 EVENT time: 250.249557,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message vvvvvvvvvvvvvvvvvvvvü to buffer at 4--------
+--------A adds message vvvvvvvvvvvvvvvvvvvvý to buffer at 4--------
 
 EVENT time: 252.046951,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 7 from A------- 
-Packet payload is :gggggggggggggggggggg 
+Packet Payload is:gggggggggggggggggggg
 Packet Sequence Number is: 7 
 Packet Ack Number is: 7 
 Packet CheckSum is: 2067 
@@ -715,7 +715,7 @@ EVENT time: 252.225983,  type: 2, fromlayer3  entity: 0
 EVENT time: 256.171906,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 8 from A------- 
-Packet payload is :hhhhhhhhhhhhhhhhhhhh 
+Packet Payload is:hhhhhhhhhhhhhhhhhhhh
 Packet Sequence Number is: 8 
 Packet Ack Number is: 8 
 Packet CheckSum is: 2088 
@@ -745,7 +745,7 @@ EVENT time: 263.692108,  type: 2, fromlayer3  entity: 0
 EVENT time: 266.097351,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 9 from A------- 
-Packet payload is :iiiiiiiiiiiiiiiiiiii 
+Packet Payload is:iiiiiiiiiiiiiiiiiiii
 Packet Sequence Number is: 9 
 Packet Ack Number is: 9 
 Packet CheckSum is: 2109 
@@ -753,12 +753,12 @@ Packet CheckSum is: 2109
 
 EVENT time: 268.438843,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message wwwwwwwwwwwwwwwwwwwwü to buffer at 5--------
+--------A adds message wwwwwwwwwwwwwwwwwwwwý to buffer at 5--------
 
 EVENT time: 268.511078,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 10 from A------- 
-Packet payload is :Zjjjjjjjjjjjjjjjjjjj 
+Packet Payload is:Zjjjjjjjjjjjjjjjjjjj
 Packet Sequence Number is: 10 
 Packet Ack Number is: 10 
 Packet CheckSum is: 2114 
@@ -766,12 +766,12 @@ Packet CheckSum is: 2114
 
 EVENT time: 268.569977,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message xxxxxxxxxxxxxxxxxxxxü to buffer at 6--------
+--------A adds message xxxxxxxxxxxxxxxxxxxxý to buffer at 6--------
 
 EVENT time: 272.942078,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 11 from A------- 
-Packet payload is :Zkkkkkkkkkkkkkkkkkkk 
+Packet Payload is:Zkkkkkkkkkkkkkkkkkkk
 Packet Sequence Number is: 11 
 Packet Ack Number is: 11 
 Packet CheckSum is: 2134 
@@ -783,7 +783,7 @@ EVENT time: 274.069641,  type: 2, fromlayer3  entity: 0
 EVENT time: 274.479584,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 14 from A------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn 
+Packet Payload is:nnnnnnnnnnnnnnnnnnnn
 Packet Sequence Number is: 14 
 Packet Ack Number is: 14 
 Packet CheckSum is: 2214 
@@ -792,12 +792,12 @@ Packet CheckSum is: 2214
 
 EVENT time: 275.281342,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message yyyyyyyyyyyyyyyyyyyyü to buffer at 7--------
+--------A adds message yyyyyyyyyyyyyyyyyyyyý to buffer at 7--------
 
 EVENT time: 276.326782,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 7 from A------- 
-Packet payload is :Zggggggggggggggggggg 
+Packet Payload is:Zggggggggggggggggggg
 Packet Sequence Number is: 7 
 Packet Ack Number is: 7 
 Packet CheckSum is: 2054 
@@ -819,16 +819,16 @@ EVENT time: 277.986450,  type: 0, timerinterrupt   entity: 0
 
 EVENT time: 280.871094,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message zzzzzzzzzzzzzzzzzzzzü to buffer at 8--------
+--------A adds message zzzzzzzzzzzzzzzzzzzzý to buffer at 8--------
 
 EVENT time: 281.106934,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message aaaaaaaaaaaaaaaaaaaaü to buffer at 9--------
+--------A adds message aaaaaaaaaaaaaaaaaaaaý to buffer at 9--------
 
 EVENT time: 285.040283,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 9 from A------- 
-Packet payload is :iiiiiiiiiiiiiiiiiiii 
+Packet Payload is:iiiiiiiiiiiiiiiiiiii
 Packet Sequence Number is: 9 
 Packet Ack Number is: 9 
 Packet CheckSum is: 2109 
@@ -837,7 +837,7 @@ Packet CheckSum is: 2109
 EVENT time: 287.167969,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 10 from A------- 
-Packet payload is :jjjjjjjjjjjjjjjjjjjj 
+Packet Payload is:jjjjjjjjjjjjjjjjjjjj
 Packet Sequence Number is: 10 
 Packet Ack Number is: 10 
 Packet CheckSum is: 2130 
@@ -850,12 +850,12 @@ EVENT time: 288.325989,  type: 2, fromlayer3  entity: 0
 
 EVENT time: 289.612274,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message bbbbbbbbbbbbbbbbbbbbü to buffer at 10--------
+--------A adds message bbbbbbbbbbbbbbbbbbbbý to buffer at 10--------
 
 EVENT time: 294.342224,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 12 from A------- 
-Packet payload is :Zlllllllllllllllllll 
+Packet Payload is:Zlllllllllllllllllll
 Packet Sequence Number is: 12 
 Packet Ack Number is: 12 
 Packet CheckSum is: 2154 
@@ -877,7 +877,7 @@ EVENT time: 297.986450,  type: 0, timerinterrupt   entity: 0
 EVENT time: 300.137756,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 13 from A------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm 
+Packet Payload is:mmmmmmmmmmmmmmmmmmmm
 Packet Sequence Number is: 13 
 Packet Ack Number is: 13 
 Packet CheckSum is: 2193 
@@ -886,11 +886,11 @@ Packet CheckSum is: 2193
 
 EVENT time: 301.850525,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ccccccccccccccccccccü to buffer at 11--------
+--------A adds message ccccccccccccccccccccý to buffer at 11--------
 
 EVENT time: 304.014648,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ddddddddddddddddddddü to buffer at 12--------
+--------A adds message ddddddddddddddddddddý to buffer at 12--------
 
 EVENT time: 305.604401,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -900,7 +900,7 @@ EVENT time: 305.604401,  type: 2, fromlayer3  entity: 0
 EVENT time: 306.756653,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 14 from A------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn 
+Packet Payload is:nnnnnnnnnnnnnnnnnnnn
 Packet Sequence Number is: 14 
 Packet Ack Number is: 14 
 Packet CheckSum is: 2214 
@@ -908,14 +908,14 @@ Packet CheckSum is: 2214
 
 EVENT time: 310.740784,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message eeeeeeeeeeeeeeeeeeeeü to buffer at 13--------
+--------A adds message eeeeeeeeeeeeeeeeeeeeý to buffer at 13--------
 
 EVENT time: 314.296722,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
 -------A Received acknowledgement 10 from B-------
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :rrrrrrrrrrrrrrrrrrrr 
+Packet Payload is:rrrrrrrrrrrrrrrrrrrr
 Packet Sequence Number is: 18 
 Packet Ack Number is: 18 
 Packet CheckSum is: 2298 
@@ -923,7 +923,7 @@ Packet CheckSum is: 2298
 EVENT time: 314.474915,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 15 from A------- 
-Packet payload is :oooooooooooooooooooo 
+Packet Payload is:oooooooooooooooooooo
 Packet Sequence Number is: 15 
 Packet Ack Number is: 15 
 Packet CheckSum is: 2235 
@@ -935,7 +935,7 @@ EVENT time: 316.872253,  type: 2, fromlayer3  entity: 0
 EVENT time: 322.607544,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 16 from A------- 
-Packet payload is :pppppppppppppppppppp 
+Packet Payload is:pppppppppppppppppppp
 Packet Sequence Number is: 16 
 Packet Ack Number is: 16 
 Packet CheckSum is: 2256 
@@ -943,7 +943,7 @@ Packet CheckSum is: 2256
 
 EVENT time: 323.083618,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ffffffffffffffffffffü to buffer at 13--------
+--------A adds message ffffffffffffffffffffý to buffer at 13--------
 
 EVENT time: 324.270966,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -951,7 +951,7 @@ EVENT time: 324.270966,  type: 2, fromlayer3  entity: 0
 EVENT time: 327.066193,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 999999 from A------- 
-Packet payload is :qqqqqqqqqqqqqqqqqqqq 
+Packet Payload is:qqqqqqqqqqqqqqqqqqqq
 Packet Sequence Number is: 999999 
 Packet Ack Number is: 999999 
 Packet CheckSum is: 1002259 
@@ -959,11 +959,11 @@ Packet CheckSum is: 1002259
 
 EVENT time: 328.201233,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ggggggggggggggggggggü to buffer at 14--------
+--------A adds message ggggggggggggggggggggý to buffer at 14--------
 
 EVENT time: 333.318817,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message hhhhhhhhhhhhhhhhhhhhü to buffer at 15--------
+--------A adds message hhhhhhhhhhhhhhhhhhhhý to buffer at 15--------
 
 EVENT time: 334.296722,  type: 0, timerinterrupt   entity: 0
 ************A_timerinterrupt*********** 
@@ -983,7 +983,7 @@ EVENT time: 334.296722,  type: 0, timerinterrupt   entity: 0
 EVENT time: 334.521484,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 10 from A------- 
-Packet payload is :Zjjjjjjjjjjjjjjjjjjj 
+Packet Payload is:Zjjjjjjjjjjjjjjjjjjj
 Packet Sequence Number is: 10 
 Packet Ack Number is: 10 
 Packet CheckSum is: 2114 
@@ -992,7 +992,7 @@ Packet CheckSum is: 2114
 EVENT time: 344.258392,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 11 from A------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk 
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 Packet Sequence Number is: 11 
 Packet Ack Number is: 11 
 Packet CheckSum is: 2151 
@@ -1003,7 +1003,7 @@ Packet CheckSum is: 2151
 EVENT time: 349.608337,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 12 from A------- 
-Packet payload is :llllllllllllllllllll 
+Packet Payload is:llllllllllllllllllll
 Packet Sequence Number is: 12 
 Packet Ack Number is: 12 
 Packet CheckSum is: 2172 
@@ -1013,7 +1013,7 @@ Packet CheckSum is: 2172
 
 EVENT time: 350.518311,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message iiiiiiiiiiiiiiiiiiiiü to buffer at 16--------
+--------A adds message iiiiiiiiiiiiiiiiiiiiý to buffer at 16--------
 
 EVENT time: 354.296722,  type: 0, timerinterrupt   entity: 0
 ************A_timerinterrupt*********** 
@@ -1031,7 +1031,7 @@ EVENT time: 354.296722,  type: 0, timerinterrupt   entity: 0
 EVENT time: 354.380981,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 15 from A------- 
-Packet payload is :oooooooooooooooooooo 
+Packet Payload is:oooooooooooooooooooo
 Packet Sequence Number is: 15 
 Packet Ack Number is: 15 
 Packet CheckSum is: 2235 
@@ -1041,7 +1041,7 @@ Packet CheckSum is: 2235
 EVENT time: 357.883148,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 16 from A------- 
-Packet payload is :pppppppppppppppppppp 
+Packet Payload is:pppppppppppppppppppp
 Packet Sequence Number is: 16 
 Packet Ack Number is: 16 
 Packet CheckSum is: 2256 
@@ -1050,12 +1050,12 @@ Packet CheckSum is: 2256
 
 EVENT time: 360.178314,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message jjjjjjjjjjjjjjjjjjjjü to buffer at 17--------
+--------A adds message jjjjjjjjjjjjjjjjjjjjý to buffer at 17--------
 
 EVENT time: 361.062714,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 17 from A------- 
-Packet payload is :Zqqqqqqqqqqqqqqqqqqq 
+Packet Payload is:Zqqqqqqqqqqqqqqqqqqq
 Packet Sequence Number is: 17 
 Packet Ack Number is: 17 
 Packet CheckSum is: 2254 
@@ -1069,7 +1069,7 @@ EVENT time: 365.489349,  type: 2, fromlayer3  entity: 0
 EVENT time: 366.629852,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 10 from A------- 
-Packet payload is :jjjjjjjjjjjjjjjjjjjj 
+Packet Payload is:jjjjjjjjjjjjjjjjjjjj
 Packet Sequence Number is: 10 
 Packet Ack Number is: 10 
 Packet CheckSum is: 2130 
@@ -1080,13 +1080,13 @@ EVENT time: 368.048279,  type: 2, fromlayer3  entity: 0
 -------A Received acknowledgement 12 from B-------
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :ssssssssssssssssssss 
+Packet Payload is:ssssssssssssssssssss
 Packet Sequence Number is: 19 
 Packet Ack Number is: 19 
 Packet CheckSum is: 2319 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :tttttttttttttttttttt 
+Packet Payload is:tttttttttttttttttttt
 Packet Sequence Number is: 20 
 Packet Ack Number is: 20 
 Packet CheckSum is: 2340 
@@ -1095,7 +1095,7 @@ Packet CheckSum is: 2340
 EVENT time: 373.581604,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 11 from A------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk 
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 Packet Sequence Number is: 11 
 Packet Ack Number is: 11 
 Packet CheckSum is: 2151 
@@ -1104,7 +1104,7 @@ Packet CheckSum is: 2151
 EVENT time: 375.798431,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 13 from A------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm 
+Packet Payload is:mmmmmmmmmmmmmmmmmmmm
 Packet Sequence Number is: 13 
 Packet Ack Number is: 13 
 Packet CheckSum is: 2193 
@@ -1115,7 +1115,7 @@ Packet CheckSum is: 2193
 EVENT time: 377.932068,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 16 from A------- 
-Packet payload is :pppppppppppppppppppp 
+Packet Payload is:pppppppppppppppppppp
 Packet Sequence Number is: 16 
 Packet Ack Number is: 16 
 Packet CheckSum is: 2256 
@@ -1124,7 +1124,7 @@ Packet CheckSum is: 2256
 
 EVENT time: 378.484924,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message kkkkkkkkkkkkkkkkkkkkü to buffer at 16--------
+--------A adds message kkkkkkkkkkkkkkkkkkkký to buffer at 16--------
 
 EVENT time: 382.430023,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -1132,7 +1132,7 @@ EVENT time: 382.430023,  type: 2, fromlayer3  entity: 0
 EVENT time: 383.619415,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 17 from A------- 
-Packet payload is :qqqqqqqqqqqqqqqqqqqq 
+Packet Payload is:qqqqqqqqqqqqqqqqqqqq
 Packet Sequence Number is: 17 
 Packet Ack Number is: 17 
 Packet CheckSum is: 2277 
@@ -1155,7 +1155,7 @@ EVENT time: 388.048279,  type: 0, timerinterrupt   entity: 0
 
 EVENT time: 388.605103,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message llllllllllllllllllllü to buffer at 17--------
+--------A adds message llllllllllllllllllllý to buffer at 17--------
 
 EVENT time: 389.523926,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -1165,7 +1165,7 @@ EVENT time: 389.523926,  type: 2, fromlayer3  entity: 0
 EVENT time: 389.570862,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 10 from A------- 
-Packet payload is :jjjjjjjjjjjjjjjjjjjj 
+Packet Payload is:jjjjjjjjjjjjjjjjjjjj
 Packet Sequence Number is: 10 
 Packet Ack Number is: 10 
 Packet CheckSum is: 2130 
@@ -1179,7 +1179,7 @@ EVENT time: 392.153412,  type: 2, fromlayer3  entity: 0
 
 EVENT time: 393.843842,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message mmmmmmmmmmmmmmmmmmmmü to buffer at 18--------
+--------A adds message mmmmmmmmmmmmmmmmmmmmý to buffer at 18--------
 
 EVENT time: 394.607697,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -1189,7 +1189,7 @@ EVENT time: 394.607697,  type: 2, fromlayer3  entity: 0
 EVENT time: 396.982330,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 11 from A------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk 
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 Packet Sequence Number is: 11 
 Packet Ack Number is: 11 
 Packet CheckSum is: 2151 
@@ -1198,7 +1198,7 @@ Packet CheckSum is: 2151
 EVENT time: 399.960938,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 12 from A------- 
-Packet payload is :llllllllllllllllllll 
+Packet Payload is:llllllllllllllllllll
 Packet Sequence Number is: 12 
 Packet Ack Number is: 12 
 Packet CheckSum is: 1002171 
@@ -1209,7 +1209,7 @@ EVENT time: 400.803925,  type: 2, fromlayer3  entity: 0
 -------A Received acknowledgement 13 from B-------
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu 
+Packet Payload is:uuuuuuuuuuuuuuuuuuuu
 Packet Sequence Number is: 21 
 Packet Ack Number is: 21 
 Packet CheckSum is: 2361 
@@ -1217,7 +1217,7 @@ Packet CheckSum is: 2361
 EVENT time: 407.088226,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 13 from A------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm 
+Packet Payload is:mmmmmmmmmmmmmmmmmmmm
 Packet Sequence Number is: 13 
 Packet Ack Number is: 13 
 Packet CheckSum is: 2193 
@@ -1226,16 +1226,16 @@ Packet CheckSum is: 2193
 
 EVENT time: 407.195770,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message nnnnnnnnnnnnnnnnnnnnü to buffer at 18--------
+--------A adds message nnnnnnnnnnnnnnnnnnnný to buffer at 18--------
 
 EVENT time: 409.059875,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ooooooooooooooooooooü to buffer at 19--------
+--------A adds message ooooooooooooooooooooý to buffer at 19--------
 
 EVENT time: 415.432343,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 14 from A------- 
-Packet payload is :Znnnnnnnnnnnnnnnnnnn 
+Packet Payload is:Znnnnnnnnnnnnnnnnnnn
 Packet Sequence Number is: 14 
 Packet Ack Number is: 14 
 Packet CheckSum is: 2194 
@@ -1257,7 +1257,7 @@ EVENT time: 420.803925,  type: 0, timerinterrupt   entity: 0
 EVENT time: 420.903168,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 15 from A------- 
-Packet payload is :oooooooooooooooooooo 
+Packet Payload is:oooooooooooooooooooo
 Packet Sequence Number is: 15 
 Packet Ack Number is: 15 
 Packet CheckSum is: 2235 
@@ -1267,7 +1267,7 @@ Packet CheckSum is: 2235
 EVENT time: 423.977997,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 16 from A------- 
-Packet payload is :pppppppppppppppppppp 
+Packet Payload is:pppppppppppppppppppp
 Packet Sequence Number is: 16 
 Packet Ack Number is: 16 
 Packet CheckSum is: 2256 
@@ -1276,7 +1276,7 @@ Packet CheckSum is: 2256
 EVENT time: 427.158936,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 17 from A------- 
-Packet payload is :qqqqqqqqqqqqqqqqqqqq 
+Packet Payload is:qqqqqqqqqqqqqqqqqqqq
 Packet Sequence Number is: 17 
 Packet Ack Number is: 17 
 Packet CheckSum is: 2277 
@@ -1285,7 +1285,7 @@ Packet CheckSum is: 2277
 
 EVENT time: 427.745911,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ppppppppppppppppppppü to buffer at 20--------
+--------A adds message ppppppppppppppppppppý to buffer at 20--------
 
 EVENT time: 430.195251,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -1293,7 +1293,7 @@ EVENT time: 430.195251,  type: 2, fromlayer3  entity: 0
 EVENT time: 430.357452,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 18 from A------- 
-Packet payload is :rrrrrrrrrrrrrrrrrrrr 
+Packet Payload is:rrrrrrrrrrrrrrrrrrrr
 Packet Sequence Number is: 18 
 Packet Ack Number is: 18 
 Packet CheckSum is: 2298 
@@ -1303,7 +1303,7 @@ Packet CheckSum is: 2298
 EVENT time: 436.888428,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 12 from A------- 
-Packet payload is :llllllllllllllllllll 
+Packet Payload is:llllllllllllllllllll
 Packet Sequence Number is: 12 
 Packet Ack Number is: 12 
 Packet CheckSum is: 2172 
@@ -1328,7 +1328,7 @@ EVENT time: 445.233734,  type: 2, fromlayer3  entity: 0
 EVENT time: 445.897980,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 13 from A------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm 
+Packet Payload is:mmmmmmmmmmmmmmmmmmmm
 Packet Sequence Number is: 13 
 Packet Ack Number is: 13 
 Packet CheckSum is: 2193 
@@ -1336,12 +1336,12 @@ Packet CheckSum is: 2193
 
 EVENT time: 447.271057,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message qqqqqqqqqqqqqqqqqqqqü to buffer at 21--------
+--------A adds message qqqqqqqqqqqqqqqqqqqqý to buffer at 21--------
 
 EVENT time: 452.213470,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 14 from A------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn 
+Packet Payload is:nnnnnnnnnnnnnnnnnnnn
 Packet Sequence Number is: 14 
 Packet Ack Number is: 14 
 Packet CheckSum is: 2214 
@@ -1353,14 +1353,14 @@ EVENT time: 452.890503,  type: 2, fromlayer3  entity: 0
 
 EVENT time: 457.415222,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message rrrrrrrrrrrrrrrrrrrrü to buffer at 22--------
+--------A adds message rrrrrrrrrrrrrrrrrrrrý to buffer at 22--------
 
 EVENT time: 457.447662,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
 -------A Received acknowledgement 14 from B-------
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :vvvvvvvvvvvvvvvvvvvv 
+Packet Payload is:vvvvvvvvvvvvvvvvvvvv
 Packet Sequence Number is: 22 
 Packet Ack Number is: 22 
 Packet CheckSum is: 2382 
@@ -1368,7 +1368,7 @@ Packet CheckSum is: 2382
 EVENT time: 459.709198,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 999999 from A------- 
-Packet payload is :oooooooooooooooooooo 
+Packet Payload is:oooooooooooooooooooo
 Packet Sequence Number is: 999999 
 Packet Ack Number is: 999999 
 Packet CheckSum is: 1002219 
@@ -1377,7 +1377,7 @@ Packet CheckSum is: 1002219
 EVENT time: 469.125122,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 18 from A------- 
-Packet payload is :rrrrrrrrrrrrrrrrrrrr 
+Packet Payload is:rrrrrrrrrrrrrrrrrrrr
 Packet Sequence Number is: 18 
 Packet Ack Number is: 18 
 Packet CheckSum is: 2298 
@@ -1386,7 +1386,7 @@ Packet CheckSum is: 2298
 EVENT time: 473.136902,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 11 from A------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk 
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 Packet Sequence Number is: 11 
 Packet Ack Number is: 11 
 Packet CheckSum is: 2151 
@@ -1394,7 +1394,7 @@ Packet CheckSum is: 2151
 
 EVENT time: 475.826813,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ssssssssssssssssssssü to buffer at 22--------
+--------A adds message ssssssssssssssssssssý to buffer at 22--------
 
 EVENT time: 477.447662,  type: 0, timerinterrupt   entity: 0
 ************A_timerinterrupt*********** 
@@ -1411,7 +1411,7 @@ EVENT time: 477.447662,  type: 0, timerinterrupt   entity: 0
 EVENT time: 477.812073,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 12 from A------- 
-Packet payload is :llllllllllllllllllll 
+Packet Payload is:llllllllllllllllllll
 Packet Sequence Number is: 12 
 Packet Ack Number is: 12 
 Packet CheckSum is: 2172 
@@ -1419,7 +1419,7 @@ Packet CheckSum is: 2172
 
 EVENT time: 477.874512,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ttttttttttttttttttttü to buffer at 23--------
+--------A adds message ttttttttttttttttttttý to buffer at 23--------
 
 EVENT time: 479.058105,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -1427,7 +1427,7 @@ EVENT time: 479.058105,  type: 2, fromlayer3  entity: 0
 EVENT time: 484.790161,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 13 from A------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm 
+Packet Payload is:mmmmmmmmmmmmmmmmmmmm
 Packet Sequence Number is: 13 
 Packet Ack Number is: 13 
 Packet CheckSum is: 2193 
@@ -1438,12 +1438,12 @@ EVENT time: 485.042603,  type: 2, fromlayer3  entity: 0
 
 EVENT time: 488.425110,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message uuuuuuuuuuuuuuuuuuuuü to buffer at 24--------
+--------A adds message uuuuuuuuuuuuuuuuuuuuý to buffer at 24--------
 
 EVENT time: 489.542023,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 14 from A------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn 
+Packet Payload is:nnnnnnnnnnnnnnnnnnnn
 Packet Sequence Number is: 14 
 Packet Ack Number is: 14 
 Packet CheckSum is: 2214 
@@ -1455,7 +1455,7 @@ EVENT time: 493.677155,  type: 2, fromlayer3  entity: 0
 EVENT time: 494.142456,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 15 from A------- 
-Packet payload is :oooooooooooooooooooo 
+Packet Payload is:oooooooooooooooooooo
 Packet Sequence Number is: 15 
 Packet Ack Number is: 15 
 Packet CheckSum is: 2235 
@@ -1465,7 +1465,7 @@ Packet CheckSum is: 2235
 
 EVENT time: 496.190674,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message vvvvvvvvvvvvvvvvvvvvü to buffer at 25--------
+--------A adds message vvvvvvvvvvvvvvvvvvvvý to buffer at 25--------
 
 EVENT time: 497.447662,  type: 0, timerinterrupt   entity: 0
 ************A_timerinterrupt*********** 
@@ -1485,12 +1485,12 @@ EVENT time: 499.039673,  type: 2, fromlayer3  entity: 0
 
 EVENT time: 499.389343,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message wwwwwwwwwwwwwwwwwwwwü to buffer at 26--------
+--------A adds message wwwwwwwwwwwwwwwwwwwwý to buffer at 26--------
 
 EVENT time: 500.772400,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 16 from A------- 
-Packet payload is :pppppppppppppppppppp 
+Packet Payload is:pppppppppppppppppppp
 Packet Sequence Number is: 16 
 Packet Ack Number is: 16 
 Packet CheckSum is: 2256 
@@ -1499,12 +1499,12 @@ Packet CheckSum is: 2256
 
 EVENT time: 501.526520,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message xxxxxxxxxxxxxxxxxxxxü to buffer at 27--------
+--------A adds message xxxxxxxxxxxxxxxxxxxxý to buffer at 27--------
 
 EVENT time: 504.898499,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 17 from A------- 
-Packet payload is :qqqqqqqqqqqqqqqqqqqq 
+Packet Payload is:qqqqqqqqqqqqqqqqqqqq
 Packet Sequence Number is: 17 
 Packet Ack Number is: 17 
 Packet CheckSum is: 1002276 
@@ -1516,7 +1516,7 @@ EVENT time: 507.206665,  type: 2, fromlayer3  entity: 0
 EVENT time: 508.127136,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 19 from A------- 
-Packet payload is :ssssssssssssssssssss 
+Packet Payload is:ssssssssssssssssssss
 Packet Sequence Number is: 19 
 Packet Ack Number is: 19 
 Packet CheckSum is: 2319 
@@ -1528,13 +1528,13 @@ EVENT time: 509.743835,  type: 2, fromlayer3  entity: 0
 -------A Received acknowledgement 16 from B-------
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :wwwwwwwwwwwwwwwwwwww 
+Packet Payload is:wwwwwwwwwwwwwwwwwwww
 Packet Sequence Number is: 23 
 Packet Ack Number is: 23 
 Packet CheckSum is: 2403 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :xxxxxxxxxxxxxxxxxxxx 
+Packet Payload is:xxxxxxxxxxxxxxxxxxxx
 Packet Sequence Number is: 24 
 Packet Ack Number is: 24 
 Packet CheckSum is: 2424 
@@ -1542,7 +1542,7 @@ Packet CheckSum is: 2424
 EVENT time: 513.437256,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 999999 from A------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm 
+Packet Payload is:mmmmmmmmmmmmmmmmmmmm
 Packet Sequence Number is: 999999 
 Packet Ack Number is: 999999 
 Packet CheckSum is: 1002179 
@@ -1550,12 +1550,12 @@ Packet CheckSum is: 1002179
 
 EVENT time: 516.121094,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message yyyyyyyyyyyyyyyyyyyyü to buffer at 26--------
+--------A adds message yyyyyyyyyyyyyyyyyyyyý to buffer at 26--------
 
 EVENT time: 517.504883,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 14 from A------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn 
+Packet Payload is:nnnnnnnnnnnnnnnnnnnn
 Packet Sequence Number is: 14 
 Packet Ack Number is: 14 
 Packet CheckSum is: 2214 
@@ -1566,12 +1566,12 @@ EVENT time: 518.842529,  type: 2, fromlayer3  entity: 0
 
 EVENT time: 521.806152,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message zzzzzzzzzzzzzzzzzzzzü to buffer at 27--------
+--------A adds message zzzzzzzzzzzzzzzzzzzzý to buffer at 27--------
 
 EVENT time: 522.494812,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 15 from A------- 
-Packet payload is :oooooooooooooooooooo 
+Packet Payload is:oooooooooooooooooooo
 Packet Sequence Number is: 15 
 Packet Ack Number is: 15 
 Packet CheckSum is: 2235 
@@ -1596,7 +1596,7 @@ EVENT time: 529.743835,  type: 0, timerinterrupt   entity: 0
 EVENT time: 530.021484,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 16 from A------- 
-Packet payload is :pppppppppppppppppppp 
+Packet Payload is:pppppppppppppppppppp
 Packet Sequence Number is: 16 
 Packet Ack Number is: 16 
 Packet CheckSum is: 2256 
@@ -1607,12 +1607,12 @@ EVENT time: 532.657104,  type: 2, fromlayer3  entity: 0
 
 EVENT time: 534.266357,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message aaaaaaaaaaaaaaaaaaaaü to buffer at 28--------
+--------A adds message aaaaaaaaaaaaaaaaaaaaý to buffer at 28--------
 
 EVENT time: 536.504639,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 18 from A------- 
-Packet payload is :rrrrrrrrrrrrrrrrrrrr 
+Packet Payload is:rrrrrrrrrrrrrrrrrrrr
 Packet Sequence Number is: 18 
 Packet Ack Number is: 18 
 Packet CheckSum is: 2298 
@@ -1624,7 +1624,7 @@ EVENT time: 539.937317,  type: 2, fromlayer3  entity: 0
 EVENT time: 540.108826,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 19 from A------- 
-Packet payload is :ssssssssssssssssssss 
+Packet Payload is:ssssssssssssssssssss
 Packet Sequence Number is: 19 
 Packet Ack Number is: 19 
 Packet CheckSum is: 2319 
@@ -1632,16 +1632,16 @@ Packet CheckSum is: 2319
 
 EVENT time: 542.025940,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message bbbbbbbbbbbbbbbbbbbbü to buffer at 29--------
+--------A adds message bbbbbbbbbbbbbbbbbbbbý to buffer at 29--------
 
 EVENT time: 543.153809,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ccccccccccccccccccccü to buffer at 30--------
+--------A adds message ccccccccccccccccccccý to buffer at 30--------
 
 EVENT time: 543.440308,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 21 from A------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu 
+Packet Payload is:uuuuuuuuuuuuuuuuuuuu
 Packet Sequence Number is: 21 
 Packet Ack Number is: 21 
 Packet CheckSum is: 2361 
@@ -1650,7 +1650,7 @@ Packet CheckSum is: 2361
 
 EVENT time: 544.463806,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ddddddddddddddddddddü to buffer at 31--------
+--------A adds message ddddddddddddddddddddý to buffer at 31--------
 
 EVENT time: 545.165588,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -1672,7 +1672,7 @@ EVENT time: 549.743835,  type: 0, timerinterrupt   entity: 0
 EVENT time: 552.043762,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 14 from A------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn 
+Packet Payload is:nnnnnnnnnnnnnnnnnnnn
 Packet Sequence Number is: 14 
 Packet Ack Number is: 14 
 Packet CheckSum is: 2214 
@@ -1681,7 +1681,7 @@ Packet CheckSum is: 2214
 EVENT time: 554.483276,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 15 from A------- 
-Packet payload is :oooooooooooooooooooo 
+Packet Payload is:oooooooooooooooooooo
 Packet Sequence Number is: 15 
 Packet Ack Number is: 15 
 Packet CheckSum is: 2235 
@@ -1691,7 +1691,7 @@ Packet CheckSum is: 2235
 EVENT time: 560.177307,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 16 from A------- 
-Packet payload is :pppppppppppppppppppp 
+Packet Payload is:pppppppppppppppppppp
 Packet Sequence Number is: 16 
 Packet Ack Number is: 16 
 Packet CheckSum is: 2256 
@@ -1704,7 +1704,7 @@ EVENT time: 561.256958,  type: 2, fromlayer3  entity: 0
 EVENT time: 562.354431,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 17 from A------- 
-Packet payload is :Zqqqqqqqqqqqqqqqqqqq 
+Packet Payload is:Zqqqqqqqqqqqqqqqqqqq
 Packet Sequence Number is: 17 
 Packet Ack Number is: 17 
 Packet CheckSum is: 2254 
@@ -1712,12 +1712,12 @@ Packet CheckSum is: 2254
 
 EVENT time: 563.045227,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message eeeeeeeeeeeeeeeeeeeeü to buffer at 32--------
+--------A adds message eeeeeeeeeeeeeeeeeeeeý to buffer at 32--------
 
 EVENT time: 567.476074,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 18 from A------- 
-Packet payload is :rrrrrrrrrrrrrrrrrrrr 
+Packet Payload is:rrrrrrrrrrrrrrrrrrrr
 Packet Sequence Number is: 18 
 Packet Ack Number is: 18 
 Packet CheckSum is: 2298 
@@ -1739,7 +1739,7 @@ EVENT time: 569.743835,  type: 0, timerinterrupt   entity: 0
 EVENT time: 572.115112,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 19 from A------- 
-Packet payload is :ssssssssssssssssssss 
+Packet Payload is:ssssssssssssssssssss
 Packet Sequence Number is: 19 
 Packet Ack Number is: 19 
 Packet CheckSum is: 2319 
@@ -1754,7 +1754,7 @@ EVENT time: 575.375244,  type: 2, fromlayer3  entity: 0
 EVENT time: 577.946289,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 20 from A------- 
-Packet payload is :Zttttttttttttttttttt 
+Packet Payload is:Zttttttttttttttttttt
 Packet Sequence Number is: 20 
 Packet Ack Number is: 20 
 Packet CheckSum is: 2314 
@@ -1762,12 +1762,12 @@ Packet CheckSum is: 2314
 
 EVENT time: 581.446472,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ffffffffffffffffffffü to buffer at 33--------
+--------A adds message ffffffffffffffffffffý to buffer at 33--------
 
 EVENT time: 587.561707,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 21 from A------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu 
+Packet Payload is:uuuuuuuuuuuuuuuuuuuu
 Packet Sequence Number is: 21 
 Packet Ack Number is: 21 
 Packet CheckSum is: 2361 
@@ -1795,16 +1795,16 @@ EVENT time: 591.991455,  type: 2, fromlayer3  entity: 0
 
 EVENT time: 592.390625,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ggggggggggggggggggggü to buffer at 34--------
+--------A adds message ggggggggggggggggggggý to buffer at 34--------
 
 EVENT time: 594.704102,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message hhhhhhhhhhhhhhhhhhhhü to buffer at 35--------
+--------A adds message hhhhhhhhhhhhhhhhhhhhý to buffer at 35--------
 
 EVENT time: 595.121826,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 15 from A------- 
-Packet payload is :oooooooooooooooooooo 
+Packet Payload is:oooooooooooooooooooo
 Packet Sequence Number is: 15 
 Packet Ack Number is: 15 
 Packet CheckSum is: 2235 
@@ -1815,12 +1815,12 @@ EVENT time: 597.359436,  type: 2, fromlayer3  entity: 0
 
 EVENT time: 603.508911,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message iiiiiiiiiiiiiiiiiiiiü to buffer at 36--------
+--------A adds message iiiiiiiiiiiiiiiiiiiiý to buffer at 36--------
 
 EVENT time: 603.859131,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 16 from A------- 
-Packet payload is :Zppppppppppppppppppp 
+Packet Payload is:Zppppppppppppppppppp
 Packet Sequence Number is: 16 
 Packet Ack Number is: 16 
 Packet CheckSum is: 2234 
@@ -1828,11 +1828,11 @@ Packet CheckSum is: 2234
 
 EVENT time: 608.016724,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message jjjjjjjjjjjjjjjjjjjjü to buffer at 37--------
+--------A adds message jjjjjjjjjjjjjjjjjjjjý to buffer at 37--------
 
 EVENT time: 609.604858,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message kkkkkkkkkkkkkkkkkkkkü to buffer at 38--------
+--------A adds message kkkkkkkkkkkkkkkkkkkký to buffer at 38--------
 
 EVENT time: 609.743835,  type: 0, timerinterrupt   entity: 0
 ************A_timerinterrupt*********** 
@@ -1849,7 +1849,7 @@ EVENT time: 609.743835,  type: 0, timerinterrupt   entity: 0
 EVENT time: 609.921326,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 17 from A------- 
-Packet payload is :qqqqqqqqqqqqqqqqqqqq 
+Packet Payload is:qqqqqqqqqqqqqqqqqqqq
 Packet Sequence Number is: 17 
 Packet Ack Number is: 17 
 Packet CheckSum is: 2277 
@@ -1861,19 +1861,19 @@ EVENT time: 611.441101,  type: 2, fromlayer3  entity: 0
 -------A Received acknowledgement 17 from B-------
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :yyyyyyyyyyyyyyyyyyyy 
+Packet Payload is:yyyyyyyyyyyyyyyyyyyy
 Packet Sequence Number is: 25 
 Packet Ack Number is: 25 
 Packet CheckSum is: 2445 
 
 EVENT time: 615.629333,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message llllllllllllllllllllü to buffer at 38--------
+--------A adds message llllllllllllllllllllý to buffer at 38--------
 
 EVENT time: 619.622559,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 18 from A------- 
-Packet payload is :rrrrrrrrrrrrrrrrrrrr 
+Packet Payload is:rrrrrrrrrrrrrrrrrrrr
 Packet Sequence Number is: 18 
 Packet Ack Number is: 18 
 Packet CheckSum is: 2298 
@@ -1885,7 +1885,7 @@ EVENT time: 622.018982,  type: 2, fromlayer3  entity: 0
 -------A Received acknowledgement 18 from B-------
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :zzzzzzzzzzzzzzzzzzzz 
+Packet Payload is:zzzzzzzzzzzzzzzzzzzz
 Packet Sequence Number is: 26 
 Packet Ack Number is: 26 
 Packet CheckSum is: 2466 
@@ -1893,7 +1893,7 @@ Packet CheckSum is: 2466
 EVENT time: 625.154968,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 19 from A------- 
-Packet payload is :ssssssssssssssssssss 
+Packet Payload is:ssssssssssssssssssss
 Packet Sequence Number is: 19 
 Packet Ack Number is: 19 
 Packet CheckSum is: 2319 
@@ -1903,7 +1903,7 @@ Packet CheckSum is: 2319
 EVENT time: 629.340149,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 20 from A------- 
-Packet payload is :tttttttttttttttttttt 
+Packet Payload is:tttttttttttttttttttt
 Packet Sequence Number is: 20 
 Packet Ack Number is: 20 
 Packet CheckSum is: 2340 
@@ -1915,7 +1915,7 @@ EVENT time: 634.310547,  type: 2, fromlayer3  entity: 0
 -------A Received acknowledgement 19 from B-------
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa 
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 Packet Sequence Number is: 27 
 Packet Ack Number is: 27 
 Packet CheckSum is: 1967 
@@ -1923,7 +1923,7 @@ Packet CheckSum is: 1967
 EVENT time: 634.509583,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 21 from A------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu 
+Packet Payload is:uuuuuuuuuuuuuuuuuuuu
 Packet Sequence Number is: 21 
 Packet Ack Number is: 21 
 Packet CheckSum is: 2361 
@@ -1932,14 +1932,14 @@ Packet CheckSum is: 2361
 
 EVENT time: 635.108765,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message mmmmmmmmmmmmmmmmmmmmü to buffer at 37--------
+--------A adds message mmmmmmmmmmmmmmmmmmmmý to buffer at 37--------
 
 EVENT time: 636.721130,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
 -------A Received acknowledgement 20 from B-------
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :bbbbbbbbbbbbbbbbbbbb 
+Packet Payload is:bbbbbbbbbbbbbbbbbbbb
 Packet Sequence Number is: 28 
 Packet Ack Number is: 28 
 Packet CheckSum is: 1988 
@@ -1950,7 +1950,7 @@ EVENT time: 640.250488,  type: 2, fromlayer3  entity: 0
 -------A Received acknowledgement 21 from B-------
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :cccccccccccccccccccc 
+Packet Payload is:cccccccccccccccccccc
 Packet Sequence Number is: 29 
 Packet Ack Number is: 29 
 Packet CheckSum is: 2009 
@@ -1959,7 +1959,7 @@ Packet CheckSum is: 2009
 EVENT time: 641.850769,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 22 from A------- 
-Packet payload is :vvvvvvvvvvvvvvvvvvvv 
+Packet Payload is:vvvvvvvvvvvvvvvvvvvv
 Packet Sequence Number is: 22 
 Packet Ack Number is: 22 
 Packet CheckSum is: 2382 
@@ -1971,7 +1971,7 @@ EVENT time: 643.423218,  type: 2, fromlayer3  entity: 0
 -------A Received acknowledgement 22 from B-------
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :dddddddddddddddddddd 
+Packet Payload is:dddddddddddddddddddd
 Packet Sequence Number is: 30 
 Packet Ack Number is: 30 
 Packet CheckSum is: 2030 
@@ -1979,7 +1979,7 @@ Packet CheckSum is: 2030
 EVENT time: 649.609436,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 999999 from A------- 
-Packet payload is :oooooooooooooooooooo 
+Packet Payload is:oooooooooooooooooooo
 Packet Sequence Number is: 999999 
 Packet Ack Number is: 999999 
 Packet CheckSum is: 1002219 
@@ -1987,12 +1987,12 @@ Packet CheckSum is: 1002219
 
 EVENT time: 651.343689,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message nnnnnnnnnnnnnnnnnnnnü to buffer at 35--------
+--------A adds message nnnnnnnnnnnnnnnnnnnný to buffer at 35--------
 
 EVENT time: 655.764526,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 16 from A------- 
-Packet payload is :pppppppppppppppppppp 
+Packet Payload is:pppppppppppppppppppp
 Packet Sequence Number is: 16 
 Packet Ack Number is: 16 
 Packet CheckSum is: 2256 
@@ -2000,7 +2000,7 @@ Packet CheckSum is: 2256
 
 EVENT time: 658.543518,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ooooooooooooooooooooü to buffer at 36--------
+--------A adds message ooooooooooooooooooooý to buffer at 36--------
 
 EVENT time: 660.968323,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -2023,7 +2023,7 @@ EVENT time: 663.423218,  type: 0, timerinterrupt   entity: 0
 EVENT time: 665.104797,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 17 from A------- 
-Packet payload is :qqqqqqqqqqqqqqqqqqqq 
+Packet Payload is:qqqqqqqqqqqqqqqqqqqq
 Packet Sequence Number is: 17 
 Packet Ack Number is: 17 
 Packet CheckSum is: 2277 
@@ -2033,7 +2033,7 @@ Packet CheckSum is: 2277
 EVENT time: 669.614502,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 18 from A------- 
-Packet payload is :rrrrrrrrrrrrrrrrrrrr 
+Packet Payload is:rrrrrrrrrrrrrrrrrrrr
 Packet Sequence Number is: 18 
 Packet Ack Number is: 18 
 Packet CheckSum is: 2298 
@@ -2042,7 +2042,7 @@ Packet CheckSum is: 2298
 EVENT time: 671.116699,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 19 from A------- 
-Packet payload is :ssssssssssssssssssss 
+Packet Payload is:ssssssssssssssssssss
 Packet Sequence Number is: 19 
 Packet Ack Number is: 19 
 Packet CheckSum is: 2319 
@@ -2053,7 +2053,7 @@ EVENT time: 671.329285,  type: 2, fromlayer3  entity: 0
 
 EVENT time: 673.656494,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ppppppppppppppppppppü to buffer at 37--------
+--------A adds message ppppppppppppppppppppý to buffer at 37--------
 
 EVENT time: 674.851013,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -2061,7 +2061,7 @@ EVENT time: 674.851013,  type: 2, fromlayer3  entity: 0
 EVENT time: 679.038025,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 20 from A------- 
-Packet payload is :tttttttttttttttttttt 
+Packet Payload is:tttttttttttttttttttt
 Packet Sequence Number is: 20 
 Packet Ack Number is: 20 
 Packet CheckSum is: 2340 
@@ -2083,12 +2083,12 @@ EVENT time: 683.423218,  type: 0, timerinterrupt   entity: 0
 
 EVENT time: 685.178833,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message qqqqqqqqqqqqqqqqqqqqü to buffer at 38--------
+--------A adds message qqqqqqqqqqqqqqqqqqqqý to buffer at 38--------
 
 EVENT time: 686.244568,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 21 from A------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu 
+Packet Payload is:uuuuuuuuuuuuuuuuuuuu
 Packet Sequence Number is: 21 
 Packet Ack Number is: 21 
 Packet CheckSum is: 2361 
@@ -2103,7 +2103,7 @@ EVENT time: 686.396545,  type: 2, fromlayer3  entity: 0
 EVENT time: 690.296448,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 22 from A------- 
-Packet payload is :vvvvvvvvvvvvvvvvvvvv 
+Packet Payload is:vvvvvvvvvvvvvvvvvvvv
 Packet Sequence Number is: 22 
 Packet Ack Number is: 22 
 Packet CheckSum is: 2382 
@@ -2113,7 +2113,7 @@ Packet CheckSum is: 2382
 EVENT time: 691.777100,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 999999 from A------- 
-Packet payload is :oooooooooooooooooooo 
+Packet Payload is:oooooooooooooooooooo
 Packet Sequence Number is: 999999 
 Packet Ack Number is: 999999 
 Packet CheckSum is: 1002219 
@@ -2122,7 +2122,7 @@ Packet CheckSum is: 1002219
 EVENT time: 698.273987,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 16 from A------- 
-Packet payload is :pppppppppppppppppppp 
+Packet Payload is:pppppppppppppppppppp
 Packet Sequence Number is: 16 
 Packet Ack Number is: 16 
 Packet CheckSum is: 2256 
@@ -2131,7 +2131,7 @@ Packet CheckSum is: 2256
 EVENT time: 700.200500,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 17 from A------- 
-Packet payload is :qqqqqqqqqqqqqqqqqqqq 
+Packet Payload is:qqqqqqqqqqqqqqqqqqqq
 Packet Sequence Number is: 17 
 Packet Ack Number is: 17 
 Packet CheckSum is: 2277 
@@ -2156,19 +2156,19 @@ EVENT time: 703.423218,  type: 0, timerinterrupt   entity: 0
 
 EVENT time: 703.609985,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message rrrrrrrrrrrrrrrrrrrrü to buffer at 39--------
+--------A adds message rrrrrrrrrrrrrrrrrrrrý to buffer at 39--------
 
 EVENT time: 706.822083,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
 
 EVENT time: 707.605103,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ssssssssssssssssssssü to buffer at 40--------
+--------A adds message ssssssssssssssssssssý to buffer at 40--------
 
 EVENT time: 710.113770,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 18 from A------- 
-Packet payload is :rrrrrrrrrrrrrrrrrrrr 
+Packet Payload is:rrrrrrrrrrrrrrrrrrrr
 Packet Sequence Number is: 18 
 Packet Ack Number is: 18 
 Packet CheckSum is: 2298 
@@ -2177,7 +2177,7 @@ Packet CheckSum is: 2298
 EVENT time: 714.690125,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 19 from A------- 
-Packet payload is :ssssssssssssssssssss 
+Packet Payload is:ssssssssssssssssssss
 Packet Sequence Number is: 19 
 Packet Ack Number is: 19 
 Packet CheckSum is: 2319 
@@ -2186,7 +2186,7 @@ Packet CheckSum is: 2319
 EVENT time: 717.848267,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 20 from A------- 
-Packet payload is :tttttttttttttttttttt 
+Packet Payload is:tttttttttttttttttttt
 Packet Sequence Number is: 20 
 Packet Ack Number is: 20 
 Packet CheckSum is: 2340 
@@ -2194,7 +2194,7 @@ Packet CheckSum is: 2340
 
 EVENT time: 718.795959,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message ttttttttttttttttttttü to buffer at 41--------
+--------A adds message ttttttttttttttttttttý to buffer at 41--------
 
 EVENT time: 719.972351,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -2216,7 +2216,7 @@ EVENT time: 723.423218,  type: 0, timerinterrupt   entity: 0
 EVENT time: 727.504700,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 22 from A------- 
-Packet payload is :vvvvvvvvvvvvvvvvvvvv 
+Packet Payload is:vvvvvvvvvvvvvvvvvvvv
 Packet Sequence Number is: 22 
 Packet Ack Number is: 22 
 Packet CheckSum is: 2382 
@@ -2225,7 +2225,7 @@ Packet CheckSum is: 2382
 
 EVENT time: 727.932617,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message uuuuuuuuuuuuuuuuuuuuü to buffer at 42--------
+--------A adds message uuuuuuuuuuuuuuuuuuuuý to buffer at 42--------
 
 EVENT time: 729.637512,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -2236,7 +2236,7 @@ EVENT time: 735.397705,  type: 2, fromlayer3  entity: 0
 EVENT time: 736.511658,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 23 from A------- 
-Packet payload is :wwwwwwwwwwwwwwwwwwww 
+Packet Payload is:wwwwwwwwwwwwwwwwwwww
 Packet Sequence Number is: 23 
 Packet Ack Number is: 23 
 Packet CheckSum is: 2403 
@@ -2250,7 +2250,7 @@ EVENT time: 736.684448,  type: 2, fromlayer3  entity: 0
 
 EVENT time: 739.148071,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message vvvvvvvvvvvvvvvvvvvvü to buffer at 43--------
+--------A adds message vvvvvvvvvvvvvvvvvvvvý to buffer at 43--------
 
 EVENT time: 743.423218,  type: 0, timerinterrupt   entity: 0
 ************A_timerinterrupt*********** 
@@ -2273,7 +2273,7 @@ EVENT time: 744.461304,  type: 2, fromlayer3  entity: 0
 -------A Received acknowledgement 23 from B-------
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :eeeeeeeeeeeeeeeeeeee 
+Packet Payload is:eeeeeeeeeeeeeeeeeeee
 Packet Sequence Number is: 31 
 Packet Ack Number is: 31 
 Packet CheckSum is: 2051 
@@ -2281,7 +2281,7 @@ Packet CheckSum is: 2051
 EVENT time: 745.695374,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 24 from A------- 
-Packet payload is :xxxxxxxxxxxxxxxxxxxx 
+Packet Payload is:xxxxxxxxxxxxxxxxxxxx
 Packet Sequence Number is: 24 
 Packet Ack Number is: 24 
 Packet CheckSum is: 2424 
@@ -2291,7 +2291,7 @@ Packet CheckSum is: 2424
 EVENT time: 746.780457,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 17 from A------- 
-Packet payload is :Zqqqqqqqqqqqqqqqqqqq 
+Packet Payload is:Zqqqqqqqqqqqqqqqqqqq
 Packet Sequence Number is: 17 
 Packet Ack Number is: 17 
 Packet CheckSum is: 2254 
@@ -2300,7 +2300,7 @@ Packet CheckSum is: 2254
 EVENT time: 750.035339,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 18 from A------- 
-Packet payload is :rrrrrrrrrrrrrrrrrrrr 
+Packet Payload is:rrrrrrrrrrrrrrrrrrrr
 Packet Sequence Number is: 18 
 Packet Ack Number is: 18 
 Packet CheckSum is: 2298 
@@ -2311,7 +2311,7 @@ EVENT time: 754.604004,  type: 2, fromlayer3  entity: 0
 -------A Received acknowledgement 24 from B-------
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :ffffffffffffffffffff 
+Packet Payload is:ffffffffffffffffffff
 Packet Sequence Number is: 32 
 Packet Ack Number is: 32 
 Packet CheckSum is: 2072 
@@ -2320,7 +2320,7 @@ Packet CheckSum is: 2072
 EVENT time: 758.889404,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 19 from A------- 
-Packet payload is :ssssssssssssssssssss 
+Packet Payload is:ssssssssssssssssssss
 Packet Sequence Number is: 19 
 Packet Ack Number is: 19 
 Packet CheckSum is: 2319 
@@ -2328,19 +2328,19 @@ Packet CheckSum is: 2319
 
 EVENT time: 758.935669,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message wwwwwwwwwwwwwwwwwwwwü to buffer at 42--------
+--------A adds message wwwwwwwwwwwwwwwwwwwwý to buffer at 42--------
 
 EVENT time: 764.073547,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
 
 EVENT time: 764.310669,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message xxxxxxxxxxxxxxxxxxxxü to buffer at 43--------
+--------A adds message xxxxxxxxxxxxxxxxxxxxý to buffer at 43--------
 
 EVENT time: 768.705200,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 20 from A------- 
-Packet payload is :tttttttttttttttttttt 
+Packet Payload is:tttttttttttttttttttt
 Packet Sequence Number is: 20 
 Packet Ack Number is: 20 
 Packet CheckSum is: 2340 
@@ -2366,7 +2366,7 @@ EVENT time: 774.604004,  type: 0, timerinterrupt   entity: 0
 EVENT time: 775.468018,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 21 from A------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu 
+Packet Payload is:uuuuuuuuuuuuuuuuuuuu
 Packet Sequence Number is: 21 
 Packet Ack Number is: 21 
 Packet CheckSum is: 2361 
@@ -2374,11 +2374,11 @@ Packet CheckSum is: 2361
 
 EVENT time: 778.423218,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message yyyyyyyyyyyyyyyyyyyyü to buffer at 44--------
+--------A adds message yyyyyyyyyyyyyyyyyyyyý to buffer at 44--------
 
 EVENT time: 779.205383,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message zzzzzzzzzzzzzzzzzzzzü to buffer at 45--------
+--------A adds message zzzzzzzzzzzzzzzzzzzzý to buffer at 45--------
 
 EVENT time: 779.473633,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -2386,7 +2386,7 @@ EVENT time: 779.473633,  type: 2, fromlayer3  entity: 0
 EVENT time: 780.318115,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 22 from A------- 
-Packet payload is :Zvvvvvvvvvvvvvvvvvvv 
+Packet Payload is:Zvvvvvvvvvvvvvvvvvvv
 Packet Sequence Number is: 22 
 Packet Ack Number is: 22 
 Packet CheckSum is: 2354 
@@ -2398,7 +2398,7 @@ EVENT time: 780.489990,  type: 2, fromlayer3  entity: 0
 EVENT time: 781.666077,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 23 from A------- 
-Packet payload is :wwwwwwwwwwwwwwwwwwww 
+Packet Payload is:wwwwwwwwwwwwwwwwwwww
 Packet Sequence Number is: 23 
 Packet Ack Number is: 23 
 Packet CheckSum is: 2403 
@@ -2408,7 +2408,7 @@ Packet CheckSum is: 2403
 EVENT time: 787.694641,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 24 from A------- 
-Packet payload is :xxxxxxxxxxxxxxxxxxxx 
+Packet Payload is:xxxxxxxxxxxxxxxxxxxx
 Packet Sequence Number is: 24 
 Packet Ack Number is: 24 
 Packet CheckSum is: 2424 
@@ -2422,7 +2422,7 @@ EVENT time: 789.368713,  type: 2, fromlayer3  entity: 0
 EVENT time: 792.200012,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 17 from A------- 
-Packet payload is :qqqqqqqqqqqqqqqqqqqq 
+Packet Payload is:qqqqqqqqqqqqqqqqqqqq
 Packet Sequence Number is: 17 
 Packet Ack Number is: 17 
 Packet CheckSum is: 2277 
@@ -2447,12 +2447,12 @@ EVENT time: 794.604004,  type: 0, timerinterrupt   entity: 0
 
 EVENT time: 795.143188,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message aaaaaaaaaaaaaaaaaaaaü to buffer at 46--------
+--------A adds message aaaaaaaaaaaaaaaaaaaaý to buffer at 46--------
 
 EVENT time: 798.140259,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 19 from A------- 
-Packet payload is :ssssssssssssssssssss 
+Packet Payload is:ssssssssssssssssssss
 Packet Sequence Number is: 19 
 Packet Ack Number is: 19 
 Packet CheckSum is: 2319 
@@ -2464,7 +2464,7 @@ EVENT time: 801.102295,  type: 2, fromlayer3  entity: 0
 
 EVENT time: 805.994568,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
---------A adds message bbbbbbbbbbbbbbbbbbbbü to buffer at 47--------
+--------A adds message bbbbbbbbbbbbbbbbbbbbý to buffer at 47--------
 
 EVENT time: 807.930603,  type: 2, fromlayer3  entity: 1
  Simulator terminated at time 807.930603

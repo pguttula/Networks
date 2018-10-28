@@ -70,10 +70,14 @@ int checksum(int seqnum,int acknum, char * payload){
   checksum = checksum + (int)seqnum + (int)acknum;
   return checksum;
 }
-printpacketdata(char * payload){
+printpacketdata(char *payload){
   int i;
-  //for (i=0; packet.payload[i]; i++){
-    printf("Packet payload is :%s \n",payload);
+  printf("Packet Payload is:");
+  for (i=0; i<datachunks; i++){
+    printf("%c", payload[i]);
+  }
+  printf("\n");
+    //printf("Packet payload is :%s\n",payload);
 }
 
 flip(int seqnum){
@@ -96,6 +100,7 @@ void A_output(struct msg message)
   packet.seqnum = AtoBseqnum_A;
   packet.acknum = AtoBacknum_A;
   strncpy (packet.payload, message.data, datachunks);
+  //packet.payload[datachunks+1] = '\0';
   int checksum_A = checksum(packet.seqnum , packet.acknum , packet.payload);
   packet.checksum = checksum_A;
   printf("**********A_output********** \n");
@@ -408,21 +413,21 @@ init()                         /* initialize the simulator */
   
    printf("***********ALTERNATING BIT PROTOCOL***********\n");
    printf("-----  Stop and Wait Network Simulator Version 1.1 -------- \n\n");
-   printf("Enter the number of messages to simulate: ");
-   scanf("%d",&nsimmax);
-   //nsimmax = 20;
-   printf("Enter  packet loss probability [enter 0.0 for no loss]:");
-   scanf("%f",&lossprob);
-   //lossprob = 0.1;
-   printf("Enter packet corruption probability [0.0 for no corruption]:");
-   scanf("%f",&corruptprob);
-   //corruptprob = 0.3;
-   printf("Enter average time between messages from sender's layer5 [ > 0.0]:");
-   scanf("%f",&lambda);
-   //lambda = 1000;
-   printf("Enter TRACE:");
-   //TRACE = 2;
-   scanf("%d",&TRACE);
+   //printf("Enter the number of messages to simulate: ");
+   //scanf("%d",&nsimmax);
+   nsimmax = 20;
+   //printf("Enter  packet loss probability [enter 0.0 for no loss]:");
+   //scanf("%f",&lossprob);
+   lossprob = 0.1;
+   //printf("Enter packet corruption probability [0.0 for no corruption]:");
+   //scanf("%f",&corruptprob);
+   corruptprob = 0.3;
+   //printf("Enter average time between messages from sender's layer5 [ > 0.0]:");
+   //scanf("%f",&lambda);
+   lambda = 1000;
+   //printf("Enter TRACE:");
+   TRACE = 2;
+   //scanf("%d",&TRACE);
 
    srand(9999);              /* init random number generator */
    sum = 0.0;                /* test random number generator for students */
