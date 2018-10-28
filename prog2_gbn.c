@@ -52,6 +52,7 @@ struct pkt {
   int base = 1;
   //struct pkt bufferedmessages[50];
   int A_packetcount = 0;
+  char* bufferm;
   starttimer(int, float);
 /* the following routine will be called once (only) before any other */
 /* entity A routines are called. You can use it to do any initialization */
@@ -73,8 +74,11 @@ int checksum(int seqnum,int acknum, char * payload){
 }
 printpacketdata(char * payload){
   int i;
-  //for (i=0; packet.payload[i]; i++){
-    printf("Packet payload is :%.20s \n",payload);
+  printf("Packet Payload is:");
+  for (i=0; i<datachunks; i++){
+    printf("%c", payload[i]);
+  }
+  printf("\n");
 }
 
 /* called from layer 5, passed the data to be sent to other side */
@@ -109,7 +113,8 @@ void A_output(struct msg message)
     }
     else if (num_buff_msgs < buffersize){
       //we have a buffer left in A
-      printf("--------A adds message %s to buffer at %d--------\n",message.data, num_buff_msgs);
+      /*strncpy(bufferm, message.data,20);*/
+      printf("----------A buffers the received message--------\n");
       buffer_messages[num_buff_msgs] = message;
       num_buff_msgs++;
     }
@@ -139,6 +144,7 @@ void A_input(struct pkt packet)
           starttimer(SENDER_A, TIME);
         }
         if(num_buff_msgs > 0){
+          printf("A pushes out buffered messages to B \n");
           int temp_buffer_size = num_buff_msgs;
           struct msg* temp_buffer = buffer_messages;
           buffer_messages = (struct msg*)malloc(buffersize * sizeof(struct msg));
