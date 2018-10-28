@@ -41,7 +41,7 @@ struct pkt {
   int expected_seqnum_B = 1;
   int SENDER_A = 0;
   int SENDER_B = 1;
-  float TIME = 20.0;
+  float TIME = 25.0;
   int windowsize = 8;
   int receiver_window_size = 8;
   int buffersize = 50;
@@ -56,6 +56,7 @@ struct pkt {
   int buffered_messages_count_B = 0;
   //struct pkt bufferedmessages[50];
   int A_packetcount = 0;
+  int acked_at_A = 0;
   int k;
   int expected_acknum_A =1;
   starttimer(int,int, float);
@@ -108,10 +109,11 @@ void A_output(struct msg message)
     printf("Packet Sequence Number is: %d \n", packet.seqnum);
     printf("Packet Ack Number is: %d \n", packet.seqnum);
     printf("Packet CheckSum is: %d \n", packet.checksum);
-    A_packetcount++;
     sent_packets[seqnum_A-1] = packet;
+    A_packetcount++;
     seqnum_A++;
     starttimer(SENDER_A, seqnum_A-1, TIME);
+    printf("Total packets sent from A to B so far: %d \n", A_packetcount);
     tolayer3(SENDER_A, packet);
   }
   //else loop buffers the messages that fall out of window size.
@@ -136,8 +138,12 @@ void A_input(struct pkt packet)
                                    packet.payload)){
     printf("-------A Received acknowledgement %d from B-------\n", 
                packet.acknum);
-    stoptimer(SENDER_A, packet.acknum);
+  //  if(packet.seqnum > acked_at_A){
+      stoptimer(SENDER_A, packet.acknum);
+      printf("Timer stopped for packet wit seqnum %d \n",packet.seqnum);
+   // }
     base = base + 1;
+    acked_at_A++;
  //we check for any buffered messages present
  //and push them from A to B first.
     if(buffered_messages_count_A > 1 && k<= buffered_messages_count_A){
@@ -227,7 +233,7 @@ void B_input(struct pkt packet)
 //case 3 as expalined above. Look for any buffered messages and send
 //them to layer 5. Reset the buffered messages count.Increment the
 //receiver base.
-              printf("----------Lost or Corrupted Packet got re-sent \n");
+              printf("----------Lost or Corrupted Packet got re-sent \n--------");
               printf("----------B Sending Acknowledgement %d to A for packet " 
                   "with Seqnum: %d---------- \n", packet.seqnum, packet.seqnum);
               acked_packets_B[packet.seqnum] = packet;
@@ -260,6 +266,9 @@ void B_input(struct pkt packet)
         }
           printf("-------Total number of packets sent from "
               "A to B so far: %d------- \n", B_packetcount);
+      }
+      else{
+        printf("---------B received a corupted packet--------\n");
       }
     }
 }

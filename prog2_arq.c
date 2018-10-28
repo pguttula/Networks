@@ -125,7 +125,7 @@ void A_input(struct pkt packet)
       AtoBacknum_A = flip(AtoBacknum_A);
     }
     else{
-      printf("------Packet is corrupt.Resending Packet to B------ \n", flip(packet.seqnum));
+      printf("------Packet is corrupt------ \n", flip(packet.seqnum));
       stoptimer(SENDER_A);
       A_timerinterrupt();
     }
@@ -252,7 +252,7 @@ void B_input(struct pkt packet)
       BtoAacknum_B = flip(BtoAacknum_B);
     }
     else{
-      printf("------Packet is corrupted. Resending packet to A------ \n", flip(packet.seqnum));
+      printf("------Packet is corrupt------ \n", flip(packet.seqnum));
       stoptimer(SENDER_B);
       B_timerinterrupt();
 
@@ -406,17 +406,22 @@ init()                         /* initialize the simulator */
   float sum, avg;
   float jimsrand();
   
-  
+   printf("***********ALTERNATING BIT PROTOCOL***********\n");
    printf("-----  Stop and Wait Network Simulator Version 1.1 -------- \n\n");
    printf("Enter the number of messages to simulate: ");
    scanf("%d",&nsimmax);
+   //nsimmax = 20;
    printf("Enter  packet loss probability [enter 0.0 for no loss]:");
    scanf("%f",&lossprob);
+   //lossprob = 0.1;
    printf("Enter packet corruption probability [0.0 for no corruption]:");
    scanf("%f",&corruptprob);
+   //corruptprob = 0.3;
    printf("Enter average time between messages from sender's layer5 [ > 0.0]:");
    scanf("%f",&lambda);
+   //lambda = 1000;
    printf("Enter TRACE:");
+   //TRACE = 2;
    scanf("%d",&TRACE);
 
    srand(9999);              /* init random number generator */
