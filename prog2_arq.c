@@ -15,7 +15,7 @@
      (although some can be lost).
 **********************************************************************/
 
-#define BIDIRECTIONAL 1    /* change to 1 for bidirectional */
+#define BIDIRECTIONAL 0    /* change to 1 for bidirectional */
                            /* and write a routine called B_output */
 
 /* a "msg" is the data unit passed from layer 5 (teachers code) to layer  */

@@ -130,7 +130,7 @@ void A_output(struct msg message)
     A_packetcount++;
     starttimer(SENDER_A, seqnum_A, TIME);
     seqnum_A++;
-    printf("Total packets sent from A to B so far: %d \n", A_packetcount);
+    printf("--------Total packets sent from A to B so far: %d \n-------", A_packetcount);
     tolayer3(SENDER_A, packet);
   }
   //else loop buffers the messages that fall out of window size.
@@ -149,7 +149,7 @@ void A_output(struct msg message)
   }
 }
 
-void left_shift_pkt_array(struct pkt *arr, k, n) {
+void left_shift_pkt_array(struct pkt *arr, int k, int n) {
   if(k>n) {
     printf("----- Undefined behaviour in left_shift -----\n");
   }
@@ -159,7 +159,7 @@ void left_shift_pkt_array(struct pkt *arr, k, n) {
   }
   return;
 }
-void left_shift_int_array(int *arr, k, n) {
+void left_shift_int_array(int *arr, int k, int n) {
   if(k>n) {
     printf("----- Undefined behaviour in left_shift -----\n");
   }
@@ -172,7 +172,7 @@ void left_shift_int_array(int *arr, k, n) {
   }
   return;
 }
-void left_shift_msg_array(struct msg *arr, k, n) {
+void left_shift_msg_array(struct msg *arr, int k, int n) {
   if(k>n) {
     printf("----- Undefined behaviour in left_shift -----\n");
   }
@@ -231,7 +231,12 @@ void A_timerinterrupt(int seqnum)
   //sent_packets for that seqnum and resend it to B.
   printf("************A_timerinterrupt*********** \n");
   printf("resending packet to B with seqnum %d \n", seqnum);
-  tolayer3(SENDER_A, sent_packets[seqnum-1]);
+  struct pkt pkt = sent_packets[seqnum-base-1];
+  if (pkt.seqnum != seqnum) {
+    printf("----- SHIT!!! ----\n");
+    exit(0);
+  }
+  tolayer3(SENDER_A, pkt);
   starttimer(SENDER_A, seqnum, TIME);
 }  
 
@@ -282,11 +287,14 @@ void B_input(struct pkt packet)
     }
     if(packet.seqnum < recv_base) {
       /* Packet was already acknowledged. Reacknowledge. */
+      printf("--------B received a packet with seqnum %d that "
+          "was ack'ed earlier. Re send ack-------\n", packet.seqnum);
       tolayer3(SENDER_B, packet);
       return;
     }
     else if(packet.seqnum < recv_base + receiver_window_size){
       /* Send an Acknowledgement immediately*/
+      printf("-------Sending Ack to A for pkt with seqnum %d \n--------",packet.seqnum); 
       tolayer3(SENDER_B, packet);
       /* Add the packet to the window */
       int seqnum = packet.seqnum;
@@ -301,10 +309,16 @@ void B_input(struct pkt packet)
         for(int i=0; i<k; i++) {
           tolayer5(SENDER_B, recv_packets[i].payload);
         }
+        if(k > 1){
+          printf("--------Buffered Messages sent to Layer 5---------- \n");
+        }
         /* Slide the window by k */
         recv_base = recv_base + k;
         left_shift_pkt_array(recv_packets, k, receiver_window_size);
         left_shift_int_array(recv_markers, k, receiver_window_size);
+      }
+      else{
+        printf("---------Received packet is out of order. Packet being buffered---------\n");
       }
       /* No such thing as a receiver buffer */
     } 
@@ -431,9 +445,9 @@ main()
            A_input(pkt2give);            /* appropriate entity */
             else
            B_input(pkt2give);
-      printf("eventptr->pktptr\n");
+      //printf("eventptr->pktptr\n");
       free(eventptr->pktptr);          /* free the memory for packet */
-       printf("DONE\n");
+       //printf("DONE\n");
             }
           else if (eventptr->evtype ==  TIMER_INTERRUPT) {
             if (eventptr->eventity == TIMER_B) 
@@ -444,9 +458,9 @@ main()
           else  {
        printf("INTERNAL PANIC: unknown event type \n");
              }
-        printf("eventptr\n");
+        //printf("eventptr\n");
         free(eventptr);
-       printf("DONE\n");
+       //printf("DONE\n");
         }
 
 terminate:
@@ -473,10 +487,10 @@ init()                         /* initialize the simulator */
    scanf("%f",&lambda);
    printf("Enter TRACE:");
    scanf("%d",&TRACE);*/
-   nsimmax = 150;
-   lossprob = 0.2;
+   nsimmax = 20;
+   lossprob = 0.0;
    corruptprob = 0.2;
-   lambda = 10;
+   lambda = 20;
    TRACE = 2;
 
    srand(9999);              /* init random number generator */
@@ -616,9 +630,9 @@ void stoptimer(int AorB, int seqnum){
              q->next->prev = q->prev;
              q->prev->next =  q->next;
              }
-       printf("q\n");
+       //printf("q\n");
        free(q);
-       printf("DONE\n");
+       //printf("DONE\n");
        return;
      }
   printf("Warning: unable to cancel your timer. It wasn't running.\n");
@@ -672,7 +686,7 @@ void tolayer3(int AorB, struct pkt packet){
 /* make a copy of the packet student just gave me since he/she may decide */
 /* to do something with the packet after we return back to him/her */ 
  mypktptr = (struct pkt *)malloc(sizeof(struct pkt));
- printf("is mkptr NULL? %d\n", mypktptr == NULL);
+ //printf("is mkptr NULL? %d\n", mypktptr == NULL);
  mypktptr->seqnum = packet.seqnum;
  mypktptr->acknum = packet.acknum;
  mypktptr->checksum = packet.checksum;
