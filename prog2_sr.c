@@ -137,7 +137,7 @@ void A_output(struct msg message)
   else /*if(seqnum_A >= base + windowsize)*/{
     if(buf_next_A < buf_base_A + buffersize){
       /* If there is space in the buffer, then buffer the msg. */
-      printf("Window is full. Message is being buffered \n");
+      printf("-------Window is full. Message is being buffered-------- \n");
       strncpy(packet.payload, message.data, 20);
       printpacketdata(packet.payload);
       buffer_messages_A[buf_next_A - buf_base_A] = message;
