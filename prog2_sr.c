@@ -483,7 +483,7 @@ init()                         /* initialize the simulator */
   
    printf("**********SELECTIVE-REPEAT PROTOCOL**********\n"); 
    printf("-----  Stop and Wait Network Simulator Version 1.1 -------- \n\n");
-   /*printf("Enter the number of messages to simulate: ");
+   printf("Enter the number of messages to simulate: ");
    scanf("%d",&nsimmax);
    printf("Enter  packet loss probability [enter 0.0 for no loss]:");
    scanf("%f",&lossprob);
@@ -492,12 +492,7 @@ init()                         /* initialize the simulator */
    printf("Enter average time between messages from sender's layer5 [ > 0.0]:");
    scanf("%f",&lambda);
    printf("Enter TRACE:");
-   scanf("%d",&TRACE);*/
-   nsimmax = 70;
-   lossprob = 0.2;
-   corruptprob = 0.2;
-   lambda = 10;
-   TRACE = 2;
+   scanf("%d",&TRACE);
 
    srand(9999);              /* init random number generator */
    sum = 0.0;                /* test random number generator for students */

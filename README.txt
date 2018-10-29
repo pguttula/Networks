@@ -1,5 +1,5 @@
-Alternating Bit Protocol- Bidirectional:
-
+Alternating Bit Protocol- Bidirectional:  
+* Use cc -w prog2_arq.c to compile code
 * Default mode is Biderectional. Please change flag #define
   BIDIRECTIONAL from 1 to 0 for Unidirectional mode.
 *Protocol uses:
@@ -9,10 +9,13 @@ Alternating Bit Protocol- Bidirectional:
   highlighted for first 10 messages recived correctly.
 
 Go-Back N Protocol:
+* Use cc -w prog2_gbn.c to compile code
 * output_gbn.pdf has the corruption, loss and recovery scenarios 
   highlighted for first 20 messages recived correctly.
 
 Selective- Repeat Protocol:
+* Use cc -w prog2_sr.c to compile code
 * output_sr.pdf has the corruption, loss and recovery scenarios
   highlighted for first 20 messages recived correctly.
-
+* Modified simulator code to set multiple timers. 
+  Modified the functions A_timerinterrupt, starttimer, stoptimer
