@@ -12,4 +12,7 @@ Go-Back N Protocol:
 * output_gbn.pdf has the corruption, loss and recovery scenarios 
   highlighted for first 20 messages recived correctly.
 
+Selective- Repeat Protocol:
+* output_sr.pdf has the corruption, loss and recovery scenarios
+  highlighted for first 20 messages recived correctly.
 

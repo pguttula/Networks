@@ -488,9 +488,9 @@ init()                         /* initialize the simulator */
    printf("Enter TRACE:");
    scanf("%d",&TRACE);*/
    nsimmax = 100;
-   lossprob = 0.0;
+   lossprob = 0.2;
    corruptprob = 0.2;
-   lambda = 20;
+   lambda = 10;
    TRACE = 2;
 
    srand(9999);              /* init random number generator */
