@@ -5,21 +5,22 @@
 EVENT time: 18.705740,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 Packet Sequence Number is: 1 
 Packet Ack Number is: 1 
 Packet CheckSum is: 1942 
---------Total packets sent from A to B so far: 1 
--------
+--------Total packets sent from A to B so far: 1 -------
+
 EVENT time: 24.170835,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 1 from A------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 Packet Sequence Number is: 1 
 Packet Ack Number is: 1 
 Packet CheckSum is: 1942 
 -------Sending Ack to A for pkt with seqnum 1 
 --------          TOLAYER3: packet being corrupted
+Total Number of packets Ack'ed at B 1
 
 EVENT time: 29.402449,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -28,22 +29,22 @@ EVENT time: 29.402449,  type: 2, fromlayer3  entity: 0
 EVENT time: 35.124840,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :bbbbbbbbbbbbbbbbbbbb
+Packet Payload is:bbbbbbbbbbbbbbbbbbbb
 Packet Sequence Number is: 2 
 Packet Ack Number is: 2 
 Packet CheckSum is: 1964 
---------Total packets sent from A to B so far: 2 
--------          TOLAYER3: packet being lost
+--------Total packets sent from A to B so far: 2 -------
+          TOLAYER3: packet being lost
 
 EVENT time: 37.680447,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :cccccccccccccccccccc
+Packet Payload is:cccccccccccccccccccc
 Packet Sequence Number is: 3 
 Packet Ack Number is: 3 
 Packet CheckSum is: 1986 
---------Total packets sent from A to B so far: 3 
--------          TOLAYER3: packet being corrupted
+--------Total packets sent from A to B so far: 3 -------
+          TOLAYER3: packet being corrupted
 
 EVENT time: 38.705742,  type: 0, timerinterrupt   entity: 1
 ************A_timerinterrupt*********** 
@@ -53,7 +54,7 @@ resending packet to B with seqnum 1
 EVENT time: 42.147713,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 3 from A------- 
-Packet payload is :Zccccccccccccccccccc
+Packet Payload is:Zccccccccccccccccccc
 Packet Sequence Number is: 3 
 Packet Ack Number is: 3 
 Packet CheckSum is: 1977 
@@ -62,31 +63,32 @@ Packet CheckSum is: 1977
 EVENT time: 46.394402,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :dddddddddddddddddddd
+Packet Payload is:dddddddddddddddddddd
 Packet Sequence Number is: 4 
 Packet Ack Number is: 4 
 Packet CheckSum is: 2008 
---------Total packets sent from A to B so far: 4 
--------
+--------Total packets sent from A to B so far: 4 -------
+
 EVENT time: 51.666630,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 4 from A------- 
-Packet payload is :dddddddddddddddddddd
+Packet Payload is:dddddddddddddddddddd
 Packet Sequence Number is: 4 
 Packet Ack Number is: 4 
 Packet CheckSum is: 2008 
 -------Sending Ack to A for pkt with seqnum 4 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 2
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 54.979748,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :eeeeeeeeeeeeeeeeeeee
+Packet Payload is:eeeeeeeeeeeeeeeeeeee
 Packet Sequence Number is: 5 
 Packet Ack Number is: 5 
 Packet CheckSum is: 2030 
---------Total packets sent from A to B so far: 5 
--------          TOLAYER3: packet being lost
+--------Total packets sent from A to B so far: 5 -------
+          TOLAYER3: packet being lost
 
 EVENT time: 55.124840,  type: 0, timerinterrupt   entity: 2
 ************A_timerinterrupt*********** 
@@ -110,7 +112,7 @@ resending packet to B with seqnum 1
 EVENT time: 59.188442,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 2 from A------- 
-Packet payload is :Zbbbbbbbbbbbbbbbbbbb
+Packet Payload is:Zbbbbbbbbbbbbbbbbbbb
 Packet Sequence Number is: 2 
 Packet Ack Number is: 2 
 Packet CheckSum is: 1956 
@@ -119,7 +121,7 @@ Packet CheckSum is: 1956
 EVENT time: 60.972366,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 3 from A------- 
-Packet payload is :cccccccccccccccccccc
+Packet Payload is:cccccccccccccccccccc
 Packet Sequence Number is: 3 
 Packet Ack Number is: 3 
 Packet CheckSum is: 1001982 
@@ -128,7 +130,7 @@ Packet CheckSum is: 1001982
 EVENT time: 65.130951,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 1 from A------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 Packet Sequence Number is: 1 
 Packet Ack Number is: 1 
 Packet CheckSum is: 1942 
@@ -138,12 +140,12 @@ Packet CheckSum is: 1942
 EVENT time: 72.798996,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :ffffffffffffffffffff
+Packet Payload is:ffffffffffffffffffff
 Packet Sequence Number is: 6 
 Packet Ack Number is: 6 
 Packet CheckSum is: 2052 
---------Total packets sent from A to B so far: 6 
--------
+--------Total packets sent from A to B so far: 6 -------
+
 EVENT time: 74.979752,  type: 0, timerinterrupt   entity: 5
 ************A_timerinterrupt*********** 
 resending packet to B with seqnum 5 
@@ -156,12 +158,13 @@ resending packet to B with seqnum 2
 EVENT time: 75.429649,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 6 from A------- 
-Packet payload is :ffffffffffffffffffff
+Packet Payload is:ffffffffffffffffffff
 Packet Sequence Number is: 6 
 Packet Ack Number is: 6 
 Packet CheckSum is: 2052 
 -------Sending Ack to A for pkt with seqnum 6 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 3
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 76.736038,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -171,12 +174,13 @@ Timer stopped for packet with seqnum 6
 EVENT time: 77.304840,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 5 from A------- 
-Packet payload is :eeeeeeeeeeeeeeeeeeee
+Packet Payload is:eeeeeeeeeeeeeeeeeeee
 Packet Sequence Number is: 5 
 Packet Ack Number is: 5 
 Packet CheckSum is: 2030 
 -------Sending Ack to A for pkt with seqnum 5 
 --------          TOLAYER3: packet being corrupted
+Total Number of packets Ack'ed at B 4
 ---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 77.680450,  type: 0, timerinterrupt   entity: 3
@@ -191,12 +195,12 @@ resending packet to B with seqnum 1
 EVENT time: 82.443901,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :gggggggggggggggggggg
+Packet Payload is:gggggggggggggggggggg
 Packet Sequence Number is: 7 
 Packet Ack Number is: 7 
 Packet CheckSum is: 2074 
---------Total packets sent from A to B so far: 7 
--------
+--------Total packets sent from A to B so far: 7 -------
+
 EVENT time: 82.883453,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
 ----- Corrupt ACK received -----
@@ -204,7 +208,7 @@ EVENT time: 82.883453,  type: 2, fromlayer3  entity: 0
 EVENT time: 83.930389,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 3 from A------- 
-Packet payload is :Zccccccccccccccccccc
+Packet Payload is:Zccccccccccccccccccc
 Packet Sequence Number is: 3 
 Packet Ack Number is: 3 
 Packet CheckSum is: 1977 
@@ -213,7 +217,7 @@ Packet CheckSum is: 1977
 EVENT time: 88.749672,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 1 from A------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 Packet Sequence Number is: 1 
 Packet Ack Number is: 1 
 Packet CheckSum is: 1942 
@@ -223,23 +227,24 @@ Packet CheckSum is: 1942
 EVENT time: 92.411438,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 7 from A------- 
-Packet payload is :gggggggggggggggggggg
+Packet Payload is:gggggggggggggggggggg
 Packet Sequence Number is: 7 
 Packet Ack Number is: 7 
 Packet CheckSum is: 2074 
 -------Sending Ack to A for pkt with seqnum 7 
 --------          TOLAYER3: packet being corrupted
+Total Number of packets Ack'ed at B 5
 ---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 94.260300,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :hhhhhhhhhhhhhhhhhhhh
+Packet Payload is:hhhhhhhhhhhhhhhhhhhh
 Packet Sequence Number is: 8 
 Packet Ack Number is: 8 
 Packet CheckSum is: 2096 
---------Total packets sent from A to B so far: 8 
--------          TOLAYER3: packet being lost
+--------Total packets sent from A to B so far: 8 -------
+          TOLAYER3: packet being lost
 
 EVENT time: 94.979752,  type: 0, timerinterrupt   entity: 5
 ************A_timerinterrupt*********** 
@@ -254,12 +259,12 @@ resending packet to B with seqnum 2
 EVENT time: 96.434456,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :iiiiiiiiiiiiiiiiiiii
+Packet Payload is:iiiiiiiiiiiiiiiiiiii
 
 EVENT time: 96.786087,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 5 from A------- 
-Packet payload is :Zeeeeeeeeeeeeeeeeeee
+Packet Payload is:Zeeeeeeeeeeeeeeeeeee
 Packet Sequence Number is: 5 
 Packet Ack Number is: 5 
 Packet CheckSum is: 2019 
@@ -289,12 +294,13 @@ EVENT time: 103.278122,  type: 2, fromlayer3  entity: 0
 EVENT time: 104.371796,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 3 from A------- 
-Packet payload is :cccccccccccccccccccc
+Packet Payload is:cccccccccccccccccccc
 Packet Sequence Number is: 3 
 Packet Ack Number is: 3 
 Packet CheckSum is: 1986 
 -------Sending Ack to A for pkt with seqnum 3 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 6
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 106.076035,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -304,17 +310,17 @@ Timer stopped for packet with seqnum 3
 EVENT time: 107.572578,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :jjjjjjjjjjjjjjjjjjjj
+Packet Payload is:jjjjjjjjjjjjjjjjjjjj
 
 EVENT time: 108.736366,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 
 EVENT time: 109.844398,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 1 from A------- 
-Packet payload is :Zaaaaaaaaaaaaaaaaaaa
+Packet Payload is:Zaaaaaaaaaaaaaaaaaaa
 Packet Sequence Number is: 1 
 Packet Ack Number is: 1 
 Packet CheckSum is: 1935 
@@ -335,12 +341,13 @@ resending packet to B with seqnum 2
 EVENT time: 115.231255,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 7 from A------- 
-Packet payload is :gggggggggggggggggggg
+Packet Payload is:gggggggggggggggggggg
 Packet Sequence Number is: 7 
 Packet Ack Number is: 7 
 Packet CheckSum is: 2074 
 -------Sending Ack to A for pkt with seqnum 7 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 7
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 117.976494,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -354,33 +361,35 @@ resending packet to B with seqnum 1
 EVENT time: 123.898842,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :llllllllllllllllllll
+Packet Payload is:llllllllllllllllllll
 
 EVENT time: 124.665741,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 8 from A------- 
-Packet payload is :hhhhhhhhhhhhhhhhhhhh
+Packet Payload is:hhhhhhhhhhhhhhhhhhhh
 Packet Sequence Number is: 8 
 Packet Ack Number is: 8 
 Packet CheckSum is: 2096 
 -------Sending Ack to A for pkt with seqnum 8 
 --------          TOLAYER3: packet being lost
+Total Number of packets Ack'ed at B 8
 ---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 130.119476,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm
+Packet Payload is:mmmmmmmmmmmmmmmmmmmm
 
 EVENT time: 133.491638,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 5 from A------- 
-Packet payload is :eeeeeeeeeeeeeeeeeeee
+Packet Payload is:eeeeeeeeeeeeeeeeeeee
 Packet Sequence Number is: 5 
 Packet Ack Number is: 5 
 Packet CheckSum is: 2030 
 -------Sending Ack to A for pkt with seqnum 5 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 9
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 134.260300,  type: 0, timerinterrupt   entity: 8
 ************A_timerinterrupt*********** 
@@ -400,7 +409,7 @@ resending packet to B with seqnum 2
 EVENT time: 135.246201,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn
+Packet Payload is:nnnnnnnnnnnnnnnnnnnn
 
 EVENT time: 138.705750,  type: 0, timerinterrupt   entity: 1
 ************A_timerinterrupt*********** 
@@ -414,12 +423,13 @@ Timer stopped for packet with seqnum 5
 EVENT time: 143.339615,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 2 from A------- 
-Packet payload is :bbbbbbbbbbbbbbbbbbbb
+Packet Payload is:bbbbbbbbbbbbbbbbbbbb
 Packet Sequence Number is: 2 
 Packet Ack Number is: 2 
 Packet CheckSum is: 1964 
 -------Sending Ack to A for pkt with seqnum 2 
 --------          TOLAYER3: packet being corrupted
+Total Number of packets Ack'ed at B 10
 --------Buffered Messages sent to Layer 5---------- 
 
 EVENT time: 144.923477,  type: 2, fromlayer3  entity: 0
@@ -429,12 +439,12 @@ EVENT time: 144.923477,  type: 2, fromlayer3  entity: 0
 EVENT time: 147.702179,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :oooooooooooooooooooo
+Packet Payload is:oooooooooooooooooooo
 
 EVENT time: 152.827789,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 1 from A------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 Packet Sequence Number is: 1 
 Packet Ack Number is: 1 
 Packet CheckSum is: 1942 
@@ -457,17 +467,17 @@ Timer stopped for packet with seqnum 1
 Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :iiiiiiiiiiiiiiiiiiii
+Packet Payload is:iiiiiiiiiiiiiiiiiiii
 Packet Sequence Number is: 9 
 Packet Ack Number is: 9 
 Packet CheckSum is: 2118 
---------Total packets sent from A to B so far: 9 
--------          TOLAYER3: packet being corrupted
+--------Total packets sent from A to B so far: 9 -------
+          TOLAYER3: packet being corrupted
 
 EVENT time: 158.728745,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 2 from A------- 
-Packet payload is :Zbbbbbbbbbbbbbbbbbbb
+Packet Payload is:Zbbbbbbbbbbbbbbbbbbb
 Packet Sequence Number is: 2 
 Packet Ack Number is: 2 
 Packet CheckSum is: 1956 
@@ -476,7 +486,7 @@ Packet CheckSum is: 1956
 EVENT time: 160.878128,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 1 from A------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 Packet Sequence Number is: 1 
 Packet Ack Number is: 1 
 Packet CheckSum is: 1942 
@@ -486,7 +496,7 @@ Packet CheckSum is: 1942
 EVENT time: 163.413452,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 8 from A------- 
-Packet payload is :Zhhhhhhhhhhhhhhhhhhh
+Packet Payload is:Zhhhhhhhhhhhhhhhhhhh
 Packet Sequence Number is: 8 
 Packet Ack Number is: 8 
 Packet CheckSum is: 2082 
@@ -495,7 +505,7 @@ Packet CheckSum is: 2082
 EVENT time: 164.904617,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 2 from A------- 
-Packet payload is :Zbbbbbbbbbbbbbbbbbbb
+Packet Payload is:Zbbbbbbbbbbbbbbbbbbb
 Packet Sequence Number is: 2 
 Packet Ack Number is: 2 
 Packet CheckSum is: 1956 
@@ -504,12 +514,12 @@ Packet CheckSum is: 1956
 EVENT time: 166.390564,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :pppppppppppppppppppp
+Packet Payload is:pppppppppppppppppppp
 
 EVENT time: 168.274017,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 999999 from A------- 
-Packet payload is :iiiiiiiiiiiiiiiiiiii
+Packet Payload is:iiiiiiiiiiiiiiiiiiii
 Packet Sequence Number is: 999999 
 Packet Ack Number is: 999999 
 Packet CheckSum is: 1002108 
@@ -518,7 +528,7 @@ Packet CheckSum is: 1002108
 EVENT time: 170.096252,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :qqqqqqqqqqqqqqqqqqqq
+Packet Payload is:qqqqqqqqqqqqqqqqqqqq
 
 EVENT time: 174.260300,  type: 0, timerinterrupt   entity: 8
 ************A_timerinterrupt*********** 
@@ -535,7 +545,7 @@ resending packet to B with seqnum 9
 EVENT time: 181.828812,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 8 from A------- 
-Packet payload is :hhhhhhhhhhhhhhhhhhhh
+Packet Payload is:hhhhhhhhhhhhhhhhhhhh
 Packet Sequence Number is: 8 
 Packet Ack Number is: 8 
 Packet CheckSum is: 2096 
@@ -544,7 +554,7 @@ Packet CheckSum is: 2096
 EVENT time: 186.002518,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 2 from A------- 
-Packet payload is :bbbbbbbbbbbbbbbbbbbb
+Packet Payload is:bbbbbbbbbbbbbbbbbbbb
 Packet Sequence Number is: 2 
 Packet Ack Number is: 2 
 Packet CheckSum is: 1964 
@@ -553,7 +563,7 @@ Packet CheckSum is: 1964
 EVENT time: 187.928848,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :rrrrrrrrrrrrrrrrrrrr
+Packet Payload is:rrrrrrrrrrrrrrrrrrrr
 
 EVENT time: 190.959702,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -563,12 +573,13 @@ Timer stopped for packet with seqnum 8
 EVENT time: 193.604523,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 9 from A------- 
-Packet payload is :iiiiiiiiiiiiiiiiiiii
+Packet Payload is:iiiiiiiiiiiiiiiiiiii
 Packet Sequence Number is: 9 
 Packet Ack Number is: 9 
 Packet CheckSum is: 2118 
 -------Sending Ack to A for pkt with seqnum 9 
---------
+--------Total Number of packets Ack'ed at B 11
+
 EVENT time: 195.124847,  type: 0, timerinterrupt   entity: 2
 ************A_timerinterrupt*********** 
 resending packet to B with seqnum 2 
@@ -580,70 +591,70 @@ Timer stopped for packet with seqnum 2
 Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :jjjjjjjjjjjjjjjjjjjj
+Packet Payload is:jjjjjjjjjjjjjjjjjjjj
 Packet Sequence Number is: 10 
 Packet Ack Number is: 10 
 Packet CheckSum is: 2140 
---------Total packets sent from A to B so far: 10 
--------Packet being sent out of Buffer 
-***********A_Output*********
---------Packet being sent from A to B------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk
-Packet Sequence Number is: 11 
-Packet Ack Number is: 11 
-Packet CheckSum is: 2162 
---------Total packets sent from A to B so far: 11 
--------Packet being sent out of Buffer 
-***********A_Output*********
---------Packet being sent from A to B------- 
-Packet payload is :llllllllllllllllllll
-Packet Sequence Number is: 12 
-Packet Ack Number is: 12 
-Packet CheckSum is: 2184 
---------Total packets sent from A to B so far: 12 
--------Packet being sent out of Buffer 
-***********A_Output*********
---------Packet being sent from A to B------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm
-Packet Sequence Number is: 13 
-Packet Ack Number is: 13 
-Packet CheckSum is: 2206 
---------Total packets sent from A to B so far: 13 
--------Packet being sent out of Buffer 
-***********A_Output*********
---------Packet being sent from A to B------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn
-Packet Sequence Number is: 14 
-Packet Ack Number is: 14 
-Packet CheckSum is: 2228 
---------Total packets sent from A to B so far: 14 
--------          TOLAYER3: packet being corrupted
+--------Total packets sent from A to B so far: 10 -------
 Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :oooooooooooooooooooo
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
+Packet Sequence Number is: 11 
+Packet Ack Number is: 11 
+Packet CheckSum is: 2162 
+--------Total packets sent from A to B so far: 11 -------
+Packet being sent out of Buffer 
+***********A_Output*********
+--------Packet being sent from A to B------- 
+Packet Payload is:llllllllllllllllllll
+Packet Sequence Number is: 12 
+Packet Ack Number is: 12 
+Packet CheckSum is: 2184 
+--------Total packets sent from A to B so far: 12 -------
+Packet being sent out of Buffer 
+***********A_Output*********
+--------Packet being sent from A to B------- 
+Packet Payload is:mmmmmmmmmmmmmmmmmmmm
+Packet Sequence Number is: 13 
+Packet Ack Number is: 13 
+Packet CheckSum is: 2206 
+--------Total packets sent from A to B so far: 13 -------
+Packet being sent out of Buffer 
+***********A_Output*********
+--------Packet being sent from A to B------- 
+Packet Payload is:nnnnnnnnnnnnnnnnnnnn
+Packet Sequence Number is: 14 
+Packet Ack Number is: 14 
+Packet CheckSum is: 2228 
+--------Total packets sent from A to B so far: 14 -------
+          TOLAYER3: packet being corrupted
+Packet being sent out of Buffer 
+***********A_Output*********
+--------Packet being sent from A to B------- 
+Packet Payload is:oooooooooooooooooooo
 Packet Sequence Number is: 15 
 Packet Ack Number is: 15 
 Packet CheckSum is: 2250 
---------Total packets sent from A to B so far: 15 
--------Packet being sent out of Buffer 
+--------Total packets sent from A to B so far: 15 -------
+Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :pppppppppppppppppppp
+Packet Payload is:pppppppppppppppppppp
 Packet Sequence Number is: 16 
 Packet Ack Number is: 16 
 Packet CheckSum is: 2272 
---------Total packets sent from A to B so far: 16 
--------
+--------Total packets sent from A to B so far: 16 -------
+
 EVENT time: 196.682648,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :ssssssssssssssssssss
+Packet Payload is:ssssssssssssssssssss
 
 EVENT time: 196.721329,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 2 from A------- 
-Packet payload is :bbbbbbbbbbbbbbbbbbbb
+Packet Payload is:bbbbbbbbbbbbbbbbbbbb
 Packet Sequence Number is: 2 
 Packet Ack Number is: 2 
 Packet CheckSum is: 1964 
@@ -657,22 +668,23 @@ Timer stopped for packet with seqnum 9
 Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :qqqqqqqqqqqqqqqqqqqq
+Packet Payload is:qqqqqqqqqqqqqqqqqqqq
 Packet Sequence Number is: 17 
 Packet Ack Number is: 17 
 Packet CheckSum is: 2294 
---------Total packets sent from A to B so far: 17 
--------          TOLAYER3: packet being corrupted
+--------Total packets sent from A to B so far: 17 -------
+          TOLAYER3: packet being corrupted
 
 EVENT time: 200.439545,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 10 from A------- 
-Packet payload is :jjjjjjjjjjjjjjjjjjjj
+Packet Payload is:jjjjjjjjjjjjjjjjjjjj
 Packet Sequence Number is: 10 
 Packet Ack Number is: 10 
 Packet CheckSum is: 2140 
 -------Sending Ack to A for pkt with seqnum 10 
---------
+--------Total Number of packets Ack'ed at B 12
+
 EVENT time: 203.454391,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
 -------A Received acknowledgement 10 from B-------
@@ -680,36 +692,38 @@ Timer stopped for packet with seqnum 10
 Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :rrrrrrrrrrrrrrrrrrrr
+Packet Payload is:rrrrrrrrrrrrrrrrrrrr
 Packet Sequence Number is: 18 
 Packet Ack Number is: 18 
 Packet CheckSum is: 2316 
---------Total packets sent from A to B so far: 18 
--------
+--------Total packets sent from A to B so far: 18 -------
+
 EVENT time: 205.311218,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 11 from A------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 Packet Sequence Number is: 11 
 Packet Ack Number is: 11 
 Packet CheckSum is: 2162 
 -------Sending Ack to A for pkt with seqnum 11 
 --------          TOLAYER3: packet being lost
+Total Number of packets Ack'ed at B 13
 
 EVENT time: 210.887939,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :tttttttttttttttttttt
+Packet Payload is:tttttttttttttttttttt
 
 EVENT time: 211.850449,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 12 from A------- 
-Packet payload is :llllllllllllllllllll
+Packet Payload is:llllllllllllllllllll
 Packet Sequence Number is: 12 
 Packet Ack Number is: 12 
 Packet CheckSum is: 2184 
 -------Sending Ack to A for pkt with seqnum 12 
---------
+--------Total Number of packets Ack'ed at B 14
+
 EVENT time: 213.713379,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
 -------A Received acknowledgement 12 from B-------
@@ -741,12 +755,13 @@ resending packet to B with seqnum 11
 EVENT time: 215.958191,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 13 from A------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm
+Packet Payload is:mmmmmmmmmmmmmmmmmmmm
 Packet Sequence Number is: 13 
 Packet Ack Number is: 13 
 Packet CheckSum is: 2206 
 -------Sending Ack to A for pkt with seqnum 13 
 --------          TOLAYER3: packet being lost
+Total Number of packets Ack'ed at B 15
 
 EVENT time: 217.611755,  type: 0, timerinterrupt   entity: 17
 ************A_timerinterrupt*********** 
@@ -755,7 +770,7 @@ resending packet to B with seqnum 17
 EVENT time: 223.239639,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 14 from A------- 
-Packet payload is :Znnnnnnnnnnnnnnnnnnn
+Packet Payload is:Znnnnnnnnnnnnnnnnnnn
 Packet Sequence Number is: 14 
 Packet Ack Number is: 14 
 Packet CheckSum is: 2208 
@@ -769,33 +784,35 @@ resending packet to B with seqnum 18
 EVENT time: 229.745026,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 15 from A------- 
-Packet payload is :oooooooooooooooooooo
+Packet Payload is:oooooooooooooooooooo
 Packet Sequence Number is: 15 
 Packet Ack Number is: 15 
 Packet CheckSum is: 2250 
 -------Sending Ack to A for pkt with seqnum 15 
 --------          TOLAYER3: packet being corrupted
+Total Number of packets Ack'ed at B 16
 ---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 230.009552,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu
+Packet Payload is:uuuuuuuuuuuuuuuuuuuu
 
 EVENT time: 230.930359,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :vvvvvvvvvvvvvvvvvvvv
+Packet Payload is:vvvvvvvvvvvvvvvvvvvv
 
 EVENT time: 231.150650,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 16 from A------- 
-Packet payload is :pppppppppppppppppppp
+Packet Payload is:pppppppppppppppppppp
 Packet Sequence Number is: 16 
 Packet Ack Number is: 16 
 Packet CheckSum is: 2272 
 -------Sending Ack to A for pkt with seqnum 16 
 --------          TOLAYER3: packet being lost
+Total Number of packets Ack'ed at B 17
 ---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 235.337723,  type: 0, timerinterrupt   entity: 11
@@ -833,7 +850,7 @@ resending packet to B with seqnum 17
 EVENT time: 240.864792,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 17 from A------- 
-Packet payload is :Zqqqqqqqqqqqqqqqqqqq
+Packet Payload is:Zqqqqqqqqqqqqqqqqqqq
 Packet Sequence Number is: 17 
 Packet Ack Number is: 17 
 Packet CheckSum is: 2271 
@@ -847,27 +864,29 @@ resending packet to B with seqnum 18
 EVENT time: 244.843124,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :wwwwwwwwwwwwwwwwwwww
+Packet Payload is:wwwwwwwwwwwwwwwwwwww
 
 EVENT time: 246.597839,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 18 from A------- 
-Packet payload is :rrrrrrrrrrrrrrrrrrrr
+Packet Payload is:rrrrrrrrrrrrrrrrrrrr
 Packet Sequence Number is: 18 
 Packet Ack Number is: 18 
 Packet CheckSum is: 2316 
 -------Sending Ack to A for pkt with seqnum 18 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 18
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 250.722809,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 16 from A------- 
-Packet payload is :pppppppppppppppppppp
+Packet Payload is:pppppppppppppppppppp
 Packet Sequence Number is: 16 
 Packet Ack Number is: 16 
 Packet CheckSum is: 2272 
 -------Sending Ack to A for pkt with seqnum 16 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 19
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 254.720230,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -897,7 +916,7 @@ resending packet to B with seqnum 11
 EVENT time: 256.727448,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :xxxxxxxxxxxxxxxxxxxx
+Packet Payload is:xxxxxxxxxxxxxxxxxxxx
 
 EVENT time: 257.611755,  type: 0, timerinterrupt   entity: 17
 ************A_timerinterrupt*********** 
@@ -906,23 +925,24 @@ resending packet to B with seqnum 17
 EVENT time: 258.732880,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :yyyyyyyyyyyyyyyyyyyy
+Packet Payload is:yyyyyyyyyyyyyyyyyyyy
 
 EVENT time: 260.648254,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 15 from A------- 
-Packet payload is :oooooooooooooooooooo
+Packet Payload is:oooooooooooooooooooo
 Packet Sequence Number is: 15 
 Packet Ack Number is: 15 
 Packet CheckSum is: 2250 
 -------Sending Ack to A for pkt with seqnum 15 
 --------          TOLAYER3: packet being lost
+Total Number of packets Ack'ed at B 20
 ---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 263.061981,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 14 from A------- 
-Packet payload is :Znnnnnnnnnnnnnnnnnnn
+Packet Payload is:Znnnnnnnnnnnnnnnnnnn
 Packet Sequence Number is: 14 
 Packet Ack Number is: 14 
 Packet CheckSum is: 2208 
@@ -936,7 +956,7 @@ Timer stopped for packet with seqnum 16
 EVENT time: 267.492981,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 13 from A------- 
-Packet payload is :Zmmmmmmmmmmmmmmmmmmm
+Packet Payload is:Zmmmmmmmmmmmmmmmmmmm
 Packet Sequence Number is: 13 
 Packet Ack Number is: 13 
 Packet CheckSum is: 2187 
@@ -945,12 +965,13 @@ Packet CheckSum is: 2187
 EVENT time: 269.030487,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 17 from A------- 
-Packet payload is :qqqqqqqqqqqqqqqqqqqq
+Packet Payload is:qqqqqqqqqqqqqqqqqqqq
 Packet Sequence Number is: 17 
 Packet Ack Number is: 17 
 Packet CheckSum is: 2294 
 -------Sending Ack to A for pkt with seqnum 17 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 21
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 271.072449,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -977,27 +998,29 @@ resending packet to B with seqnum 15
 EVENT time: 277.743988,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 15 from A------- 
-Packet payload is :oooooooooooooooooooo
+Packet Payload is:oooooooooooooooooooo
 Packet Sequence Number is: 15 
 Packet Ack Number is: 15 
 Packet CheckSum is: 2250 
 -------Sending Ack to A for pkt with seqnum 15 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 22
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 278.016022,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :zzzzzzzzzzzzzzzzzzzz
+Packet Payload is:zzzzzzzzzzzzzzzzzzzz
 
 EVENT time: 279.871674,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 16 from A------- 
-Packet payload is :pppppppppppppppppppp
+Packet Payload is:pppppppppppppppppppp
 Packet Sequence Number is: 16 
 Packet Ack Number is: 16 
 Packet CheckSum is: 2272 
 -------Sending Ack to A for pkt with seqnum 16 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 23
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 282.917542,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -1007,7 +1030,7 @@ Timer stopped for packet with seqnum 15
 EVENT time: 287.045929,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 18 from A------- 
-Packet payload is :Zrrrrrrrrrrrrrrrrrrr
+Packet Payload is:Zrrrrrrrrrrrrrrrrrrr
 Packet Sequence Number is: 18 
 Packet Ack Number is: 18 
 Packet CheckSum is: 2292 
@@ -1022,23 +1045,24 @@ Timer stopped for packet with seqnum 16
 EVENT time: 289.792328,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 
 EVENT time: 290.082886,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 16 from A------- 
-Packet payload is :pppppppppppppppppppp
+Packet Payload is:pppppppppppppppppppp
 Packet Sequence Number is: 16 
 Packet Ack Number is: 16 
 Packet CheckSum is: 2272 
 -------Sending Ack to A for pkt with seqnum 16 
 --------          TOLAYER3: packet being lost
+Total Number of packets Ack'ed at B 24
 ---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 290.809875,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :bbbbbbbbbbbbbbbbbbbb
+Packet Payload is:bbbbbbbbbbbbbbbbbbbb
 
 EVENT time: 295.337708,  type: 0, timerinterrupt   entity: 14
 ************A_timerinterrupt*********** 
@@ -1055,22 +1079,23 @@ resending packet to B with seqnum 11
 EVENT time: 297.801147,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 15 from A------- 
-Packet payload is :oooooooooooooooooooo
+Packet Payload is:oooooooooooooooooooo
 Packet Sequence Number is: 15 
 Packet Ack Number is: 15 
 Packet CheckSum is: 2250 
 -------Sending Ack to A for pkt with seqnum 15 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 25
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 301.307526,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :cccccccccccccccccccc
+Packet Payload is:cccccccccccccccccccc
 
 EVENT time: 301.438660,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :dddddddddddddddddddd
+Packet Payload is:dddddddddddddddddddd
 
 EVENT time: 305.773438,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -1081,28 +1106,29 @@ Timer stopped for packet with seqnum 15
 EVENT time: 305.933777,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 14 from A------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn
+Packet Payload is:nnnnnnnnnnnnnnnnnnnn
 Packet Sequence Number is: 14 
 Packet Ack Number is: 14 
 Packet CheckSum is: 2228 
 -------Sending Ack to A for pkt with seqnum 14 
 --------          TOLAYER3: packet being lost
+Total Number of packets Ack'ed at B 26
 --------Buffered Messages sent to Layer 5---------- 
 
 EVENT time: 308.150024,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :eeeeeeeeeeeeeeeeeeee
+Packet Payload is:eeeeeeeeeeeeeeeeeeee
 
 EVENT time: 313.739777,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :ffffffffffffffffffff
+Packet Payload is:ffffffffffffffffffff
 
 EVENT time: 314.085480,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 13 from A------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm
+Packet Payload is:mmmmmmmmmmmmmmmmmmmm
 Packet Sequence Number is: 13 
 Packet Ack Number is: 13 
 Packet CheckSum is: 2206 
@@ -1131,7 +1157,7 @@ Timer stopped for packet with seqnum 13
 EVENT time: 318.400238,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 11 from A------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 Packet Sequence Number is: 11 
 Packet Ack Number is: 11 
 Packet CheckSum is: 2162 
@@ -1141,7 +1167,7 @@ Packet CheckSum is: 2162
 EVENT time: 323.986572,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 17 from A------- 
-Packet payload is :qqqqqqqqqqqqqqqqqqqq
+Packet Payload is:qqqqqqqqqqqqqqqqqqqq
 Packet Sequence Number is: 17 
 Packet Ack Number is: 17 
 Packet CheckSum is: 2294 
@@ -1150,12 +1176,12 @@ Packet CheckSum is: 2294
 EVENT time: 330.269623,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :gggggggggggggggggggg
+Packet Payload is:gggggggggggggggggggg
 
 EVENT time: 330.824066,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 11 from A------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 Packet Sequence Number is: 11 
 Packet Ack Number is: 11 
 Packet CheckSum is: 2162 
@@ -1171,7 +1197,7 @@ Timer stopped for packet with seqnum 17
 EVENT time: 334.280457,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 13 from A------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm
+Packet Payload is:mmmmmmmmmmmmmmmmmmmm
 Packet Sequence Number is: 13 
 Packet Ack Number is: 13 
 Packet CheckSum is: 2206 
@@ -1180,7 +1206,7 @@ Packet CheckSum is: 2206
 EVENT time: 335.211243,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :hhhhhhhhhhhhhhhhhhhh
+Packet Payload is:hhhhhhhhhhhhhhhhhhhh
 
 EVENT time: 335.337708,  type: 0, timerinterrupt   entity: 14
 ************A_timerinterrupt*********** 
@@ -1200,12 +1226,12 @@ Timer stopped for packet with seqnum 13
 EVENT time: 343.820709,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :iiiiiiiiiiiiiiiiiiii
+Packet Payload is:iiiiiiiiiiiiiiiiiiii
 
 EVENT time: 343.893250,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 14 from A------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn
+Packet Payload is:nnnnnnnnnnnnnnnnnnnn
 Packet Sequence Number is: 14 
 Packet Ack Number is: 14 
 Packet CheckSum is: 2228 
@@ -1214,7 +1240,7 @@ Packet CheckSum is: 2228
 EVENT time: 348.446960,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 14 from A------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn
+Packet Payload is:nnnnnnnnnnnnnnnnnnnn
 Packet Sequence Number is: 14 
 Packet Ack Number is: 14 
 Packet CheckSum is: 2228 
@@ -1237,12 +1263,12 @@ resending packet to B with seqnum 11
 EVENT time: 356.190094,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :jjjjjjjjjjjjjjjjjjjj
+Packet Payload is:jjjjjjjjjjjjjjjjjjjj
 
 EVENT time: 357.587006,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 13 from A------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm
+Packet Payload is:mmmmmmmmmmmmmmmmmmmm
 Packet Sequence Number is: 13 
 Packet Ack Number is: 13 
 Packet CheckSum is: 2206 
@@ -1251,7 +1277,7 @@ Packet CheckSum is: 2206
 EVENT time: 358.633850,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 11 from A------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 Packet Sequence Number is: 11 
 Packet Ack Number is: 11 
 Packet CheckSum is: 2162 
@@ -1266,7 +1292,7 @@ Timer stopped for packet with seqnum 13
 EVENT time: 364.551331,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 11 from A------- 
-Packet payload is :Zkkkkkkkkkkkkkkkkkkk
+Packet Payload is:Zkkkkkkkkkkkkkkkkkkk
 Packet Sequence Number is: 11 
 Packet Ack Number is: 11 
 Packet CheckSum is: 2145 
@@ -1279,80 +1305,80 @@ Timer stopped for packet with seqnum 11
 Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :ssssssssssssssssssss
+Packet Payload is:ssssssssssssssssssss
 Packet Sequence Number is: 19 
 Packet Ack Number is: 19 
 Packet CheckSum is: 2338 
---------Total packets sent from A to B so far: 19 
--------Packet being sent out of Buffer 
+--------Total packets sent from A to B so far: 19 -------
+Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :tttttttttttttttttttt
+Packet Payload is:tttttttttttttttttttt
 Packet Sequence Number is: 20 
 Packet Ack Number is: 20 
 Packet CheckSum is: 2360 
---------Total packets sent from A to B so far: 20 
--------Packet being sent out of Buffer 
+--------Total packets sent from A to B so far: 20 -------
+Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu
+Packet Payload is:uuuuuuuuuuuuuuuuuuuu
 Packet Sequence Number is: 21 
 Packet Ack Number is: 21 
 Packet CheckSum is: 2382 
---------Total packets sent from A to B so far: 21 
--------          TOLAYER3: packet being corrupted
+--------Total packets sent from A to B so far: 21 -------
+          TOLAYER3: packet being corrupted
 Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :vvvvvvvvvvvvvvvvvvvv
+Packet Payload is:vvvvvvvvvvvvvvvvvvvv
 Packet Sequence Number is: 22 
 Packet Ack Number is: 22 
 Packet CheckSum is: 2404 
---------Total packets sent from A to B so far: 22 
--------          TOLAYER3: packet being lost
+--------Total packets sent from A to B so far: 22 -------
+          TOLAYER3: packet being lost
 Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :wwwwwwwwwwwwwwwwwwww
+Packet Payload is:wwwwwwwwwwwwwwwwwwww
 Packet Sequence Number is: 23 
 Packet Ack Number is: 23 
 Packet CheckSum is: 2426 
---------Total packets sent from A to B so far: 23 
--------Packet being sent out of Buffer 
+--------Total packets sent from A to B so far: 23 -------
+Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :xxxxxxxxxxxxxxxxxxxx
+Packet Payload is:xxxxxxxxxxxxxxxxxxxx
 Packet Sequence Number is: 24 
 Packet Ack Number is: 24 
 Packet CheckSum is: 2448 
---------Total packets sent from A to B so far: 24 
--------Packet being sent out of Buffer 
+--------Total packets sent from A to B so far: 24 -------
+Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :yyyyyyyyyyyyyyyyyyyy
+Packet Payload is:yyyyyyyyyyyyyyyyyyyy
 Packet Sequence Number is: 25 
 Packet Ack Number is: 25 
 Packet CheckSum is: 2470 
---------Total packets sent from A to B so far: 25 
--------Packet being sent out of Buffer 
+--------Total packets sent from A to B so far: 25 -------
+Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :zzzzzzzzzzzzzzzzzzzz
+Packet Payload is:zzzzzzzzzzzzzzzzzzzz
 Packet Sequence Number is: 26 
 Packet Ack Number is: 26 
 Packet CheckSum is: 2492 
---------Total packets sent from A to B so far: 26 
--------          TOLAYER3: packet being lost
+--------Total packets sent from A to B so far: 26 -------
+          TOLAYER3: packet being lost
 
 EVENT time: 366.454498,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 
 EVENT time: 366.589905,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 14 from A------- 
-Packet payload is :Znnnnnnnnnnnnnnnnnnn
+Packet Payload is:Znnnnnnnnnnnnnnnnnnn
 Packet Sequence Number is: 14 
 Packet Ack Number is: 14 
 Packet CheckSum is: 2208 
@@ -1361,7 +1387,7 @@ Packet CheckSum is: 2208
 EVENT time: 369.436462,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 11 from A------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 Packet Sequence Number is: 11 
 Packet Ack Number is: 11 
 Packet CheckSum is: 2162 
@@ -1376,7 +1402,7 @@ Timer stopped for packet with seqnum 11
 EVENT time: 376.563751,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 11 from A------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 Packet Sequence Number is: 11 
 Packet Ack Number is: 11 
 Packet CheckSum is: 2162 
@@ -1385,12 +1411,13 @@ Packet CheckSum is: 2162
 EVENT time: 379.638580,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 19 from A------- 
-Packet payload is :ssssssssssssssssssss
+Packet Payload is:ssssssssssssssssssss
 Packet Sequence Number is: 19 
 Packet Ack Number is: 19 
 Packet CheckSum is: 2338 
 -------Sending Ack to A for pkt with seqnum 19 
 --------          TOLAYER3: packet being lost
+Total Number of packets Ack'ed at B 27
 
 EVENT time: 379.866669,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -1401,17 +1428,18 @@ Timer stopped for packet with seqnum 11
 EVENT time: 380.817200,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :llllllllllllllllllll
+Packet Payload is:llllllllllllllllllll
 
 EVENT time: 382.819519,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 20 from A------- 
-Packet payload is :tttttttttttttttttttt
+Packet Payload is:tttttttttttttttttttt
 Packet Sequence Number is: 20 
 Packet Ack Number is: 20 
 Packet CheckSum is: 2360 
 -------Sending Ack to A for pkt with seqnum 20 
---------
+--------Total Number of packets Ack'ed at B 28
+
 EVENT time: 385.697327,  type: 0, timerinterrupt   entity: 26
 ************A_timerinterrupt*********** 
 resending packet to B with seqnum 26 
@@ -1451,7 +1479,7 @@ resending packet to B with seqnum 19
 EVENT time: 388.286163,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 21 from A------- 
-Packet payload is :Zuuuuuuuuuuuuuuuuuuu
+Packet Payload is:Zuuuuuuuuuuuuuuuuuuu
 Packet Sequence Number is: 21 
 Packet Ack Number is: 21 
 Packet CheckSum is: 2355 
@@ -1465,17 +1493,18 @@ Timer stopped for packet with seqnum 20
 EVENT time: 395.869995,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm
+Packet Payload is:mmmmmmmmmmmmmmmmmmmm
 
 EVENT time: 397.428986,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 23 from A------- 
-Packet payload is :wwwwwwwwwwwwwwwwwwww
+Packet Payload is:wwwwwwwwwwwwwwwwwwww
 Packet Sequence Number is: 23 
 Packet Ack Number is: 23 
 Packet CheckSum is: 2426 
 -------Sending Ack to A for pkt with seqnum 23 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 29
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 401.440765,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -1485,17 +1514,18 @@ Timer stopped for packet with seqnum 23
 EVENT time: 403.983276,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 24 from A------- 
-Packet payload is :xxxxxxxxxxxxxxxxxxxx
+Packet Payload is:xxxxxxxxxxxxxxxxxxxx
 Packet Sequence Number is: 24 
 Packet Ack Number is: 24 
 Packet CheckSum is: 2448 
 -------Sending Ack to A for pkt with seqnum 24 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 30
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 405.529999,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn
+Packet Payload is:nnnnnnnnnnnnnnnnnnnn
 
 EVENT time: 405.697327,  type: 0, timerinterrupt   entity: 19
 ************A_timerinterrupt*********** 
@@ -1530,18 +1560,19 @@ Timer stopped for packet with seqnum 24
 EVENT time: 412.516144,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 25 from A------- 
-Packet payload is :yyyyyyyyyyyyyyyyyyyy
+Packet Payload is:yyyyyyyyyyyyyyyyyyyy
 Packet Sequence Number is: 25 
 Packet Ack Number is: 25 
 Packet CheckSum is: 2470 
 -------Sending Ack to A for pkt with seqnum 25 
 --------          TOLAYER3: packet being lost
+Total Number of packets Ack'ed at B 31
 ---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 417.890076,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
+Packet Payload is:zzzz   zzzzzzzzzzzz
 Packet Sequence Number is: 26 
 Packet Ack Number is: 26 
 Packet CheckSum is: 2005 
@@ -1550,7 +1581,7 @@ Packet CheckSum is: 2005
 EVENT time: 418.252289,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :oooooooooooooooooooo
+Packet Payload is:oooooooooooooooooooo
 
 EVENT time: 425.697327,  type: 0, timerinterrupt   entity: 26
 ************A_timerinterrupt*********** 
@@ -1577,23 +1608,25 @@ resending packet to B with seqnum 19
 EVENT time: 425.815735,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 25 from A------- 
-Packet payload is :yyyyyyyyyyyyyyyyyyyy
+Packet Payload is:yyyyyyyyyyyyyyyyyyyy
 Packet Sequence Number is: 25 
 Packet Ack Number is: 25 
 Packet CheckSum is: 2470 
 -------Sending Ack to A for pkt with seqnum 25 
 --------          TOLAYER3: packet being corrupted
+Total Number of packets Ack'ed at B 32
 ---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 427.932770,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 24 from A------- 
-Packet payload is :xxxxxxxxxxxxxxxxxxxx
+Packet Payload is:xxxxxxxxxxxxxxxxxxxx
 Packet Sequence Number is: 24 
 Packet Ack Number is: 24 
 Packet CheckSum is: 2448 
 -------Sending Ack to A for pkt with seqnum 24 
 --------          TOLAYER3: packet being lost
+Total Number of packets Ack'ed at B 33
 ---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 432.909637,  type: 2, fromlayer3  entity: 0
@@ -1603,17 +1636,18 @@ EVENT time: 432.909637,  type: 2, fromlayer3  entity: 0
 EVENT time: 436.601837,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :pppppppppppppppppppp
+Packet Payload is:pppppppppppppppppppp
 
 EVENT time: 437.348694,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 21 from A------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu
+Packet Payload is:uuuuuuuuuuuuuuuuuuuu
 Packet Sequence Number is: 21 
 Packet Ack Number is: 21 
 Packet CheckSum is: 2382 
 -------Sending Ack to A for pkt with seqnum 21 
 --------          TOLAYER3: packet being corrupted
+Total Number of packets Ack'ed at B 34
 
 EVENT time: 439.978180,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -1622,7 +1656,7 @@ EVENT time: 439.978180,  type: 2, fromlayer3  entity: 0
 EVENT time: 440.980865,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 19 from A------- 
-Packet payload is :ssssssssssssssssssss
+Packet Payload is:ssssssssssssssssssss
 Packet Sequence Number is: 19 
 Packet Ack Number is: 19 
 Packet CheckSum is: 2338 
@@ -1657,12 +1691,12 @@ EVENT time: 446.290985,  type: 2, fromlayer3  entity: 0
 EVENT time: 446.721985,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :qqqqqqqqqqqqqqqqqqqq
+Packet Payload is:qqqqqqqqqqqqqqqqqqqq
 
 EVENT time: 450.144012,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 21 from A------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu
+Packet Payload is:uuuuuuuuuuuuuuuuuuuu
 Packet Sequence Number is: 21 
 Packet Ack Number is: 21 
 Packet CheckSum is: 2382 
@@ -1676,38 +1710,41 @@ EVENT time: 453.567474,  type: 2, fromlayer3  entity: 0
 EVENT time: 454.052795,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :rrrrrrrrrrrrrrrrrrrr
+Packet Payload is:rrrrrrrrrrrrrrrrrrrr
 
 EVENT time: 458.316711,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 22 from A------- 
-Packet payload is :vvvvvvvvvvvvvvvvvvvv
+Packet Payload is:vvvvvvvvvvvvvvvvvvvv
 Packet Sequence Number is: 22 
 Packet Ack Number is: 22 
 Packet CheckSum is: 2404 
 -------Sending Ack to A for pkt with seqnum 22 
 --------          TOLAYER3: packet being lost
+Total Number of packets Ack'ed at B 35
 
 EVENT time: 462.804901,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 24 from A------- 
-Packet payload is :xxxxxxxxxxxxxxxxxxxx
+Packet Payload is:xxxxxxxxxxxxxxxxxxxx
 Packet Sequence Number is: 24 
 Packet Ack Number is: 24 
 Packet CheckSum is: 2448 
 -------Sending Ack to A for pkt with seqnum 24 
 --------          TOLAYER3: packet being lost
+Total Number of packets Ack'ed at B 36
 ---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 464.788818,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 25 from A------- 
-Packet payload is :yyyyyyyyyyyyyyyyyyyy
+Packet Payload is:yyyyyyyyyyyyyyyyyyyy
 Packet Sequence Number is: 25 
 Packet Ack Number is: 25 
 Packet CheckSum is: 2470 
 -------Sending Ack to A for pkt with seqnum 25 
 --------          TOLAYER3: packet being lost
+Total Number of packets Ack'ed at B 37
 ---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 465.697327,  type: 0, timerinterrupt   entity: 26
@@ -1734,7 +1771,7 @@ resending packet to B with seqnum 19
 EVENT time: 466.711121,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
+Packet Payload is:zzzz   zzzzzzzzzzzz
 Packet Sequence Number is: 26 
 Packet Ack Number is: 26 
 Packet CheckSum is: 2005 
@@ -1743,7 +1780,7 @@ Packet CheckSum is: 2005
 EVENT time: 470.247864,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 999999 from A------- 
-Packet payload is :yyyyyyyyyyyyyyyyyyyy
+Packet Payload is:yyyyyyyyyyyyyyyyyyyy
 Packet Sequence Number is: 999999 
 Packet Ack Number is: 999999 
 Packet CheckSum is: 1002444 
@@ -1752,12 +1789,12 @@ Packet CheckSum is: 1002444
 EVENT time: 472.980316,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :ssssssssssssssssssss
+Packet Payload is:ssssssssssssssssssss
 
 EVENT time: 473.476501,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 22 from A------- 
-Packet payload is :vvvvvvvvvvvvvvvvvvvv
+Packet Payload is:vvvvvvvvvvvvvvvvvvvv
 Packet Sequence Number is: 22 
 Packet Ack Number is: 22 
 Packet CheckSum is: 2404 
@@ -1771,7 +1808,7 @@ Timer stopped for packet with seqnum 22
 EVENT time: 482.324921,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 19 from A------- 
-Packet payload is :ssssssssssssssssssss
+Packet Payload is:ssssssssssssssssssss
 Packet Sequence Number is: 19 
 Packet Ack Number is: 19 
 Packet CheckSum is: 2338 
@@ -1781,7 +1818,7 @@ Packet CheckSum is: 2338
 EVENT time: 484.281799,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :tttttttttttttttttttt
+Packet Payload is:tttttttttttttttttttt
 
 EVENT time: 485.697327,  type: 0, timerinterrupt   entity: 19
 ************A_timerinterrupt*********** 
@@ -1803,7 +1840,7 @@ resending packet to B with seqnum 26
 EVENT time: 486.392548,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 19 from A------- 
-Packet payload is :ssssssssssssssssssss
+Packet Payload is:ssssssssssssssssssss
 Packet Sequence Number is: 19 
 Packet Ack Number is: 19 
 Packet CheckSum is: 2338 
@@ -1812,12 +1849,12 @@ Packet CheckSum is: 2338
 EVENT time: 488.055573,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu
+Packet Payload is:uuuuuuuuuuuuuuuuuuuu
 
 EVENT time: 491.382477,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 21 from A------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu
+Packet Payload is:uuuuuuuuuuuuuuuuuuuu
 Packet Sequence Number is: 21 
 Packet Ack Number is: 21 
 Packet CheckSum is: 2382 
@@ -1831,30 +1868,30 @@ Timer stopped for packet with seqnum 19
 Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 Packet Sequence Number is: 27 
 Packet Ack Number is: 27 
 Packet CheckSum is: 1994 
---------Total packets sent from A to B so far: 27 
--------Packet being sent out of Buffer 
+--------Total packets sent from A to B so far: 27 -------
+Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :bbbbbbbbbbbbbbbbbbbb
+Packet Payload is:bbbbbbbbbbbbbbbbbbbb
 Packet Sequence Number is: 28 
 Packet Ack Number is: 28 
 Packet CheckSum is: 2016 
---------Total packets sent from A to B so far: 28 
--------          TOLAYER3: packet being lost
+--------Total packets sent from A to B so far: 28 -------
+          TOLAYER3: packet being lost
 
 EVENT time: 498.535095,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :vvvvvvvvvvvvvvvvvvvv
+Packet Payload is:vvvvvvvvvvvvvvvvvvvv
 
 EVENT time: 498.909149,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 22 from A------- 
-Packet payload is :vvvvvvvvvvvvvvvvvvvv
+Packet Payload is:vvvvvvvvvvvvvvvvvvvv
 Packet Sequence Number is: 22 
 Packet Ack Number is: 22 
 Packet CheckSum is: 2404 
@@ -1864,7 +1901,7 @@ Packet CheckSum is: 2404
 EVENT time: 505.392273,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
+Packet Payload is:zzzz   zzzzzzzzzzzz
 Packet Sequence Number is: 26 
 Packet Ack Number is: 26 
 Packet CheckSum is: 2005 
@@ -1886,7 +1923,7 @@ resending packet to B with seqnum 21
 EVENT time: 513.755188,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
+Packet Payload is:zzzz   zzzzzzzzzzzz
 Packet Sequence Number is: 26 
 Packet Ack Number is: 26 
 Packet CheckSum is: 2005 
@@ -1904,22 +1941,23 @@ resending packet to B with seqnum 27
 EVENT time: 518.060242,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :wwwwwwwwwwwwwwwwwwww
+Packet Payload is:wwwwwwwwwwwwwwwwwwww
 
 EVENT time: 522.695435,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 25 from A------- 
-Packet payload is :yyyyyyyyyyyyyyyyyyyy
+Packet Payload is:yyyyyyyyyyyyyyyyyyyy
 Packet Sequence Number is: 25 
 Packet Ack Number is: 25 
 Packet CheckSum is: 2470 
 -------Sending Ack to A for pkt with seqnum 25 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 38
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 524.196899,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 22 from A------- 
-Packet payload is :vvvvvvvvvvvvvvvvvvvv
+Packet Payload is:vvvvvvvvvvvvvvvvvvvv
 Packet Sequence Number is: 22 
 Packet Ack Number is: 22 
 Packet CheckSum is: 1002381 
@@ -1945,7 +1983,7 @@ Timer stopped for packet with seqnum 25
 EVENT time: 532.800354,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 21 from A------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu
+Packet Payload is:uuuuuuuuuuuuuuuuuuuu
 Packet Sequence Number is: 21 
 Packet Ack Number is: 21 
 Packet CheckSum is: 2382 
@@ -1962,7 +2000,7 @@ resending packet to B with seqnum 28
 EVENT time: 535.239868,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 19 from A------- 
-Packet payload is :ssssssssssssssssssss
+Packet Payload is:ssssssssssssssssssss
 Packet Sequence Number is: 19 
 Packet Ack Number is: 19 
 Packet CheckSum is: 2338 
@@ -1971,12 +2009,12 @@ Packet CheckSum is: 2338
 EVENT time: 537.298889,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :xxxxxxxxxxxxxxxxxxxx
+Packet Payload is:xxxxxxxxxxxxxxxxxxxx
 
 EVENT time: 540.021179,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 19 from A------- 
-Packet payload is :ssssssssssssssssssss
+Packet Payload is:ssssssssssssssssssss
 Packet Sequence Number is: 19 
 Packet Ack Number is: 19 
 Packet CheckSum is: 2338 
@@ -1989,46 +2027,46 @@ Timer stopped for packet with seqnum 21
 Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :cccccccccccccccccccc
+Packet Payload is:cccccccccccccccccccc
 Packet Sequence Number is: 29 
 Packet Ack Number is: 29 
 Packet CheckSum is: 2038 
---------Total packets sent from A to B so far: 29 
--------          TOLAYER3: packet being lost
+--------Total packets sent from A to B so far: 29 -------
+          TOLAYER3: packet being lost
 Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :dddddddddddddddddddd
+Packet Payload is:dddddddddddddddddddd
 Packet Sequence Number is: 30 
 Packet Ack Number is: 30 
 Packet CheckSum is: 2060 
---------Total packets sent from A to B so far: 30 
--------          TOLAYER3: packet being corrupted
+--------Total packets sent from A to B so far: 30 -------
+          TOLAYER3: packet being corrupted
 Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :eeeeeeeeeeeeeeeeeeee
+Packet Payload is:eeeeeeeeeeeeeeeeeeee
 Packet Sequence Number is: 31 
 Packet Ack Number is: 31 
 Packet CheckSum is: 2082 
---------Total packets sent from A to B so far: 31 
--------Packet being sent out of Buffer 
+--------Total packets sent from A to B so far: 31 -------
+Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :ffffffffffffffffffff
+Packet Payload is:ffffffffffffffffffff
 Packet Sequence Number is: 32 
 Packet Ack Number is: 32 
 Packet CheckSum is: 2104 
---------Total packets sent from A to B so far: 32 
--------Packet being sent out of Buffer 
+--------Total packets sent from A to B so far: 32 -------
+Packet being sent out of Buffer 
 ***********A_Output*********
 --------Packet being sent from A to B------- 
-Packet payload is :gggggggggggggggggggg
+Packet Payload is:gggggggggggggggggggg
 Packet Sequence Number is: 33 
 Packet Ack Number is: 33 
 Packet CheckSum is: 2126 
---------Total packets sent from A to B so far: 33 
--------
+--------Total packets sent from A to B so far: 33 -------
+
 EVENT time: 545.697327,  type: 0, timerinterrupt   entity: 26
 ************A_timerinterrupt*********** 
 resending packet to B with seqnum 26 
@@ -2042,7 +2080,7 @@ Timer stopped for packet with seqnum 19
 EVENT time: 547.159973,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 21 from A------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu
+Packet Payload is:uuuuuuuuuuuuuuuuuuuu
 Packet Sequence Number is: 21 
 Packet Ack Number is: 21 
 Packet CheckSum is: 2382 
@@ -2051,7 +2089,7 @@ Packet CheckSum is: 2382
 EVENT time: 547.482544,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :yyyyyyyyyyyyyyyyyyyy
+Packet Payload is:yyyyyyyyyyyyyyyyyyyy
 
 EVENT time: 552.812988,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -2062,7 +2100,7 @@ Timer stopped for packet with seqnum 19
 EVENT time: 553.013977,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :zzzzzzzzzzzzzzzzzzzz
+Packet Payload is:zzzzzzzzzzzzzzzzzzzz
 
 EVENT time: 555.045288,  type: 0, timerinterrupt   entity: 28
 ************A_timerinterrupt*********** 
@@ -2075,12 +2113,13 @@ resending packet to B with seqnum 27
 EVENT time: 555.572571,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 25 from A------- 
-Packet payload is :yyyyyyyyyyyyyyyyyyyy
+Packet Payload is:yyyyyyyyyyyyyyyyyyyy
 Packet Sequence Number is: 25 
 Packet Ack Number is: 25 
 Packet CheckSum is: 2470 
 -------Sending Ack to A for pkt with seqnum 25 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 39
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 560.734314,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -2091,12 +2130,13 @@ Timer stopped for packet with seqnum 21
 EVENT time: 561.789795,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 27 from A------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 Packet Sequence Number is: 27 
 Packet Ack Number is: 27 
 Packet CheckSum is: 1994 
 -------Sending Ack to A for pkt with seqnum 27 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 40
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 561.909790,  type: 0, timerinterrupt   entity: 33
 ************A_timerinterrupt*********** 
@@ -2134,12 +2174,12 @@ Timer stopped for packet with seqnum 25
 EVENT time: 566.806274,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 
 EVENT time: 570.135132,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
+Packet Payload is:zzzz   zzzzzzzzzzzz
 Packet Sequence Number is: 26 
 Packet Ack Number is: 26 
 Packet CheckSum is: 2005 
@@ -2148,7 +2188,7 @@ Packet CheckSum is: 2005
 EVENT time: 572.170410,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :bbbbbbbbbbbbbbbbbbbb
+Packet Payload is:bbbbbbbbbbbbbbbbbbbb
 
 EVENT time: 575.045288,  type: 0, timerinterrupt   entity: 27
 ************A_timerinterrupt*********** 
@@ -2166,7 +2206,7 @@ Timer stopped for packet with seqnum 27
 EVENT time: 577.695251,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 21 from A------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu
+Packet Payload is:uuuuuuuuuuuuuuuuuuuu
 Packet Sequence Number is: 21 
 Packet Ack Number is: 21 
 Packet CheckSum is: 2382 
@@ -2208,7 +2248,7 @@ resending packet to B with seqnum 26
 EVENT time: 586.432556,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 28 from A------- 
-Packet payload is :Zbbbbbbbbbbbbbbbbbbb
+Packet Payload is:Zbbbbbbbbbbbbbbbbbbb
 Packet Sequence Number is: 28 
 Packet Ack Number is: 28 
 Packet CheckSum is: 2008 
@@ -2217,17 +2257,18 @@ Packet CheckSum is: 2008
 EVENT time: 591.977661,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :cccccccccccccccccccc
+Packet Payload is:cccccccccccccccccccc
 
 EVENT time: 592.494751,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 27 from A------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 Packet Sequence Number is: 27 
 Packet Ack Number is: 27 
 Packet CheckSum is: 1994 
 -------Sending Ack to A for pkt with seqnum 27 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 41
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 593.959412,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -2243,7 +2284,7 @@ resending packet to B with seqnum 28
 EVENT time: 598.344299,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 21 from A------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu
+Packet Payload is:uuuuuuuuuuuuuuuuuuuu
 Packet Sequence Number is: 21 
 Packet Ack Number is: 21 
 Packet CheckSum is: 2382 
@@ -2279,17 +2320,18 @@ resending packet to B with seqnum 29
 EVENT time: 603.809204,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 25 from A------- 
-Packet payload is :yyyyyyyyyyyyyyyyyyyy
+Packet Payload is:yyyyyyyyyyyyyyyyyyyy
 Packet Sequence Number is: 25 
 Packet Ack Number is: 25 
 Packet CheckSum is: 2470 
 -------Sending Ack to A for pkt with seqnum 25 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 42
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 604.437866,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :dddddddddddddddddddd
+Packet Payload is:dddddddddddddddddddd
 
 EVENT time: 605.697327,  type: 0, timerinterrupt   entity: 26
 ************A_timerinterrupt*********** 
@@ -2305,12 +2347,12 @@ Timer stopped for packet with seqnum 25
 EVENT time: 611.164795,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :eeeeeeeeeeeeeeeeeeee
+Packet Payload is:eeeeeeeeeeeeeeeeeeee
 
 EVENT time: 611.392029,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
+Packet Payload is:zzzz   zzzzzzzzzzzz
 Packet Sequence Number is: 26 
 Packet Ack Number is: 26 
 Packet CheckSum is: 2005 
@@ -2323,22 +2365,24 @@ resending packet to B with seqnum 28
 EVENT time: 615.949158,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 27 from A------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 Packet Sequence Number is: 27 
 Packet Ack Number is: 27 
 Packet CheckSum is: 1994 
 -------Sending Ack to A for pkt with seqnum 27 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 43
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 621.625488,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 28 from A------- 
-Packet payload is :bbbbbbbbbbbbbbbbbbbb
+Packet Payload is:bbbbbbbbbbbbbbbbbbbb
 Packet Sequence Number is: 28 
 Packet Ack Number is: 28 
 Packet CheckSum is: 2016 
 -------Sending Ack to A for pkt with seqnum 28 
 --------          TOLAYER3: packet being corrupted
+Total Number of packets Ack'ed at B 44
 ---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 621.909790,  type: 0, timerinterrupt   entity: 29
@@ -2365,7 +2409,7 @@ resending packet to B with seqnum 33
 EVENT time: 622.173706,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :ffffffffffffffffffff
+Packet Payload is:ffffffffffffffffffff
 
 EVENT time: 624.201843,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -2376,7 +2420,7 @@ Timer stopped for packet with seqnum 27
 EVENT time: 624.543457,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :gggggggggggggggggggg
+Packet Payload is:gggggggggggggggggggg
 
 EVENT time: 625.697327,  type: 0, timerinterrupt   entity: 26
 ************A_timerinterrupt*********** 
@@ -2390,7 +2434,7 @@ EVENT time: 625.709412,  type: 2, fromlayer3  entity: 0
 EVENT time: 629.384155,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 999999 from A------- 
-Packet payload is :dddddddddddddddddddd
+Packet Payload is:dddddddddddddddddddd
 Packet Sequence Number is: 999999 
 Packet Ack Number is: 999999 
 Packet CheckSum is: 1002029 
@@ -2399,7 +2443,7 @@ Packet CheckSum is: 1002029
 EVENT time: 631.786011,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :hhhhhhhhhhhhhhhhhhhh
+Packet Payload is:hhhhhhhhhhhhhhhhhhhh
 
 EVENT time: 635.045288,  type: 0, timerinterrupt   entity: 28
 ************A_timerinterrupt*********** 
@@ -2409,17 +2453,18 @@ resending packet to B with seqnum 28
 EVENT time: 635.539246,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 31 from A------- 
-Packet payload is :eeeeeeeeeeeeeeeeeeee
+Packet Payload is:eeeeeeeeeeeeeeeeeeee
 Packet Sequence Number is: 31 
 Packet Ack Number is: 31 
 Packet CheckSum is: 2082 
 -------Sending Ack to A for pkt with seqnum 31 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 45
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 637.790527,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :iiiiiiiiiiiiiiiiiiii
+Packet Payload is:iiiiiiiiiiiiiiiiiiii
 
 EVENT time: 641.909790,  type: 0, timerinterrupt   entity: 33
 ************A_timerinterrupt*********** 
@@ -2450,12 +2495,13 @@ Timer stopped for packet with seqnum 31
 EVENT time: 644.879517,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 32 from A------- 
-Packet payload is :ffffffffffffffffffff
+Packet Payload is:ffffffffffffffffffff
 Packet Sequence Number is: 32 
 Packet Ack Number is: 32 
 Packet CheckSum is: 2104 
 -------Sending Ack to A for pkt with seqnum 32 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 46
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 645.697327,  type: 0, timerinterrupt   entity: 26
 ************A_timerinterrupt*********** 
@@ -2470,22 +2516,23 @@ Timer stopped for packet with seqnum 32
 EVENT time: 649.389221,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 33 from A------- 
-Packet payload is :gggggggggggggggggggg
+Packet Payload is:gggggggggggggggggggg
 Packet Sequence Number is: 33 
 Packet Ack Number is: 33 
 Packet CheckSum is: 2126 
 -------Sending Ack to A for pkt with seqnum 33 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 47
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 650.267944,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :jjjjjjjjjjjjjjjjjjjj
+Packet Payload is:jjjjjjjjjjjjjjjjjjjj
 
 EVENT time: 650.891418,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
+Packet Payload is:zzzz   zzzzzzzzzzzz
 Packet Sequence Number is: 26 
 Packet Ack Number is: 26 
 Packet CheckSum is: 2005 
@@ -2504,17 +2551,18 @@ resending packet to B with seqnum 28
 EVENT time: 657.554626,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk
+Packet Payload is:kkkkkkkkkkkkkkkkkkkk
 
 EVENT time: 660.721741,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 28 from A------- 
-Packet payload is :bbbbbbbbbbbbbbbbbbbb
+Packet Payload is:bbbbbbbbbbbbbbbbbbbb
 Packet Sequence Number is: 28 
 Packet Ack Number is: 28 
 Packet CheckSum is: 2016 
 -------Sending Ack to A for pkt with seqnum 28 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 48
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 661.909790,  type: 0, timerinterrupt   entity: 29
 ************A_timerinterrupt*********** 
@@ -2532,7 +2580,7 @@ resending packet to B with seqnum 26
 EVENT time: 667.152588,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :llllllllllllllllllll
+Packet Payload is:llllllllllllllllllll
 
 EVENT time: 670.198853,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -2542,23 +2590,24 @@ Timer stopped for packet with seqnum 28
 EVENT time: 670.484985,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 27 from A------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 Packet Sequence Number is: 27 
 Packet Ack Number is: 27 
 Packet CheckSum is: 1994 
 -------Sending Ack to A for pkt with seqnum 27 
 --------          TOLAYER3: packet being lost
+Total Number of packets Ack'ed at B 49
 ---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 677.428040,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm
+Packet Payload is:mmmmmmmmmmmmmmmmmmmm
 
 EVENT time: 678.651978,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 33 from A------- 
-Packet payload is :gggggggg
+Packet Payload is:gggggggg   gggg   
 Packet Sequence Number is: 33 
 Packet Ack Number is: 33 
 Packet CheckSum is: 1304 
@@ -2567,7 +2616,7 @@ Packet CheckSum is: 1304
 EVENT time: 680.132629,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 999999 from A------- 
-Packet payload is :dddddddddddddddddddd
+Packet Payload is:dddddddddddddddddddd
 Packet Sequence Number is: 999999 
 Packet Ack Number is: 999999 
 Packet CheckSum is: 1002029 
@@ -2589,12 +2638,13 @@ resending packet to B with seqnum 26
 EVENT time: 686.629517,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 29 from A------- 
-Packet payload is :cccccccccccccccccccc
+Packet Payload is:cccccccccccccccccccc
 Packet Sequence Number is: 29 
 Packet Ack Number is: 29 
 Packet CheckSum is: 2038 
 -------Sending Ack to A for pkt with seqnum 29 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 50
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 688.130615,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -2604,7 +2654,7 @@ Timer stopped for packet with seqnum 29
 EVENT time: 688.556030,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
+Packet Payload is:zzzz   zzzzzzzzzzzz
 Packet Sequence Number is: 26 
 Packet Ack Number is: 26 
 Packet CheckSum is: 2005 
@@ -2613,22 +2663,23 @@ Packet CheckSum is: 2005
 EVENT time: 691.716248,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn
+Packet Payload is:nnnnnnnnnnnnnnnnnnnn
 
 EVENT time: 694.029724,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :oooooooooooooooooooo
+Packet Payload is:oooooooooooooooooooo
 
 EVENT time: 698.176453,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 27 from A------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa
+Packet Payload is:aaaaaaaaaaaaaaaaaaaa
 Packet Sequence Number is: 27 
 Packet Ack Number is: 27 
 Packet CheckSum is: 1994 
 -------Sending Ack to A for pkt with seqnum 27 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 51
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 700.414062,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -2639,12 +2690,13 @@ Timer stopped for packet with seqnum 27
 EVENT time: 701.848755,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 28 from A------- 
-Packet payload is :bbbbbbbbbbbbbbbbbbbb
+Packet Payload is:bbbbbbbbbbbbbbbbbbbb
 Packet Sequence Number is: 28 
 Packet Ack Number is: 28 
 Packet CheckSum is: 2016 
 -------Sending Ack to A for pkt with seqnum 28 
------------------Received packet is out of order. Packet being buffered---------
+--------Total Number of packets Ack'ed at B 52
+---------Received packet is out of order. Packet being buffered---------
 
 EVENT time: 701.909790,  type: 0, timerinterrupt   entity: 30
 ************A_timerinterrupt*********** 
@@ -2653,7 +2705,7 @@ resending packet to B with seqnum 30
 EVENT time: 702.834534,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :pppppppppppppppppppp
+Packet Payload is:pppppppppppppppppppp
 
 EVENT time: 703.563416,  type: 2, fromlayer3  entity: 0
 **********A_input********* 
@@ -2668,12 +2720,12 @@ resending packet to B with seqnum 26
 EVENT time: 708.558289,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :qqqqqqqqqqqqqqqqqqqq
+Packet Payload is:qqqqqqqqqqqqqqqqqqqq
 
 EVENT time: 709.891418,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 29 from A------- 
-Packet payload is :cccccccccccccccccccc
+Packet Payload is:cccccccccccccccccccc
 Packet Sequence Number is: 29 
 Packet Ack Number is: 29 
 Packet CheckSum is: 1002008 
@@ -2682,7 +2734,7 @@ Packet CheckSum is: 1002008
 EVENT time: 717.458984,  type: 2, fromlayer3  entity: 1
 **********B_input********* 
 --------B received packet with Seqnum: 999999 from A------- 
-Packet payload is :eeeeeeeeeeeeeeeeeeee
+Packet Payload is:eeeeeeeeeeeeeeeeeeee
 Packet Sequence Number is: 999999 
 Packet Ack Number is: 999999 
 Packet CheckSum is: 1002050 
@@ -2691,773 +2743,8 @@ Packet CheckSum is: 1002050
 EVENT time: 718.637817,  type: 1, fromlayer5  entity: 0
 ***********A_Output*********
 -------Window is full. Message is being buffered-------- 
-Packet payload is :rrrrrrrrrrrrrrrrrrrr
+Packet Payload is:rrrrrrrrrrrrrrrrrrrr
 
 EVENT time: 721.909790,  type: 0, timerinterrupt   entity: 30
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 30 
-
-EVENT time: 725.697327,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-
-EVENT time: 727.316711,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 32 from A------- 
-Packet payload is :ffffffffffffffffffff
-Packet Sequence Number is: 32 
-Packet Ack Number is: 32 
-Packet CheckSum is: 2104 
--------Sending Ack to A for pkt with seqnum 32 
---------          TOLAYER3: packet being corrupted
----------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 732.710876,  type: 2, fromlayer3  entity: 0
-**********A_input********* 
------ Corrupt ACK received -----
-
-EVENT time: 735.407349,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 33 from A------- 
-Packet payload is :gggggggg
-Packet Sequence Number is: 33 
-Packet Ack Number is: 33 
-Packet CheckSum is: 1304 
----------B received a corrupted packet with seqnum 33--------
-
-EVENT time: 736.353760,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :ssssssssssssssssssss
-
-EVENT time: 736.744995,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 2005 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 737.830078,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 28 from A------- 
-Packet payload is :Zbbbbbbbbbbbbbbbbbbb
-Packet Sequence Number is: 28 
-Packet Ack Number is: 28 
-Packet CheckSum is: 2008 
----------B received a corrupted packet with seqnum 28--------
-
-EVENT time: 741.909790,  type: 0, timerinterrupt   entity: 30
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 30 
-
-EVENT time: 743.360291,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :tttttttttttttttttttt
-
-EVENT time: 745.697327,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-          TOLAYER3: packet being corrupted
-
-EVENT time: 746.684143,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 33 from A------- 
-Packet payload is :gggggggg
-Packet Sequence Number is: 33 
-Packet Ack Number is: 33 
-Packet CheckSum is: 1304 
----------B received a corrupted packet with seqnum 33--------
-
-EVENT time: 756.499939,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 32 from A------- 
-Packet payload is :ffffffffffffffffffff
-Packet Sequence Number is: 32 
-Packet Ack Number is: 32 
-Packet CheckSum is: 2104 
--------Sending Ack to A for pkt with seqnum 32 
------------------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 758.734375,  type: 2, fromlayer3  entity: 0
-**********A_input********* 
-Warning: unable to cancel your timer. It wasn't running.
--------A Received acknowledgement 32 from B-------
-Timer stopped for packet with seqnum 32 
-
-EVENT time: 761.765137,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu
-
-EVENT time: 761.909790,  type: 0, timerinterrupt   entity: 30
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 30 
-
-EVENT time: 763.262756,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 31 from A------- 
-Packet payload is :eeeeeeeeeeeeeeeeeeee
-Packet Sequence Number is: 31 
-Packet Ack Number is: 31 
-Packet CheckSum is: 2082 
--------Sending Ack to A for pkt with seqnum 31 
------------------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 764.446106,  type: 2, fromlayer3  entity: 0
-**********A_input********* 
-Warning: unable to cancel your timer. It wasn't running.
--------A Received acknowledgement 31 from B-------
-Timer stopped for packet with seqnum 31 
-
-EVENT time: 765.697327,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-
-EVENT time: 768.112854,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 30 from A------- 
-Packet payload is :Zddddddddddddddddddd
-Packet Sequence Number is: 30 
-Packet Ack Number is: 30 
-Packet CheckSum is: 2050 
----------B received a corrupted packet with seqnum 30--------
-
-EVENT time: 769.460815,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 29 from A------- 
-Packet payload is :cccccccccccccccccccc
-Packet Sequence Number is: 29 
-Packet Ack Number is: 29 
-Packet CheckSum is: 2038 
--------Sending Ack to A for pkt with seqnum 29 
------------------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 771.871399,  type: 2, fromlayer3  entity: 0
-**********A_input********* 
-Warning: unable to cancel your timer. It wasn't running.
--------A Received acknowledgement 29 from B-------
-Timer stopped for packet with seqnum 29 
-
-EVENT time: 777.616821,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 28 from A------- 
-Packet payload is :bbbbbbbbbbbbbbbbbbbb
-Packet Sequence Number is: 28 
-Packet Ack Number is: 28 
-Packet CheckSum is: 2016 
--------Sending Ack to A for pkt with seqnum 28 
------------------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 779.453247,  type: 2, fromlayer3  entity: 0
-**********A_input********* 
-Warning: unable to cancel your timer. It wasn't running.
--------A Received acknowledgement 28 from B-------
-Timer stopped for packet with seqnum 28 
-
-EVENT time: 781.244568,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :vvvvvvvvvvvvvvvvvvvv
-
-EVENT time: 781.909790,  type: 0, timerinterrupt   entity: 30
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 30 
-
-EVENT time: 784.395508,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 29 from A------- 
-Packet payload is :cccccccccccccccccccc
-Packet Sequence Number is: 29 
-Packet Ack Number is: 29 
-Packet CheckSum is: 2038 
--------Sending Ack to A for pkt with seqnum 29 
---------          TOLAYER3: packet being lost
----------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 785.697327,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-          TOLAYER3: packet being corrupted
-
-EVENT time: 786.763916,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 30 from A------- 
-Packet payload is :dddddddddddddddddddd
-Packet Sequence Number is: 30 
-Packet Ack Number is: 30 
-Packet CheckSum is: 2060 
--------Sending Ack to A for pkt with seqnum 30 
------------------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 788.336365,  type: 2, fromlayer3  entity: 0
-**********A_input********* 
--------A Received acknowledgement 30 from B-------
-Timer stopped for packet with seqnum 30 
-
-EVENT time: 790.472961,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :wwwwwwwwwwwwwwwwwwww
-
-EVENT time: 791.289612,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 31 from A------- 
-Packet payload is :eeeeeeeeeeeeeeeeeeee
-Packet Sequence Number is: 31 
-Packet Ack Number is: 31 
-Packet CheckSum is: 2082 
--------Sending Ack to A for pkt with seqnum 31 
------------------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 795.096985,  type: 2, fromlayer3  entity: 0
-**********A_input********* 
-Warning: unable to cancel your timer. It wasn't running.
--------A Received acknowledgement 31 from B-------
-Timer stopped for packet with seqnum 31 
-
-EVENT time: 796.979553,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 32 from A------- 
-Packet payload is :ffffffffffffffffffff
-Packet Sequence Number is: 32 
-Packet Ack Number is: 32 
-Packet CheckSum is: 2104 
--------Sending Ack to A for pkt with seqnum 32 
------------------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 798.193359,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :xxxxxxxxxxxxxxxxxxxx
-
-EVENT time: 802.183350,  type: 2, fromlayer3  entity: 0
-**********A_input********* 
-Warning: unable to cancel your timer. It wasn't running.
--------A Received acknowledgement 32 from B-------
-Timer stopped for packet with seqnum 32 
-
-EVENT time: 803.017395,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 999999 from A------- 
-Packet payload is :gggggggg
-Packet Sequence Number is: 999999 
-Packet Ack Number is: 999999 
-Packet CheckSum is: 1001270 
----------B received a corrupted packet with seqnum 999999--------
-
-EVENT time: 805.697327,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-          TOLAYER3: packet being corrupted
-
-EVENT time: 808.721069,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 28 from A------- 
-Packet payload is :Zbbbbbbbbbbbbbbbbbbb
-Packet Sequence Number is: 28 
-Packet Ack Number is: 28 
-Packet CheckSum is: 2008 
----------B received a corrupted packet with seqnum 28--------
-
-EVENT time: 813.306335,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :yyyyyyyyyyyyyyyyyyyy
-
-EVENT time: 816.013184,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 33 from A------- 
-Packet payload is :gggggggg
-Packet Sequence Number is: 33 
-Packet Ack Number is: 33 
-Packet CheckSum is: 1304 
----------B received a corrupted packet with seqnum 33--------
-
-EVENT time: 820.083984,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 999999 from A------- 
-Packet payload is :ffffffffffffffffffff
-Packet Sequence Number is: 999999 
-Packet Ack Number is: 999999 
-Packet CheckSum is: 1002071 
----------B received a corrupted packet with seqnum 999999--------
-
-EVENT time: 820.844849,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :zzzzzzzzzzzzzzzzzzzz
-
-EVENT time: 825.697327,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-
-EVENT time: 826.636108,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :aaaaaaaaaaaaaaaaaaaa
-
-EVENT time: 829.752136,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 31 from A------- 
-Packet payload is :eeeeeeeeeeeeeeeeeeee
-Packet Sequence Number is: 31 
-Packet Ack Number is: 31 
-Packet CheckSum is: 2082 
--------Sending Ack to A for pkt with seqnum 31 
------------------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 833.074158,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 30 from A------- 
-Packet payload is :dddddddddddddddddddd
-Packet Sequence Number is: 30 
-Packet Ack Number is: 30 
-Packet CheckSum is: 2060 
--------Sending Ack to A for pkt with seqnum 30 
---------          TOLAYER3: packet being corrupted
----------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 834.412109,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 29 from A------- 
-Packet payload is :cccccccccccccccccccc
-Packet Sequence Number is: 29 
-Packet Ack Number is: 29 
-Packet CheckSum is: 2038 
--------Sending Ack to A for pkt with seqnum 29 
---------          TOLAYER3: packet being lost
----------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 837.269653,  type: 2, fromlayer3  entity: 0
-**********A_input********* 
-Warning: unable to cancel your timer. It wasn't running.
--------A Received acknowledgement 31 from B-------
-Timer stopped for packet with seqnum 31 
-
-EVENT time: 838.460144,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 30 from A------- 
-Packet payload is :dddddddddddddddddddd
-Packet Sequence Number is: 30 
-Packet Ack Number is: 30 
-Packet CheckSum is: 2060 
--------Sending Ack to A for pkt with seqnum 30 
---------          TOLAYER3: packet being lost
----------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 839.502258,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :bbbbbbbbbbbbbbbbbbbb
-
-EVENT time: 841.488037,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 2005 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 842.118652,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :cccccccccccccccccccc
-
-EVENT time: 843.092834,  type: 2, fromlayer3  entity: 0
-**********A_input********* 
------ Corrupt ACK received -----
-
-EVENT time: 845.697327,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-          TOLAYER3: packet being lost
-
-EVENT time: 845.770874,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 30 from A------- 
-Packet payload is :dddddddddddddddddddd
-Packet Sequence Number is: 30 
-Packet Ack Number is: 30 
-Packet CheckSum is: 2060 
--------Sending Ack to A for pkt with seqnum 30 
------------------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 848.716003,  type: 2, fromlayer3  entity: 0
-**********A_input********* 
-Warning: unable to cancel your timer. It wasn't running.
--------A Received acknowledgement 30 from B-------
-Timer stopped for packet with seqnum 30 
-
-EVENT time: 852.941650,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 999999 from A------- 
-Packet payload is :cccccccccccccccccccc
-Packet Sequence Number is: 999999 
-Packet Ack Number is: 999999 
-Packet CheckSum is: 1002008 
----------B received a corrupted packet with seqnum 999999--------
-
-EVENT time: 858.720764,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :dddddddddddddddddddd
-
-EVENT time: 862.683716,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 2005 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 863.509033,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :eeeeeeeeeeeeeeeeeeee
-
-EVENT time: 865.697327,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-          TOLAYER3: packet being corrupted
-
-EVENT time: 869.490295,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 30 from A------- 
-Packet payload is :dddddddddddddddddddd
-Packet Sequence Number is: 30 
-Packet Ack Number is: 30 
-Packet CheckSum is: 2060 
--------Sending Ack to A for pkt with seqnum 30 
---------          TOLAYER3: packet being lost
----------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 875.031372,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :ffffffffffffffffffff
-
-EVENT time: 878.277222,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 2005 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 885.697327,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-          TOLAYER3: packet being lost
-
-EVENT time: 886.709839,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :gggggggggggggggggggg
-
-EVENT time: 888.105164,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 30 from A------- 
-Packet payload is :dddddddddddddddddddd
-Packet Sequence Number is: 30 
-Packet Ack Number is: 30 
-Packet CheckSum is: 2060 
--------Sending Ack to A for pkt with seqnum 30 
---------          TOLAYER3: packet being corrupted
----------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 892.171265,  type: 2, fromlayer3  entity: 0
-**********A_input********* 
------ Corrupt ACK received -----
-
-EVENT time: 895.547241,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 2005 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 898.462036,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :hhhhhhhhhhhhhhhhhhhh
-
-EVENT time: 904.230225,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 30 from A------- 
-Packet payload is :dddddddddddddddddddd
-Packet Sequence Number is: 30 
-Packet Ack Number is: 30 
-Packet CheckSum is: 2060 
--------Sending Ack to A for pkt with seqnum 30 
------------------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 905.697327,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-
-EVENT time: 908.311401,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :Zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 1973 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 910.530457,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :iiiiiiiiiiiiiiiiiiii
-
-EVENT time: 910.707825,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 30 from A------- 
-Packet payload is :dddddddddddddddddddd
-Packet Sequence Number is: 30 
-Packet Ack Number is: 30 
-Packet CheckSum is: 2060 
--------Sending Ack to A for pkt with seqnum 30 
------------------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 913.983887,  type: 2, fromlayer3  entity: 0
-**********A_input********* 
-Warning: unable to cancel your timer. It wasn't running.
--------A Received acknowledgement 30 from B-------
-Timer stopped for packet with seqnum 30 
-
-EVENT time: 919.863403,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 2005 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 922.861877,  type: 2, fromlayer3  entity: 0
-**********A_input********* 
-Warning: unable to cancel your timer. It wasn't running.
--------A Received acknowledgement 30 from B-------
-Timer stopped for packet with seqnum 30 
-
-EVENT time: 924.778931,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 30 from A------- 
-Packet payload is :dddddddddddddddddddd
-Packet Sequence Number is: 30 
-Packet Ack Number is: 30 
-Packet CheckSum is: 2060 
--------Sending Ack to A for pkt with seqnum 30 
------------------Received packet is out of order. Packet being buffered---------
-
-EVENT time: 924.842346,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :jjjjjjjjjjjjjjjjjjjj
-
-EVENT time: 925.697327,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-          TOLAYER3: packet being corrupted
-
-EVENT time: 930.062195,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :Zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 1973 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 932.127808,  type: 2, fromlayer3  entity: 0
-**********A_input********* 
-Warning: unable to cancel your timer. It wasn't running.
--------A Received acknowledgement 30 from B-------
-Timer stopped for packet with seqnum 30 
-
-EVENT time: 934.551147,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :Zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 1973 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 937.237305,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 2005 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 941.614685,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :kkkkkkkkkkkkkkkkkkkk
-
-EVENT time: 944.595825,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :Zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 1973 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 945.697327,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-
-EVENT time: 947.684814,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 2005 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 948.700867,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :llllllllllllllllllll
-
-EVENT time: 949.503967,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :Zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 1973 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 956.749451,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 2005 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 965.697327,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-
-EVENT time: 968.270935,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :mmmmmmmmmmmmmmmmmmmm
-
-EVENT time: 970.516602,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 2005 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 973.045288,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :nnnnnnnnnnnnnnnnnnnn
-
-EVENT time: 985.697327,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-
-EVENT time: 988.346069,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :oooooooooooooooooooo
-
-EVENT time: 990.179626,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 2005 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 998.053772,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :pppppppppppppppppppp
-
-EVENT time: 1005.244873,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :qqqqqqqqqqqqqqqqqqqq
-
-EVENT time: 1005.697327,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-          TOLAYER3: packet being lost
-
-EVENT time: 1019.165833,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :rrrrrrrrrrrrrrrrrrrr
-
-EVENT time: 1025.697266,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-
-EVENT time: 1030.999146,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :ssssssssssssssssssss
-
-EVENT time: 1034.856812,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 2005 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 1039.696655,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :tttttttttttttttttttt
-
-EVENT time: 1045.697266,  type: 0, timerinterrupt   entity: 26
-************A_timerinterrupt*********** 
-resending packet to B with seqnum 26 
-
-EVENT time: 1047.960083,  type: 2, fromlayer3  entity: 1
-**********B_input********* 
---------B received packet with Seqnum: 26 from A------- 
-Packet payload is :zzzz
-Packet Sequence Number is: 26 
-Packet Ack Number is: 26 
-Packet CheckSum is: 2005 
----------B received a corrupted packet with seqnum 26--------
-
-EVENT time: 1052.457153,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :uuuuuuuuuuuuuuuuuuuu
-
-EVENT time: 1054.891724,  type: 1, fromlayer5  entity: 0
-***********A_Output*********
--------Window is full. Message is being buffered-------- 
-Packet payload is :vvvvvvvvvvvvvvvvvvvv
-
-EVENT time: 1056.129028,  type: 1, fromlayer5  entity: 0
- Simulator terminated at time 1056.129028
- after sending 100 msgs from layer5
+ Simulator terminated at time 721.909790
+ after sending 70 msgs from layer5

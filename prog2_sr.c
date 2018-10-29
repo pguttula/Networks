@@ -44,6 +44,7 @@ struct pkt {
     };
 
 /********* STUDENTS WRITE THE NEXT SEVEN ROUTINES *********/
+  int datachunks = 20;
   int seqnum_A = 1;
   int acknum_A = 0;
   int expected_seqnum_B = 1;
@@ -98,10 +99,13 @@ int checksum(int seqnum,int acknum, char * payload){
 //Function to print the data in packet
 printpacketdata(char * payload){
   int i;
-  //for (i=0; packet.payload[i]; i++){
-    printf("Packet payload is :%.20s\n",payload);
-}
+  printf("Packet Payload is:");
 
+  for (i=0; i<datachunks; i++){
+    printf("%c", payload[i]);
+  }
+  printf("\n");
+}
 /* called from layer 5, passed the data to be sent to other side */
 void A_output(struct msg message)
 {
@@ -130,7 +134,7 @@ void A_output(struct msg message)
     A_packetcount++;
     starttimer(SENDER_A, seqnum_A, TIME);
     seqnum_A++;
-    printf("--------Total packets sent from A to B so far: %d \n-------", A_packetcount);
+    printf("--------Total packets sent from A to B so far: %d -------\n", A_packetcount);
     tolayer3(SENDER_A, packet);
   }
   //else loop buffers the messages that fall out of window size.
@@ -233,7 +237,7 @@ void A_timerinterrupt(int seqnum)
   printf("resending packet to B with seqnum %d \n", seqnum);
   struct pkt pkt = sent_packets[seqnum-base];
   if (pkt.seqnum != seqnum) {
-    printf("----- SHIT!!! ----\n");
+    printf("----- Oops!!! ----\n");
     exit(0);
   }
   tolayer3(SENDER_A, pkt);
@@ -251,6 +255,7 @@ void B_init()
   buffer_messages_B = (struct msg*)malloc(buffersize * sizeof(struct msg));
   buf_base_B = 0;
   buf_next_B = 0;
+  B_packetcount = 0;
 }
 /* called from layer 5, passed the data to be sent to other side */
 void B_output(struct msg message)
@@ -301,6 +306,7 @@ void B_input(struct pkt packet)
       recv_packets[seqnum - recv_base] = packet;
       recv_markers[seqnum - recv_base] = 1;
       B_packetcount++;
+      printf("Total Number of packets Ack'ed at B %d\n",B_packetcount);
       if(seqnum == recv_base) { 
         /* Compute k */
         int k = 0;
@@ -487,7 +493,7 @@ init()                         /* initialize the simulator */
    scanf("%f",&lambda);
    printf("Enter TRACE:");
    scanf("%d",&TRACE);*/
-   nsimmax = 100;
+   nsimmax = 70;
    lossprob = 0.2;
    corruptprob = 0.2;
    lambda = 10;
