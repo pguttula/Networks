@@ -1,0 +1,157 @@
+% Math mode
+%-----------
+\newenvironment{nop}{}{}
+\newenvironment{smathpar}{
+\begin{nop}\small\begin{mathpar}}{
+\end{mathpar}\end{nop}\ignorespacesafterend}
+
+% Theorem
+%--------
+
+\theoremstyle{plain}
+\newtheorem{axiom}{Axiom}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+% Decorations
+%-----------
+\newenvironment{decoration}
+  {\color{blue}\begin{array}{l}}
+  {\end{array}}
+
+% New colors
+%------------
+\definecolor{Bittersweet}{rgb}{1.0, 0.44, 0.37}
+\definecolor{MidnightBlue}{rgb}{0.0, 0.2, 0.4}
+\definecolor{BrightBlue}{rgb}{0.0, 0.2, 0.7}
+
+% Listings
+%----------
+\newcommand{\lstml}{
+\lstset{ %
+language=ML, % choose the language of the code
+basicstyle=\footnotesize\ttfamily,       % the size of the fonts that are used for the code
+keywordstyle=\color{Bittersweet},
+% numbers=left,                   % where to put the line-numbers
+numberstyle=\tiny,      % the size of the fonts that are used for the line-numbers
+stepnumber=1,                   % the step between two line-numbers. If it is 1 each line will be numbered
+numbersep=5pt,                  % how far the line-numbers are from the code
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+% frame=single,                   % adds a frame around the code
+tabsize=2,                      % sets default tabsize to 2 spaces
+captionpos=b,                   % sets the caption-position to bottom
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+commentstyle=\itshape\color{BrightBlue},
+%escapeinside={\%*}{*)},         % if you want to add a comment within your code
+mathescape=true,
+morekeywords={oper, txn, invariant, module, begin, match, when, @@deriving, not, : , txn_do, do, SQL/\\}
+}}
+\lstnewenvironment{ocaml}
+    { % \centering
+			\lstml
+      \lstset{}%
+      \csname lst@setfirstlabel\endcsname}
+    { %\centering
+      \csname lst@savefirstlabel\endcsname}
+\newcommand{\ocamlinline}[1]{\lstinline[language=ML,
+                                        basicstyle=\footnotesize\ttfamily, 
+                                        keywordstyle=\color{Bittersweet},
+                                        mathescape=true]!#1!}
+
+% SQL Trace 
+% ----------
+\newcommand{\lstsql}{
+\lstset{ %
+  language=SQL, % choose the language of the code
+  basicstyle=\footnotesize\ttfamily,       % the size of the fonts that are used for the code
+  keywordstyle=\color{MidnightBlue},
+  % numbers=left,                   % where to put the line-numbers
+  numberstyle=\tiny,      % the size of the fonts that are used for the line-numbers
+  stepnumber=1,                   % the step between two line-numbers. If it is 1 each line will be numbered
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  % frame=single,                   % adds a frame around the code
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  commentstyle=\itshape\color{BrightBlue},
+  %escapeinside={\%*}{*)},         % if you want to add a comment within your code
+  mathescape=true,
+  morekeywords={BEGIN, COMMIT, ROLLBACK}
+}}
+\lstnewenvironment{sqltrace}
+    { % \centering
+			\lstsql
+      \lstset{}%
+      \csname lst@setfirstlabel\endcsname}
+    { %\centering
+      \csname lst@savefirstlabel\endcsname}
+
+\newcommand{\sql}[1]{\lstinline[language=SQL,
+                                basicstyle=\footnotesize\ttfamily, 
+                                keywordstyle=\color{BrightBlue},
+                                breaklines=true,
+                                breakatwhitespace=false,
+                                mathescape=true,
+                                morekeywords={BEGIN, COMMIT, ROLLBACK}]!#1!}
+
+% ALGORITHM2E
+% ------------
+% code formatting
+\SetAlFnt{\sffamily}
+\renewcommand\ArgSty{\normalfont\sffamily}
+\renewcommand\KwSty[1]{\textnormal{\textbf{\sffamily#1}}\unskip}
+\SetAlCapFnt{\normalfont\sffamily\large}
+\renewcommand\AlCapNameFnt{\sffamily\large}
+
+% comment formatting
+\newcommand\algcommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+\SetCommentSty{algcommfont}
+
+
+% Formatting
+%---------
+\newcommand{\C}[1]{\code{#1}}
+\newcommand{\tuplee}[1]{\langle #1 \rangle}
+\newcommand*{\rom}[1]{\expandafter\romannumeral #1}
+
+% Formatting commands
+% -------------------
+\newcommand{\code}[1]{{\tt #1}}
+\newcommand{\spc}[0]{\quad}
+\newcommand{\ALT}{~\mid~}
+\newcommand{\rel}[1]{{R}_{\mathit{#1}}}
+\newcommand{\conj}{~\wedge~}
+\newcommand{\disj}{~\vee~}
+\newcommand{\txnimp}{\mbox{${\cal T}$}}
+\newcommand{\ssnimp}{{\sc SsnImp}\xspace}
+%\newcommand{\coloneqq}{::=}
+\newcommand{\qqquad}{\quad\quad}
+\newcommand{\cskip}{\C{SKIP}}
+%\newcommand{\defeq}[0]{ \triangleq }
+\newcommand{\op}{\textsf{op}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\F}{{\sf F}}
+\newcommand{\G}{{\sf G}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\T}{\mathcal{T}}
+\renewcommand{\P}{\mathcal{P}}
+\newcommand{\B}[1]{\small\bf #1}
+\newcommand{\wmax}{{\sf W}_{max}}
+\newcommand{\nmax}{{\sf N}_{best}}
