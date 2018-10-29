@@ -44,6 +44,7 @@ struct pkt {
     };
 
 /********* STUDENTS WRITE THE NEXT SEVEN ROUTINES *********/
+  int datachunks = 20;
   int seqnum_A = 1;
   int acknum_A = 0;
   int expected_seqnum_B = 1;
@@ -98,10 +99,13 @@ int checksum(int seqnum,int acknum, char * payload){
 //Function to print the data in packet
 printpacketdata(char * payload){
   int i;
-  //for (i=0; packet.payload[i]; i++){
-    printf("Packet payload is :%.20s\n",payload);
-}
+  printf("Packet Payload is:");
 
+  for (i=0; i<datachunks; i++){
+    printf("%c", payload[i]);
+  }
+  printf("\n");
+}
 /* called from layer 5, passed the data to be sent to other side */
 void A_output(struct msg message)
 {
@@ -130,14 +134,14 @@ void A_output(struct msg message)
     A_packetcount++;
     starttimer(SENDER_A, seqnum_A, TIME);
     seqnum_A++;
-    printf("--------Total packets sent from A to B so far: %d \n-------", A_packetcount);
+    printf("--------Total packets sent from A to B so far: %d -------\n", A_packetcount);
     tolayer3(SENDER_A, packet);
   }
   //else loop buffers the messages that fall out of window size.
   else /*if(seqnum_A >= base + windowsize)*/{
     if(buf_next_A < buf_base_A + buffersize){
       /* If there is space in the buffer, then buffer the msg. */
-      printf("Window is full. Message is being buffered \n");
+      printf("-------Window is full. Message is being buffered-------- \n");
       strncpy(packet.payload, message.data, 20);
       printpacketdata(packet.payload);
       buffer_messages_A[buf_next_A - buf_base_A] = message;
@@ -233,7 +237,7 @@ void A_timerinterrupt(int seqnum)
   printf("resending packet to B with seqnum %d \n", seqnum);
   struct pkt pkt = sent_packets[seqnum-base];
   if (pkt.seqnum != seqnum) {
-    printf("----- SHIT!!! ----\n");
+    printf("----- Oops!!! ----\n");
     exit(0);
   }
   tolayer3(SENDER_A, pkt);
@@ -251,6 +255,7 @@ void B_init()
   buffer_messages_B = (struct msg*)malloc(buffersize * sizeof(struct msg));
   buf_base_B = 0;
   buf_next_B = 0;
+  B_packetcount = 0;
 }
 /* called from layer 5, passed the data to be sent to other side */
 void B_output(struct msg message)
@@ -301,6 +306,7 @@ void B_input(struct pkt packet)
       recv_packets[seqnum - recv_base] = packet;
       recv_markers[seqnum - recv_base] = 1;
       B_packetcount++;
+      printf("Total Number of packets Ack'ed at B %d\n",B_packetcount);
       if(seqnum == recv_base) { 
         /* Compute k */
         int k = 0;
@@ -477,7 +483,7 @@ init()                         /* initialize the simulator */
   
    printf("**********SELECTIVE-REPEAT PROTOCOL**********\n"); 
    printf("-----  Stop and Wait Network Simulator Version 1.1 -------- \n\n");
-   /*printf("Enter the number of messages to simulate: ");
+   printf("Enter the number of messages to simulate: ");
    scanf("%d",&nsimmax);
    printf("Enter  packet loss probability [enter 0.0 for no loss]:");
    scanf("%f",&lossprob);
@@ -486,12 +492,7 @@ init()                         /* initialize the simulator */
    printf("Enter average time between messages from sender's layer5 [ > 0.0]:");
    scanf("%f",&lambda);
    printf("Enter TRACE:");
-   scanf("%d",&TRACE);*/
-   nsimmax = 100;
-   lossprob = 0.0;
-   corruptprob = 0.2;
-   lambda = 20;
-   TRACE = 2;
+   scanf("%d",&TRACE);
 
    srand(9999);              /* init random number generator */
    sum = 0.0;                /* test random number generator for students */

@@ -15,7 +15,7 @@
      (although some can be lost).
 **********************************************************************/
 
-#define BIDIRECTIONAL 0    /* change to 1 for bidirectional */
+#define BIDIRECTIONAL 1    /* change to 1 for bidirectional */
                            /* and write a routine called B_output */
 
 /* a "msg" is the data unit passed from layer 5 (teachers code) to layer  */
@@ -420,18 +420,13 @@ init()                         /* initialize the simulator */
    printf("-----  Stop and Wait Network Simulator Version 1.1 -------- \n\n");
    printf("Enter the number of messages to simulate: ");
    scanf("%d",&nsimmax);
-   //nsimmax = 20;
    printf("Enter  packet loss probability [enter 0.0 for no loss]:");
    scanf("%f",&lossprob);
-   //lossprob = 0.1;
    printf("Enter packet corruption probability [0.0 for no corruption]:");
    scanf("%f",&corruptprob);
-   //corruptprob = 0.3;
    printf("Enter average time between messages from sender's layer5 [ > 0.0]:");
    scanf("%f",&lambda);
-   //lambda = 1000;
    printf("Enter TRACE:");
-   //TRACE = 2;
    scanf("%d",&TRACE);
 
    srand(9999);              /* init random number generator */
