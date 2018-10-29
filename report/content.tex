@@ -1,6 +1,20 @@
 \section*{Experiment 1}
 
+The graph for experiment 1 is shown in Fig.~\ref{fig:chart1}. Note
+that I multiplied throughputs with 1000 for the sake of presentation.
 
+\begin{figure}[!ht]
+  \includegraphics[width=0.8\textwidth]{chart1-fig}
+  \caption{Experiment-1 data visualized. On x-axis is the loss
+  probability. On y-axis is Throughput $\times$ 1000.}
+  \label{fig:chart1}
+\end{figure}
+
+The raw data is shown below. Each cell has two components: the number
+of messages received by layer 5, and the time it took for the
+simulation to complete.
+Fig.~\ref{fig:chart1}
+\begin{center}
 \begin{verbatim}
             0.1       0.2       0.4       0.6       0.8
 ----------------------------------------------------------
@@ -19,9 +33,17 @@ GBN50       999       999       998       201       134
 ARQ         297       196       49        26        4
            49472     50633     48570      49746     51320
 \end{verbatim}
+\end{center}
 
+\paragraph{Observations}. The throughput for Selective Repeat (SR) and
+Go-Back-N (GBN) is much higher than Alternating Bit Protocol (ARQ).
+This is as expected.
 
 \section*{Experiment 2}
+
+The raw data for experiment 2 is shown below. The graph is going to be
+more or less straight lines parallel to the x-axes, hence not worth
+presenting.
 
 \begin{verbatim}
           0.2           0.4
@@ -41,11 +63,22 @@ SR200     997           999
 SR500     999           999
          48348         49404
 
-GBN10, 999/48675, 998/50019
-GBN50, 999/48675, 998/50019
-GBN100, 999/48675, 998/50019
-GBN200, 999/48675, 998/50019
-GBN500, 999/48675, 998/50019
-ARQ, 196/50633, 49/18570
+GBN10     999           998
+         48675         50019
 
+GBN50     999           998
+         48675         50019 
+
+GBN100    999           998
+         48675         50019 
+
+GBN200    999           998
+         48675         50019
+
+GBN500    999           998
+         48675         50019
+
+ARQ			      196           49
+				         50633         18570
 \end{verbatim}
+
