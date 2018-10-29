@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-//#include <stdlib.h>
+#include <stdlib.h>
 /* ******************************************************************
  ALTERNATING BIT AND GO-BACK-N NETWORK EMULATOR: VERSION 1.1  J.F.Kurose
 
@@ -125,8 +125,8 @@ void A_output(struct msg message)
     printf("Packet Sequence Number is: %d \n", packet.seqnum);
     printf("Packet Ack Number is: %d \n", packet.seqnum);
     printf("Packet CheckSum is: %d \n", packet.checksum);
-    sent_packets[seqnum_A-base-1] = packet;
-    ack_markers[seqnum_A- base-1] = 0;
+    sent_packets[seqnum_A-base] = packet;
+    ack_markers[seqnum_A- base] = 0;
     A_packetcount++;
     starttimer(SENDER_A, seqnum_A, TIME);
     seqnum_A++;
@@ -197,7 +197,7 @@ void A_input(struct pkt packet)
     printf("-------A Received acknowledgement %d from B-------\n", 
                packet.acknum);
     printf("Timer stopped for packet with seqnum %d \n",packet.seqnum);
-    ack_markers[packet.acknum-base-1] = 1;
+    ack_markers[packet.acknum - base] = 1;
     acked_at_A++;
     if (packet.acknum == sent_packets[0].acknum) {
       int k = 0;
@@ -231,7 +231,7 @@ void A_timerinterrupt(int seqnum)
   //sent_packets for that seqnum and resend it to B.
   printf("************A_timerinterrupt*********** \n");
   printf("resending packet to B with seqnum %d \n", seqnum);
-  struct pkt pkt = sent_packets[seqnum-base-1];
+  struct pkt pkt = sent_packets[seqnum-base];
   if (pkt.seqnum != seqnum) {
     printf("----- SHIT!!! ----\n");
     exit(0);
@@ -534,7 +534,7 @@ generate_next_arrival()
 {
    double x,log(),ceil();
    struct event *evptr;
-    char *malloc();
+    //char *malloc();
    float ttime;
    int tempint;
 
@@ -643,7 +643,7 @@ void starttimer(int AorB, int seqnum, float increment){
 
  struct event *q;
  struct event *evptr;
- char *malloc();
+ //char *malloc();
 
  if (TRACE>2)
     printf("          START TIMER: starting timer at %f\n",time);
@@ -668,7 +668,7 @@ void starttimer(int AorB, int seqnum, float increment){
 void tolayer3(int AorB, struct pkt packet){
  struct pkt *mypktptr;
  struct event *evptr,*q;
- char *malloc();
+ //char *malloc();
  float lastime, x, jimsrand();
  int i;
 
