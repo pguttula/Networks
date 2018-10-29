@@ -50,6 +50,10 @@ struct pkt {
   float TIME = 20.0;
   int A_packetcount = 0;
   int B_packetcount = 0;
+  int From_App_Layer = 0;
+  int To_App_Layer = 0;
+  int From_Tpt_Layer = 0;
+  int To_Tpt_Layer = 0;
   starttimer(int, float);
   struct pkt prev_pkt_A;
   struct pkt prev_pkt_B;
@@ -110,6 +114,7 @@ void A_output(struct msg message)
   printf("Packet Sequence Number is: %d \n", packet.seqnum);
   printf("Packet Ack Number is: %d \n", packet.acknum);
   printf("Packet CheckSum is: %d \n", packet.checksum);
+  From_App_Layer++;
   tolayer3(SENDER_A, packet);
   starttimer(SENDER_A, TIME);
 }
@@ -413,21 +418,21 @@ init()                         /* initialize the simulator */
   
    printf("***********ALTERNATING BIT PROTOCOL***********\n");
    printf("-----  Stop and Wait Network Simulator Version 1.1 -------- \n\n");
-   //printf("Enter the number of messages to simulate: ");
-   //scanf("%d",&nsimmax);
-   nsimmax = 20;
-   //printf("Enter  packet loss probability [enter 0.0 for no loss]:");
-   //scanf("%f",&lossprob);
-   lossprob = 0.1;
-   //printf("Enter packet corruption probability [0.0 for no corruption]:");
-   //scanf("%f",&corruptprob);
-   corruptprob = 0.3;
-   //printf("Enter average time between messages from sender's layer5 [ > 0.0]:");
-   //scanf("%f",&lambda);
-   lambda = 1000;
-   //printf("Enter TRACE:");
-   TRACE = 2;
-   //scanf("%d",&TRACE);
+   printf("Enter the number of messages to simulate: ");
+   scanf("%d",&nsimmax);
+   //nsimmax = 20;
+   printf("Enter  packet loss probability [enter 0.0 for no loss]:");
+   scanf("%f",&lossprob);
+   //lossprob = 0.1;
+   printf("Enter packet corruption probability [0.0 for no corruption]:");
+   scanf("%f",&corruptprob);
+   //corruptprob = 0.3;
+   printf("Enter average time between messages from sender's layer5 [ > 0.0]:");
+   scanf("%f",&lambda);
+   //lambda = 1000;
+   printf("Enter TRACE:");
+   //TRACE = 2;
+   scanf("%d",&TRACE);
 
    srand(9999);              /* init random number generator */
    sum = 0.0;                /* test random number generator for students */

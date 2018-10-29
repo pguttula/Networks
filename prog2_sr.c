@@ -99,7 +99,7 @@ int checksum(int seqnum,int acknum, char * payload){
 printpacketdata(char * payload){
   int i;
   //for (i=0; packet.payload[i]; i++){
-    printf("Packet payload is :%.20s \n",payload);
+    printf("Packet payload is :%.20s\n",payload);
 }
 
 /* called from layer 5, passed the data to be sent to other side */
@@ -282,7 +282,7 @@ void B_input(struct pkt packet)
     int i;
     printpacket(packet);
     if(packet.checksum != checksum(packet.seqnum,packet.acknum,packet.payload)) {
-      printf("---------B received a corrupted packet--------\n");
+      printf("---------B received a corrupted packet with seqnum %d--------\n", packet.seqnum);
       return;
     }
     if(packet.seqnum < recv_base) {
@@ -487,7 +487,7 @@ init()                         /* initialize the simulator */
    scanf("%f",&lambda);
    printf("Enter TRACE:");
    scanf("%d",&TRACE);*/
-   nsimmax = 20;
+   nsimmax = 100;
    lossprob = 0.0;
    corruptprob = 0.2;
    lambda = 20;
