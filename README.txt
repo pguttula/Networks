@@ -18,5 +18,16 @@ Selective- Repeat Protocol:
   Modified the functions A_timerinterrupt, starttimer, stoptimer
 
   Make instructions:
- * Alternating Bit Protocol- Use the command :make gbn
- * Go-Back N - Use command : make 
+ * Alternating Bit Protocol- 
+   To Compile code: make arq
+   To execute code: ./arq.out
+ * Go-Back N -
+   To Compile code: make gbn
+   To execute code: ./gbn.out
+ * SR Protocol-
+   To Compile code: make sr
+   To execute code: ./sr.out
+   
+   To clean directory:
+   make clean
+
