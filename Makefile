@@ -4,12 +4,12 @@ CFLAGS = -g -w -Wall -Wno-return-type -Wno-implicit-function-declaration -Wno-im
 all: gbn arq sr
 
 gbn:
-	$(CC) $(CFLAGS) prog2_gbn.c
+	$(CC) $(CFLAGS) prog2_gbn.c -o gbn.out
 arq:
-	$(CC) $(CFLAGS) prog2_arq.c
+	$(CC) $(CFLAGS) prog2_arq.c -o arq.out
 
 sr:
-	$(CC) $(CFLAGS) prog2_sr.c
+	$(CC) $(CFLAGS) prog2_sr.c -o sr.out
 
 clean:
 	-rm -f *.o *.out
