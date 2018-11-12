@@ -51,7 +51,7 @@ struct pkt {
   int SENDER_A = 0;
   int SENDER_B = 1;
   float TIME = 20.0;
-  int windowsize = 8;
+  int windowsize = 50;
   int receiver_window_size = 100;
   int buffersize = 1000;
   int buf_base_A = 0;
