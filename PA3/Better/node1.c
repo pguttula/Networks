@@ -58,19 +58,25 @@ static void inform_neighbors() {
 /* Update min costs to all nodes. Return 1 if anything changed, 0
  * otherwise.  */
 static int update_min_costs() {
-  int updated = 0;
-  int i,j;
+  int i,j, min;
+  int mins[4] = {999,999,999,999};
   for(i=0;i<4;i++) {
+    min = 999;
     for(j=0;j<4;j++) {
-      if(dt1.costs[i][j] < min_costs[i]){
-        /* Path to i via j has lesser cost. */
-        min_costs[i] = dt1.costs[i][j];
+      if(dt1.costs[i][j] < min) {
+        min = dt1.costs[i][j];
         min_nexts[i] = j;
-        updated = 1;
       } 
     }
+    mins[i] = min;
   }
-  return updated;
+  if(memcmp(mins,min_costs,4*sizeof(int)) == 0) {
+    return 0;
+  }
+  else {
+    memcpy(min_costs,mins,4*sizeof(int));
+    return 1;
+  }
 }
 
 void rtinit1() 
@@ -147,10 +153,14 @@ void linkhandler1(int linkid, int newcost)
 {
   printf("NODE %d <-> NODE: %d link cost updated to %d at time: %f\n", my_id, linkid, 
       newcost, clocktime);
+  int i;
   /* update link cost */
+  int oldcost = link_costs[linkid];
   link_costs[linkid] = newcost;
-  /* update the distance table */
-  dt1.costs[linkid][linkid] = newcost;
+  /* update the distance table entries routed via linkid */
+  for(i=0; i<4; i++) {
+    dt1.costs[i][linkid] = dt1.costs[i][linkid] - oldcost + newcost;
+  }
   /* Since old min costs may no longer be valid, update min costs
    * and min_nexts starting from scratch */
   int old_min_costs[4], old_min_nexts[4];
@@ -165,6 +175,7 @@ void linkhandler1(int linkid, int newcost)
   if(memcmp(old_min_costs, min_costs, 4*sizeof(int)) != 0 || 
       memcmp(old_min_nexts, min_nexts, 4*sizeof(int)) !=0) {
     printf("%s Min costs updated\n",marker);
+    printdt1(&dt1);
     inform_neighbors();
   }
 }

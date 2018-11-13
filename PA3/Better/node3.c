@@ -19,6 +19,7 @@ struct distance_table
 } dt3;
 
 static int my_id = 3;
+static int min_nexts[4] = {999, 999, 999, 999};
 static int min_costs[4] = {999,999,999,999};
 static int link_costs[4] = {7,999,2,0};
 static int neighbors[2] = {0,2};
@@ -29,9 +30,21 @@ void printdt3(struct distance_table*);
 
 static void inform_neighbor(int n) {
   struct rtpkt pkt;
+  int i, poisoned_min_costs[4];
   pkt.sourceid = my_id;
   pkt.destid = n;
-  memcpy(pkt.mincost, min_costs, 4*sizeof(int));
+  /* Define poisoned min cost to i as infinity if the next node
+   * on min path is n. Else define it as min cost to i. */
+  for(i=0; i<4; i++) {
+    if(min_nexts[i] == n) {
+      //printf("Node %d -> Node %d: poisoning cost to %d\n", my_id, n, i);
+      poisoned_min_costs[i] = 999;
+    }
+    else {
+      poisoned_min_costs[i] = min_costs[i];
+    }
+  }
+  memcpy(pkt.mincost, poisoned_min_costs, 4*sizeof(int));
   tolayer2(pkt);
 }
 
@@ -45,17 +58,25 @@ static void inform_neighbors() {
 /* Update min costs to all nodes. Return 1 if anything changed, 0
  * otherwise.  */
 static int update_min_costs() {
-  int updated = 0;
-  int i,j;
+  int i,j, min;
+  int mins[4] = {999,999,999,999};
   for(i=0;i<4;i++) {
+    min = 999;
     for(j=0;j<4;j++) {
-      if(dt3.costs[i][j] < min_costs[i]){
-        min_costs[i] = dt3.costs[i][j];
-        updated = 1;
+      if(dt2.costs[i][j] < min) {
+        min = dt2.costs[i][j];
+        min_nexts[i] = j;
       } 
     }
+    mins[i] = min;
   }
-  return updated;
+  if(memcmp(mins,min_costs,4*sizeof(int)) == 0) {
+    return 0;
+  }
+  else {
+    memcpy(min_costs,mins,4*sizeof(int));
+    return 1;
+  }
 }
 
 

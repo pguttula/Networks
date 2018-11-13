@@ -45,17 +45,24 @@ static void inform_neighbors() {
 /* Update min costs to all nodes. Return 1 if anything changed, 0
  * otherwise.  */
 static int update_min_costs() {
-  int updated = 0;
-  int i,j;
+  int i,j, min;
+  int mins[4] = {999,999,999,999};
   for(i=0;i<4;i++) {
+    min = 999;
     for(j=0;j<4;j++) {
-      if(dt3.costs[i][j] < min_costs[i]){
-        min_costs[i] = dt3.costs[i][j];
-        updated = 1;
+      if(dt3.costs[i][j] < min) {
+        min = dt3.costs[i][j];
       } 
     }
+    mins[i] = min;
   }
-  return updated;
+  if(memcmp(mins,min_costs,4*sizeof(int)) == 0) {
+    return 0;
+  }
+  else {
+    memcpy(min_costs,mins,4*sizeof(int));
+    return 1;
+  }
 }
 
 
