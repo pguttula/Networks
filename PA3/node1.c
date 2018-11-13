@@ -130,6 +130,25 @@ void linkhandler1(int linkid, int newcost)
 /* constant definition in prog3.c from 0 to 1 */
 	
 {
+  printf("NODE %d <-> NODE: %d link cost updated to %d at time: %f\n", my_id, linkid, 
+      newcost, clocktime);
+  /* update link cost */
+  link_costs[linkid] = newcost;
+  /* update the distance table */
+  dt1.costs[linkid][linkid] = newcost;
+  /* Since old min costs may no longer be valid, update min costs
+   * starting from scratch */
+  int old_min_costs[4];
+  int inftys[4] = {999,999,999,999};
+  memcpy(old_min_costs,min_costs,4*sizeof(int));
+  memcpy(min_costs,inftys,4*sizeof(int));
+  update_min_costs();
+  /* If new min costs are not same as old, inform neighbors of new
+   * min costs*/
+  if(memcmp(old_min_costs,min_costs,4*sizeof(int)) != 0) {
+    printf("%s Min costs updated\n",marker);
+    inform_neighbors();
+  }
 }
 
 
